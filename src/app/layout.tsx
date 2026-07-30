@@ -76,6 +76,26 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Pink Boots Latam" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Pink Boots Society Latin America",
+              alternateName: "Pink Boots Latam",
+              description: "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas en Latinoamerica.",
+              url: "https://pinkbootslatam.org",
+              logo: "https://pinkbootslatam.org/sponsors/pink-boots-logo.png",
+              sameAs: [
+                "https://www.instagram.com/pinkbootslatam/",
+                "https://www.facebook.com/PinkBootsPeru/",
+              ],
+              foundingLocation: { "@type": "Place", address: { addressCountry: "PA" } },
+              knowsAbout: ["cerveza", "brewing", "mujeres cerveceras", "bebidas fermentadas", "educacion cervecera"],
+            }),
+          }}
+        />
       </head>
       <body className="font-sans">{children}</body>
     </html>

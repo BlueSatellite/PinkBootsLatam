@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { mainSponsor, otherSponsors } from "@/lib/sponsors";
+import InstagramFeed from "@/components/ui/InstagramFeed";
 
 export default function HomePage() {
   const t = useTranslations("home");
@@ -154,6 +155,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <InstagramFeed />
     </>
   );
 }

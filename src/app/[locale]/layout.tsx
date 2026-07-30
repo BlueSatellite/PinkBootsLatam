@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export default async function LocaleLayout({
   children,
@@ -14,7 +15,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "es" | "pt")) {
+  if (!routing.locales.includes(locale as "es" | "en" | "pt")) {
     notFound();
   }
 
@@ -25,6 +26,7 @@ export default async function LocaleLayout({
       <Navbar />
       <main className="min-h-screen">{children}</main>
       <Footer />
+      <WhatsAppButton />
     </NextIntlClientProvider>
   );
 }
