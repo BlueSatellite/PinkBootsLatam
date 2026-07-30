@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Capitulos",
+    description: "Encuentra tu capitulo de Pink Boots Society en Latinoamerica. Red de mujeres y personas no binarias en la industria cervecera.",
+  };
+}
 
 export default function ChaptersPage() {
   const t = useTranslations("chapters");

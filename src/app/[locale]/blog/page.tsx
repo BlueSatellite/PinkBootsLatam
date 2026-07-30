@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Blog",
+    description: "Historias, noticias y recursos de la comunidad Pink Boots Society en Latinoamerica.",
+  };
+}
 
 export default function BlogPage() {
   const t = useTranslations("blog");

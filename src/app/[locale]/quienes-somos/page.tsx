@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Quienes Somos",
+    description: "Conoce al equipo de Pink Boots Society Latin America, profesionales apasionadas por la industria de bebidas fermentadas.",
+  };
+}
 
 export default function TeamPage() {
   const t = useTranslations("team");
