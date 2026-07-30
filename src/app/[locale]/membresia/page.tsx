@@ -1,0 +1,78 @@
+import { useTranslations } from "next-intl";
+
+export default function MembershipPage() {
+  const t = useTranslations("membership");
+
+  return (
+    <>
+      <section className="relative bg-[var(--color-text-primary)] py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+            Pink Boots Society Latin America
+          </p>
+          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            {t("title")}
+          </h1>
+          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
+            {t("hero")}
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            {t("benefitsTitle")}
+          </h2>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {t.raw("benefits").map((benefit: string) => (
+              <li
+                key={benefit}
+                className="flex items-start gap-3 rounded-lg border border-[var(--color-border-default)] p-4"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="mt-0.5 shrink-0 text-[var(--color-pink-brand)]"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2C9.5 2 7 3 5.5 5L4 7.5C2.5 10 2.5 13 4 15.5L5.5 18C7 20 9.5 21 12 21C14.5 21 17 20 18.5 18L20 15.5C21.5 13 21.5 10 20 7.5L18.5 5C17 3 14.5 2 12 2Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <path
+                    d="M8 12L11 15L16 9"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  {benefit}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6">
+            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              {t("howTo")}
+            </p>
+            <a
+              href={t("ctaUrl")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+            >
+              {t("cta")}
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

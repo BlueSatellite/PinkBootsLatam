@@ -66,5 +66,36 @@
     ],
     "cta": "Si deseas contribuir, escribenos a traves de nuestras redes sociales o acercate a tu capitulo local.",
     "button": "Contactanos en Instagram"
+  },
+  "membership": {
+    "title": "Membresia",
+    "hero": "Se parte de la comunidad mas grande de mujeres y personas no binarias en la industria de bebidas fermentadas de Latinoamerica.",
+    "benefitsTitle": "Beneficios",
+    "benefits": [
+      "Acceso a becas educativas y webinars exclusivos",
+      "Descuentos en eventos y conferencias",
+      "Conexion con profesionales de toda la region",
+      "Programa de mentoria",
+      "Directorio de miembros",
+      "Oportunidades de voluntariado y liderazgo"
+    ],
+    "howTo": "La membresia se tramita a traves del sitio oficial de Pink Boots Society (EE.UU.). Las membresias de Latinoamerica contribuyen al fondo global que se distribuye equitativamente entre todos los chapters al final del ano.",
+    "cta": "Unete en el sitio oficial",
+    "ctaUrl": "https://www.pinkbootssociety.org/membership-information"
+  },
+  "sponsors": {
+    "title": "Patrocinadores y Aliados",
+    "hero": "Gracias a nuestros aliados podemos impulsar la educacion, la comunidad y la inclusion en la industria cervecera latinoamericana.",
+    "mainTitle": "Sponsor Principal",
+    "partnersTitle": "Aliados",
+    "becomeTitle": "Conviertete en aliado",
+    "becomeText": "Si tu empresa u organizacion desea apoyar a Pink Boots Society Latin America, contactanos para conocer las oportunidades de patrocinio.",
+    "becomeCta": "Escribenos en Instagram"
+  },
+  "chapters": {
+    "title": "Capitulos",
+    "hero": "Encuentra un capitulo de Pink Boots cerca de ti en toda Latinoamerica.",
+    "comingSoon": "Estamos construyendo la red de capitulos en Latinoamerica. Pronto podras encontrar un capitulo en tu pais.",
+    "cta": "Si quieres iniciar o liderar un capitulo en tu pais, escribenos."
   }
 }
