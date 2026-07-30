@@ -47,9 +47,10 @@ export default function SponsorsPage() {
               <Image
                 src={mainSponsor.logo}
                 alt={mainSponsor.name}
-                width={340}
-                height={102}
-                className="h-[80px] w-auto"
+                width={400}
+                height={130}
+                className="h-[100px] w-auto"
+                unoptimized
               />
             </a>
           </div>
@@ -69,9 +70,10 @@ export default function SponsorsPage() {
                 <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  width={160}
-                  height={64}
-                  className="h-[52px] w-auto object-contain"
+                  width={200}
+                  height={80}
+                  className="h-[64px] w-auto object-contain"
+                  unoptimized
                 />
               </a>
             ))}

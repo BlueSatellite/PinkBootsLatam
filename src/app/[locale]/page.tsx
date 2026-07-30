@@ -70,9 +70,10 @@ export default function HomePage() {
               <Image
                 src={mainSponsor.logo}
                 alt={mainSponsor.name}
-                width={300}
-                height={90}
-                className="h-[72px] w-auto"
+                width={360}
+                height={120}
+                className="h-[90px] w-auto"
+                unoptimized
               />
             </a>
           </div>
@@ -89,9 +90,10 @@ export default function HomePage() {
                 <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  width={160}
-                  height={64}
-                  className="h-[52px] w-auto object-contain"
+                  width={200}
+                  height={80}
+                  className="h-[64px] w-auto object-contain"
+                  unoptimized
                 />
               </a>
             ))}
