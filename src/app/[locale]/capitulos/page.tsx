@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import ChaptersMapWrapper from "@/components/ui/ChaptersMapWrapper";
 
 interface Chapter {
   country: string;
@@ -99,6 +100,10 @@ export default function ChaptersPage() {
           </p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-4 -mt-10 relative z-10 sm:px-6 lg:px-8">
+        <ChaptersMapWrapper />
+      </div>
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
