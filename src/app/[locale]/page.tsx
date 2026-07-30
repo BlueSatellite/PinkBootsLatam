@@ -52,37 +52,35 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[var(--color-surface-alt)] py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
             {t("sponsorsTitle")}
           </h2>
 
-          <div className="mt-10 flex justify-center">
-            <div className="rounded-xl border-2 border-[var(--color-pink-brand)] bg-white px-8 py-6">
-              <Image
-                src={mainSponsor.logo}
-                alt={mainSponsor.name}
-                width={220}
-                height={66}
-                className="h-[50px] w-auto"
-              />
-            </div>
+          <div className="mt-12 flex justify-center">
+            <Image
+              src={mainSponsor.logo}
+              alt={mainSponsor.name}
+              width={240}
+              height={72}
+              className="h-[56px] w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          <p className="mt-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-pink-brand)]">
+            Sponsor principal
+          </p>
+
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {otherSponsors.map((sponsor) => (
-              <div
+              <Image
                 key={sponsor.name}
-                className="flex items-center justify-center rounded-lg border border-[var(--color-border-default)] bg-white px-3 py-5"
-              >
-                <Image
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  width={120}
-                  height={50}
-                  className="h-[40px] w-auto object-contain"
-                />
-              </div>
+                src={sponsor.logo}
+                alt={sponsor.name}
+                width={120}
+                height={48}
+                className="h-[36px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+              />
             ))}
           </div>
         </div>
