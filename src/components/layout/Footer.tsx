@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const footerLinks = [
   { key: "about", href: "/nuestra-historia" },
@@ -97,9 +98,12 @@ export default function Footer() {
 
           <div>
             <h3 className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-pink-300)]">
-              {t("footer.followUs")}
+              Idioma
             </h3>
-            <p className="mt-5 text-sm leading-relaxed text-white/50">
+            <div className="mt-5">
+              <LanguageSwitcher />
+            </div>
+            <p className="mt-6 text-sm leading-relaxed text-white/50">
               &copy; {new Date().getFullYear()} {t("footer.rights")}
             </p>
           </div>
