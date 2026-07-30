@@ -48,7 +48,7 @@ export default function Footer() {
               <img
                 src="/sponsors/pink-boots-logo.png"
                 alt="Pink Boots Society Latin America"
-                className="h-9 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
               <span className="font-display text-lg font-bold uppercase tracking-wider text-[#b58500]">
                 Pink Boots Latam
