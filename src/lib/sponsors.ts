@@ -38,7 +38,7 @@ export const sponsors: Sponsor[] = [
   },
   {
     name: "Cicerone",
-    logo: "/sponsors/cicerone.png",
+    logo: "/sponsors/cicerone.jpg",
     website: "https://www.cicerone.org/",
   },
 ];

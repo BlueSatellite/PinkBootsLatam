@@ -72,7 +72,7 @@ export default function HomePage() {
                 alt={mainSponsor.name}
                 width={360}
                 height={120}
-                className="h-[110px] w-auto"
+                className="h-[140px] w-auto"
                 unoptimized
               />
             </a>
@@ -92,7 +92,7 @@ export default function HomePage() {
                   alt={sponsor.name}
                   width={200}
                   height={80}
-                  className="h-[80px] w-auto object-contain"
+                  className="h-[100px] w-auto object-contain"
                   unoptimized
                 />
               </a>
