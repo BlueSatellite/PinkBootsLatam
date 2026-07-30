@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
-import Image from "next/image";
 
 const navItems = [
   { key: "about", href: "/nuestra-historia" },
@@ -45,12 +44,10 @@ export default function Navbar() {
             className="flex items-center gap-2.5 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-pink-brand)]"
             aria-label="Pink Boots Society Latin America - Inicio"
           >
-            <Image
+            <img
               src="/sponsors/pink-boots-logo.png"
               alt="Pink Boots Society Latin America"
-              width={36}
-              height={36}
-              className="h-9 w-auto"
+              className="h-10 w-auto"
             />
             <span className="font-display text-sm font-bold uppercase tracking-wider text-[#b58500]">
               Pink Boots Latam

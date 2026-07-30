@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Image from "next/image";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 const footerLinks = [
@@ -42,15 +41,13 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-[var(--color-border-light)] bg-[var(--color-surface-dark)] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-2.5">
-              <Image
+              <img
                 src="/sponsors/pink-boots-logo.png"
                 alt="Pink Boots Society Latin America"
-                width={36}
-                height={36}
                 className="h-9 w-auto"
               />
               <span className="font-display text-lg font-bold uppercase tracking-wider text-[#b58500]">
