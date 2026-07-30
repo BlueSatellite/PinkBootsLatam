@@ -101,10 +101,6 @@ export default function ChaptersPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 -mt-10 relative z-10 sm:px-6 lg:px-8">
-        <ChaptersMapWrapper />
-      </div>
-
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2">
@@ -164,6 +160,13 @@ export default function ChaptersPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 mx-auto max-w-3xl">
+            <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
+              Mapa de capitulos
+            </p>
+            <ChaptersMapWrapper />
           </div>
         </div>
       </section>

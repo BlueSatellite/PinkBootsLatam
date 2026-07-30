@@ -26,7 +26,7 @@ const locations = [
 
 export default function ChaptersMap() {
   return (
-    <div className="h-[400px] w-full overflow-hidden rounded-xl sm:h-[500px]">
+    <div className="h-[250px] w-full overflow-hidden rounded-lg sm:h-[300px]">
       <MapContainer
         center={[5, -72]}
         zoom={3.5}
