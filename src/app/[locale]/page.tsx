@@ -58,7 +58,12 @@ export default function HomePage() {
           </h2>
 
           <div className="mt-14 flex justify-center">
-            <div className="relative rounded-2xl bg-white px-10 py-8 shadow-sm ring-1 ring-[var(--color-pink-200)]">
+            <a
+              href={mainSponsor.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative rounded-2xl bg-white px-10 py-8 shadow-sm ring-1 ring-[var(--color-pink-200)] transition-all hover:scale-105 hover:shadow-lg"
+            >
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--color-pink-brand)] px-4 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
                 Sponsor principal
               </span>
@@ -69,14 +74,17 @@ export default function HomePage() {
                 height={90}
                 className="h-[72px] w-auto"
               />
-            </div>
+            </a>
           </div>
 
           <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3">
             {otherSponsors.map((sponsor) => (
-              <div
+              <a
                 key={sponsor.name}
-                className="flex items-center justify-center rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 hover:shadow-md hover:ring-[var(--color-pink-200)] transition-all"
+                href={sponsor.website ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
               >
                 <Image
                   src={sponsor.logo}
@@ -85,7 +93,7 @@ export default function HomePage() {
                   height={64}
                   className="h-[52px] w-auto object-contain"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
