@@ -97,5 +97,37 @@
     "hero": "Encuentra un capitulo de Pink Boots cerca de ti en toda Latinoamerica.",
     "comingSoon": "Estamos construyendo la red de capitulos en Latinoamerica. Pronto podras encontrar un capitulo en tu pais.",
     "cta": "Si quieres iniciar o liderar un capitulo en tu pais, escribenos."
+  },
+  "events": {
+    "title": "Eventos",
+    "hero": "Conecta, aprende y celebra con la comunidad Pink Boots en toda Latinoamerica.",
+    "upcoming": "Proximos eventos",
+    "past": "Eventos pasados",
+    "empty": "No hay eventos programados en este momento. Vuelve pronto o siguenos en Instagram para enterarte de los proximos.",
+    "types": [
+      { "name": "Collaboration Brew Day", "description": "El evento insignia de Pink Boots donde capítulos de todo el mundo elaboran cerveza colaborativa el mismo dia." },
+      { "name": "Webinars", "description": "Sesiones educativas virtuales con expertas de la industria." },
+      { "name": "Networking", "description": "Encuentros presenciales y virtuales para conectar con otras profesionales." }
+    ]
+  },
+  "scholarships": {
+    "title": "Becas",
+    "hero": "Impulsamos tu crecimiento profesional a traves de oportunidades educativas.",
+    "intro": "Pink Boots Society ofrece becas para mujeres y personas no binarias en la industria de bebidas fermentadas. Las becas cubren desde certificaciones profesionales hasta programas academicos completos.",
+    "availableTitle": "Becas disponibles",
+    "available": [
+      { "name": "Certificacion Cicerone", "description": "Apoyo para obtener la certificacion de conocimiento cervecero mas reconocida a nivel mundial." },
+      { "name": "BJCP Beer Judge", "description": "Formacion y certificacion como jueza de cerveza del Beer Judge Certification Program." },
+      { "name": "Educacion continua", "description": "Cursos, diplomados y programas academicos en universidades e institutos aliados." }
+    ],
+    "howTo": "Las becas se solicitan a traves del programa global de Pink Boots Society. Visita el sitio oficial para conocer las convocatorias abiertas.",
+    "cta": "Ver becas en sitio oficial",
+    "ctaUrl": "https://www.pinkbootssociety.org/scholarships"
+  },
+  "blog": {
+    "title": "Blog",
+    "hero": "Historias, noticias y recursos de la comunidad Pink Boots en Latinoamerica.",
+    "empty": "Pronto tendremos contenido para compartir. Mientras tanto, siguenos en Instagram para estar al dia.",
+    "cta": "Seguir en Instagram"
   }
 }
