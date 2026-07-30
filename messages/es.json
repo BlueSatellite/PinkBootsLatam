@@ -30,7 +30,41 @@
   },
   "footer": {
     "rights": "Pink Boots Society Latin America. Todos los derechos reservados.",
-    "quickLinks": "Enlaces Rápidos",
-    "followUs": "Síguenos"
+    "quickLinks": "Enlaces Rapidos",
+    "followUs": "Siguenos"
+  },
+  "about": {
+    "title": "Nuestra Historia",
+    "intro": "Pink Boots Society nacio en 2007, fundada por Teri Fahrendorf, una maestra cervecera que recorrio Estados Unidos elaborando cerveza con otras mujeres del gremio. Lo que comenzo como un viaje en carretera se convirtio en un movimiento global.",
+    "missionLabel": "Nuestra Mision",
+    "mission": "Pink Boots Society busca asistir, inspirar y motivar a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educacion.",
+    "latamIntro": "Pink Boots Society Latin America es el chapter padre para toda la region. Desde Mexico hasta la Patagonia, incluyendo Brasil, unimos a mujeres y personas no binarias apasionadas por la cerveza y las bebidas fermentadas. Creemos que nuestras distintas culturas comparten una sola pasion: la cerveza.",
+    "valuesTitle": "Nuestros Valores",
+    "values": [
+      { "title": "Educacion", "description": "Impulsamos el crecimiento profesional mediante becas, webinars y programas de formacion." },
+      { "title": "Comunidad", "description": "Construimos redes de apoyo entre mujeres y personas no binarias en toda Latinoamerica." },
+      { "title": "Inclusion", "description": "Creemos en una industria donde todas las personas tengan las mismas oportunidades." },
+      { "title": "Colaboracion", "description": "Trabajamos con aliados de la industria para crear espacios mas diversos y equitativos." }
+    ]
+  },
+  "team": {
+    "title": "Quienes Somos",
+    "intro": "Somos un equipo de profesionales apasionadas por la industria de bebidas fermentadas. Desde cerveceras hasta sommeliers, nuestra red abarca toda Latinoamerica.",
+    "leadership": "Liderazgo",
+    "comingSoon": "Informacion de liderazgo proximamente."
+  },
+  "donate": {
+    "title": "Donaciones",
+    "hero": "Tu apoyo impulsa el futuro de las mujeres y personas no binarias en la industria cervecera latinoamericana.",
+    "whyTitle": "Por que donar",
+    "whyText": "Cada contribucion nos permite financiar becas educativas, organizar eventos de networking, crear programas de mentoria y expandir nuestra comunidad a mas rincones de Latinoamerica. Pink Boots Society es una organizacion sin fines de lucro.",
+    "waysTitle": "Como contribuir",
+    "ways": [
+      { "title": "Donacion directa", "description": "Realiza una contribucion unica o recurrente." },
+      { "title": "Patrocinio corporativo", "description": "Convierte a tu empresa en aliada oficial de Pink Boots Latam." },
+      { "title": "Voluntariado", "description": "Ofrece tu tiempo y experiencia para apoyar a nuestra comunidad." }
+    ],
+    "cta": "Si deseas contribuir, escribenos a traves de nuestras redes sociales o acercate a tu capitulo local.",
+    "button": "Contactanos en Instagram"
   }
 }
