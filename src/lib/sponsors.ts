@@ -8,7 +8,7 @@ export interface Sponsor {
 export const sponsors: Sponsor[] = [
   {
     name: "Costa Rica Beer School",
-    logo: "/sponsors/cr-beer-school.avif",
+    logo: "/sponsors/cr-beer-school.svg",
     featured: true,
     website: "https://www.instagram.com/costaricabeerschool/",
   },
