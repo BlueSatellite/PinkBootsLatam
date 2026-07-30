@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import Image from "next/image";
+import { sponsors, mainSponsor, otherSponsors } from "@/lib/sponsors";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -7,17 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description: "Conoce a los aliados de Pink Boots Society Latin America: Costa Rica Beer School, Lallemand, White Labs, Yakima Chief y mas.",
   };
 }
-
-const mainSponsor = "Costa Rica Beer School";
-
-const partners = [
-  "Lallemand",
-  "White Labs",
-  "Yakima Chief",
-  "Fermenta Cociencia",
-  "BJCP",
-  "Cicerone",
-];
 
 export default function SponsorsPage() {
   const t = useTranslations("sponsors");
@@ -44,28 +35,33 @@ export default function SponsorsPage() {
             {t("mainTitle")}
           </h2>
           <div className="mt-6 flex justify-center">
-            <div className="rounded-xl border-2 border-[var(--color-pink-brand)] bg-white px-12 py-10 text-center">
-              <span className="text-xl font-bold tracking-tight text-[var(--color-pink-brand)]">
-                {mainSponsor}
-              </span>
-              <p className="mt-1 text-xs font-medium uppercase tracking-widest text-[var(--color-text-muted)]">
-                Sponsor principal
-              </p>
+            <div className="rounded-xl border-2 border-[var(--color-pink-brand)] bg-white px-8 py-6">
+              <Image
+                src={mainSponsor.logo}
+                alt={mainSponsor.name}
+                width={240}
+                height={72}
+                className="h-[55px] w-auto"
+              />
             </div>
           </div>
 
           <h2 className="mt-16 text-center font-display text-base font-bold uppercase tracking-[0.15em] text-[var(--color-pink-brand)]">
             {t("partnersTitle")}
           </h2>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {partners.map((partner) => (
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {otherSponsors.map((sponsor) => (
               <div
-                key={partner}
-                className="flex items-center justify-center rounded-lg border border-[var(--color-border-default)] bg-white px-4 py-6"
+                key={sponsor.name}
+                className="flex items-center justify-center rounded-lg border border-[var(--color-border-default)] bg-white px-3 py-5"
               >
-                <span className="text-center text-sm font-medium text-[var(--color-text-muted)]">
-                  {partner}
-                </span>
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={130}
+                  height={50}
+                  className="h-[42px] w-auto object-contain"
+                />
               </div>
             ))}
           </div>
