@@ -38,9 +38,9 @@ export default function SponsorsPage() {
             <Image
               src={mainSponsor.logo}
               alt={mainSponsor.name}
-              width={260}
-              height={78}
-              className="h-[60px] w-auto"
+              width={320}
+              height={96}
+              className="h-[80px] w-auto"
             />
           </div>
           <p className="mt-2 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
@@ -50,15 +50,15 @@ export default function SponsorsPage() {
           <h2 className="mt-16 text-center font-display text-base font-bold uppercase tracking-[0.15em] text-[var(--color-pink-brand)]">
             {t("partnersTitle")}
           </h2>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
             {otherSponsors.map((sponsor) => (
               <Image
                 key={sponsor.name}
                 src={sponsor.logo}
                 alt={sponsor.name}
-                width={140}
-                height={52}
-                className="h-[40px] w-auto object-contain opacity-75 hover:opacity-100 transition-opacity"
+                width={160}
+                height={64}
+                className="h-[52px] w-auto object-contain opacity-75 hover:opacity-100 transition-opacity"
               />
             ))}
           </div>

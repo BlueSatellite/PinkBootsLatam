@@ -13,8 +13,8 @@ export const sponsors: Sponsor[] = [
     website: "https://www.instagram.com/costaricabeerschool/",
   },
   {
-    name: "Lallemand",
-    logo: "/sponsors/lallemand.svg",
+    name: "Lallemand Brewing",
+    logo: "/sponsors/lallemand.png",
     website: "https://www.lallemandbrewing.com/",
   },
   {
@@ -23,7 +23,7 @@ export const sponsors: Sponsor[] = [
     website: "https://www.whitelabs.com/",
   },
   {
-    name: "Yakima Chief",
+    name: "Yakima Chief Hops",
     logo: "/sponsors/yakima-chief.png",
     website: "https://www.yakimachief.com/",
   },
@@ -33,7 +33,7 @@ export const sponsors: Sponsor[] = [
   },
   {
     name: "BJCP",
-    logo: "/sponsors/bjcp.svg",
+    logo: "/sponsors/bjcp.png",
     website: "https://www.bjcp.org/",
   },
   {

@@ -61,9 +61,9 @@ export default function HomePage() {
             <Image
               src={mainSponsor.logo}
               alt={mainSponsor.name}
-              width={240}
-              height={72}
-              className="h-[56px] w-auto opacity-90 hover:opacity-100 transition-opacity"
+              width={280}
+              height={84}
+              className="h-[70px] w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
 
@@ -71,15 +71,15 @@ export default function HomePage() {
             Sponsor principal
           </p>
 
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
             {otherSponsors.map((sponsor) => (
               <Image
                 key={sponsor.name}
                 src={sponsor.logo}
                 alt={sponsor.name}
-                width={120}
-                height={48}
-                className="h-[36px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                width={150}
+                height={60}
+                className="h-[48px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
               />
             ))}
           </div>
