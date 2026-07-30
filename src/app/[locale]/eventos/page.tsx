@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Eventos",
+    description: "Collaboration Brew Day, webinars, networking y mas eventos de Pink Boots Society en Latinoamerica.",
+  };
+}
 
 export default function EventsPage() {
   const t = useTranslations("events");

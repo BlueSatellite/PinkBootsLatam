@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Membresia",
+    description: "Unete a Pink Boots Society Latin America. Beneficios, becas, comunidad y oportunidades para mujeres y personas no binarias en la industria cervecera.",
+  };
+}
 
 export default function MembershipPage() {
   const t = useTranslations("membership");

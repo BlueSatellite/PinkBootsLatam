@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Patrocinadores",
+    description: "Conoce a los aliados de Pink Boots Society Latin America: Costa Rica Beer School, Lallemand, White Labs, Yakima Chief y mas.",
+  };
+}
 
 const mainSponsor = "Costa Rica Beer School";
 

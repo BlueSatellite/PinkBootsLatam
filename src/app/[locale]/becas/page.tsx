@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Becas",
+    description: "Becas educativas para mujeres y personas no binarias en cerveza: Cicerone, BJCP, educacion continua a traves de Pink Boots Society.",
+  };
+}
 
 export default function ScholarshipsPage() {
   const t = useTranslations("scholarships");

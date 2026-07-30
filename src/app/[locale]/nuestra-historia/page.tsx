@@ -1,4 +1,12 @@
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Nuestra Historia",
+    description: "Conoce la historia de Pink Boots Society Latin America, nuestra mision y valores en la industria cervecera latinoamericana.",
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations("about");
