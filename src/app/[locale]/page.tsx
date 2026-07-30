@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import Image from "next/image";
 import { mainSponsor, otherSponsors } from "@/lib/sponsors";
 
 export default function HomePage() {
@@ -67,13 +66,10 @@ export default function HomePage() {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--color-pink-brand)] px-4 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
                 Sponsor principal
               </span>
-              <Image
+              <img
                 src={mainSponsor.logo}
                 alt={mainSponsor.name}
-                width={360}
-                height={120}
                 className="h-[140px] w-auto"
-                unoptimized
               />
             </a>
           </div>
@@ -87,13 +83,10 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
               >
-                <Image
+                <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  width={200}
-                  height={80}
                   className="h-[100px] w-auto object-contain"
-                  unoptimized
                 />
               </a>
             ))}

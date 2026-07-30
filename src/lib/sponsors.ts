@@ -10,7 +10,7 @@ export const sponsors: Sponsor[] = [
     name: "Costa Rica Beer School",
     logo: "/sponsors/cr-beer-school.avif",
     featured: true,
-    website: "https://www.instagram.com/costaricabeerschool/",
+    website: "https://costaricabeerfactory.com/beer-school",
   },
   {
     name: "Lallemand Brewing",

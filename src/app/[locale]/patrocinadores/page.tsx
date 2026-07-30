@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { sponsors, mainSponsor, otherSponsors } from "@/lib/sponsors";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -44,13 +43,10 @@ export default function SponsorsPage() {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--color-pink-brand)] px-4 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
                 Sponsor principal
               </span>
-              <Image
+              <img
                 src={mainSponsor.logo}
                 alt={mainSponsor.name}
-                width={400}
-                height={130}
                 className="h-[150px] w-auto"
-                unoptimized
               />
             </a>
           </div>
@@ -67,13 +63,10 @@ export default function SponsorsPage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center rounded-xl bg-white px-6 py-8 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
               >
-                <Image
+                <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  width={200}
-                  height={80}
                   className="h-[100px] w-auto object-contain"
-                  unoptimized
                 />
               </a>
             ))}
