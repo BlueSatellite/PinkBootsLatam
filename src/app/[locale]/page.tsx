@@ -51,36 +51,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[var(--color-surface-alt)] py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-[var(--color-surface-alt)] py-20 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
             {t("sponsorsTitle")}
           </h2>
 
-          <div className="mt-12 flex justify-center">
-            <Image
-              src={mainSponsor.logo}
-              alt={mainSponsor.name}
-              width={280}
-              height={84}
-              className="h-[70px] w-auto opacity-90 hover:opacity-100 transition-opacity"
-            />
+          <div className="mt-14 flex justify-center">
+            <div className="relative rounded-2xl bg-white px-10 py-8 shadow-sm ring-1 ring-[var(--color-pink-200)]">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--color-pink-brand)] px-4 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
+                Sponsor principal
+              </span>
+              <Image
+                src={mainSponsor.logo}
+                alt={mainSponsor.name}
+                width={300}
+                height={90}
+                className="h-[72px] w-auto"
+              />
+            </div>
           </div>
 
-          <p className="mt-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-pink-brand)]">
-            Sponsor principal
-          </p>
-
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+          <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3">
             {otherSponsors.map((sponsor) => (
-              <Image
+              <div
                 key={sponsor.name}
-                src={sponsor.logo}
-                alt={sponsor.name}
-                width={150}
-                height={60}
-                className="h-[48px] w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-              />
+                className="flex items-center justify-center rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 hover:shadow-md hover:ring-[var(--color-pink-200)] transition-all"
+              >
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  width={160}
+                  height={64}
+                  className="h-[52px] w-auto object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>
