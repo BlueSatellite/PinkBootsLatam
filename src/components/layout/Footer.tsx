@@ -52,7 +52,7 @@ export default function Footer() {
                 height={36}
                 className="h-9 w-auto"
               />
-              <span className="font-display text-lg font-bold uppercase tracking-wider text-[#f8c82c]">
+              <span className="font-display text-lg font-bold uppercase tracking-wider text-[#b58500]">
                 Pink Boots Latam
               </span>
             </div>
