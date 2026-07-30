@@ -41,33 +41,30 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-[var(--color-border-light)] bg-[var(--color-surface-dark)] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div>
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="grid gap-6 sm:grid-cols-3">
+          <div className="flex flex-col items-start gap-3">
             <div className="flex items-center gap-2.5">
               <img
                 src="/sponsors/pink-boots-logo.png"
                 alt="Pink Boots Society Latin America"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
-              <span className="font-display text-lg font-bold uppercase tracking-wider text-[#b58500]">
+              <span className="font-display text-base font-bold uppercase tracking-wider text-[#b58500]">
                 Pink Boots Latam
               </span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-white/60">
-              {t("site.description")}
-            </p>
-            <nav className="mt-5 flex gap-2" aria-label="Redes sociales">
+            <nav className="flex gap-2" aria-label="Redes sociales">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-white/10 p-2 transition-colors hover:bg-[var(--color-pink-brand)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="rounded-full bg-white/10 p-1.5 transition-colors hover:bg-[var(--color-pink-brand)]"
                   aria-label={social.label}
                 >
-                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d={social.path} />
                   </svg>
                 </a>
@@ -75,32 +72,21 @@ export default function Footer() {
             </nav>
           </div>
 
-          <div>
-            <h3 className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-pink-300)]">
-              {t("footer.quickLinks")}
-            </h3>
-            <ul className="mt-5 space-y-2.5">
-              {footerLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/50 transition-colors hover:text-[var(--color-pink-300)]"
-                  >
-                    {t(`nav.${link.key}`)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-wrap gap-x-6 gap-y-1">
+            {footerLinks.map((link) => (
+              <Link
+                key={link.key}
+                href={link.href}
+                className="text-xs text-white/50 transition-colors hover:text-[var(--color-pink-300)]"
+              >
+                {t(`nav.${link.key}`)}
+              </Link>
+            ))}
           </div>
 
-          <div>
-            <h3 className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-pink-300)]">
-              Idioma
-            </h3>
-            <div className="mt-5">
-              <LanguageSwitcher />
-            </div>
-            <p className="mt-6 text-sm leading-relaxed text-white/50">
+          <div className="flex flex-col items-start gap-3 sm:items-end sm:text-right">
+            <LanguageSwitcher />
+            <p className="text-xs text-white/40">
               &copy; {new Date().getFullYear()} {t("footer.rights")}
             </p>
           </div>

@@ -47,7 +47,7 @@ export default function Navbar() {
             <img
               src="/sponsors/pink-boots-logo.png"
               alt="Pink Boots Society Latin America"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
             <span className="font-display text-sm font-bold uppercase tracking-wider text-[#b58500]">
               Pink Boots Latam
