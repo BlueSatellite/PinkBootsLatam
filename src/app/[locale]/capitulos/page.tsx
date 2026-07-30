@@ -42,12 +42,13 @@ const chapters: Chapter[] = [
     instagram: "@jevascerveceras",
   },
   {
-    country: "Colombia",
-    city: "Bogota",
+    country: "Mexico",
+    city: "Cuernavaca",
     role: "Miembro activo",
     contact: "Viviana Lopez",
-    info: "Medalla de plata en Copa Guerreras del Lupulo.",
+    info: "Medalla de plata en Copa Guerreras del Lupulo. @tebana_laboratorio_cervecero",
     instagram: "@tebana_laboratorio_cervecero",
+    url: "https://www.instagram.com/tebana_laboratorio_cervecero/",
   },
   {
     country: "Chile",
