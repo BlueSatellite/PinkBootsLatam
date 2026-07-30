@@ -1,0 +1,36 @@
+{
+  "site": {
+    "title": "Pink Boots Society Latin America",
+    "description": "Apoiando mulheres e pessoas não-binárias na indústria de bebidas fermentadas e alcoólicas na América Latina.",
+    "tagline": "Culturas diferentes, uma só paixão: a cerveja"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Nossa História",
+    "team": "Quem Somos",
+    "chapters": "Capítulos",
+    "membership": "Associação",
+    "events": "Eventos",
+    "scholarships": "Bolsas",
+    "blog": "Blog",
+    "sponsors": "Patrocinadores",
+    "donate": "Doações",
+    "contact": "Contato"
+  },
+  "home": {
+    "heroTitle": "Culturas diferentes, uma só paixão: a cerveja",
+    "heroSubtitle": "Apoiamos mulheres e pessoas não-binárias na indústria de bebidas fermentadas e alcoólicas em toda a América Latina.",
+    "missionTitle": "Nossa Missão",
+    "missionText": "A Pink Boots Society busca auxiliar, inspirar e motivar mulheres e pessoas não-binárias na indústria de bebidas fermentadas e alcoólicas a avançarem em suas carreiras por meio da educação.",
+    "sponsorsTitle": "Nossos Parceiros",
+    "eventsTitle": "Próximos Eventos",
+    "joinCTA": "Junte-se à Pink Boots",
+    "donateCTA": "Faça uma Doação",
+    "chaptersCTA": "Encontre seu Capítulo"
+  },
+  "footer": {
+    "rights": "Pink Boots Society Latin America. Todos os direitos reservados.",
+    "quickLinks": "Links Rápidos",
+    "followUs": "Siga-nos"
+  }
+}
