@@ -49,7 +49,7 @@ export default function SponsorsPage() {
                 alt={mainSponsor.name}
                 width={400}
                 height={130}
-                className="h-[100px] w-auto"
+                className="h-[120px] w-auto"
                 unoptimized
               />
             </a>
@@ -72,7 +72,7 @@ export default function SponsorsPage() {
                   alt={sponsor.name}
                   width={200}
                   height={80}
-                  className="h-[64px] w-auto object-contain"
+                  className="h-[80px] w-auto object-contain"
                   unoptimized
                 />
               </a>

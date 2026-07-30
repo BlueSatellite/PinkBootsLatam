@@ -52,7 +52,7 @@ export default function Navbar() {
               height={36}
               className="h-9 w-auto"
             />
-            <span className="font-display text-sm font-bold uppercase tracking-wider text-[var(--color-text-primary)]">
+            <span className="font-display text-sm font-bold uppercase tracking-wider text-[#f8c82c]">
               Pink Boots Latam
             </span>
           </Link>
