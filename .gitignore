@@ -6,3 +6,5 @@ out/
 *.pem
 dist/
 .vercel
+
+.vercel
