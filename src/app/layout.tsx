@@ -53,8 +53,8 @@ export const metadata: Metadata = {
       "Distintas culturas, una sola pasion: la cerveza.",
   },
   icons: {
-    icon: "/icons/icon-192.svg",
-    apple: "/icons/apple-touch-icon.svg",
+    icon: "/sponsors/pink-boots-logo.png",
+    apple: "/sponsors/pink-boots-logo.png",
   },
 };
 
@@ -75,7 +75,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Pink Boots Latam" />
-        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.svg" />
+        <link rel="apple-touch-icon" href="/sponsors/pink-boots-logo.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
