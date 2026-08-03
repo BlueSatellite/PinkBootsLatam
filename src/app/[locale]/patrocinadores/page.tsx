@@ -61,13 +61,18 @@ export default function SponsorsPage() {
                 href={sponsor.website ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center rounded-xl bg-white px-6 py-8 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
+                className="flex flex-col items-center justify-center gap-2 rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
               >
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
                   className="h-[100px] w-auto object-contain"
                 />
+                {sponsor.label && (
+                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                    {sponsor.label}
+                  </span>
+                )}
               </a>
             ))}
           </div>

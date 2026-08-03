@@ -3,6 +3,7 @@ export interface Sponsor {
   logo: string;
   featured?: boolean;
   website?: string;
+  label?: string;
 }
 
 export const sponsors: Sponsor[] = [
@@ -28,9 +29,10 @@ export const sponsors: Sponsor[] = [
     website: "https://www.yakimachief.com/",
   },
   {
-    name: "Fermenta Cociencia",
-    logo: "/sponsors/fermenta-cociencia.svg",
-    website: "https://www.fermentaconciencia.com/",
+    name: "Blue Entropy",
+    logo: "/sponsors/blue-entropy.png",
+    website: "https://www.instagram.com/blue_ntropy/",
+    label: "Creador de la pagina web",
   },
   {
     name: "BJCP",
@@ -41,11 +43,6 @@ export const sponsors: Sponsor[] = [
     name: "Cicerone",
     logo: "/sponsors/cicerone.jpg",
     website: "https://www.cicerone.org/",
-  },
-  {
-    name: "Blue Entropy — Creador Web",
-    logo: "/sponsors/blue-entropy.png",
-    website: "https://www.instagram.com/blue_ntropy/",
   },
 ];
 
