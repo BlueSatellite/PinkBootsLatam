@@ -29,32 +29,41 @@ export default function EventsPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            {t("upcoming")}
-          </h2>
-          <div className="mt-6 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-10 text-center">
-            <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-              {t("empty")}
+          <div className="rounded-2xl border-2 border-[var(--color-pink-200)] bg-gradient-to-br from-[var(--color-pink-50)] to-white p-8 sm:p-10">
+            <span className="rounded-full bg-[var(--color-pink-brand)] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
+              Evento principal
+            </span>
+            <h2 className="mt-4 font-display text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+              Pink Boots Collaboration Brew Day
+            </h2>
+            <p className="mt-4 leading-relaxed text-[var(--color-text-secondary)]">
+              Es una celebracion internacional de mujeres en la industria de bebidas fermentadas y alcoholicas. Un movimiento para reconocer el impacto que tienen en nuestra industria. Es nuestro evento anual de recaudacion de fondos <strong>mas importante</strong>.
             </p>
-            <a
-              href="https://www.instagram.com/pinkbootslatam/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
-            >
-              Instagram @pinkbootslatam
-            </a>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-lg bg-white p-4 text-center shadow-sm">
+                <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">$235K+</p>
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Recaudados en 2022 por cervecerias participantes</p>
+              </div>
+              <div className="rounded-lg bg-white p-4 text-center shadow-sm">
+                <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">Global</p>
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Capitulos de todo el mundo elaboran el mismo dia</p>
+              </div>
+              <div className="rounded-lg bg-white p-4 text-center shadow-sm">
+                <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">Becas</p>
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Las ganancias financian becas educativas</p>
+              </div>
+            </div>
+            <p className="mt-5 text-sm font-medium text-[var(--color-text-secondary)]">
+              Los equipos registrados elaboran cerveza y donan parte de las ganancias de sus ventas. Cada ano, mas cervecerias se suman a esta revolucion.
+            </p>
           </div>
 
-          <h2 className="mt-14 font-display text-xl font-bold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             Tipos de eventos
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {t.raw("types").map((type: { name: string; description: string }) => (
-              <div
-                key={type.name}
-                className="rounded-xl border border-[var(--color-border-default)] p-5"
-              >
+              <div key={type.name} className="rounded-xl border border-[var(--color-border-default)] p-5">
                 <h3 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
                   {type.name}
                 </h3>

@@ -29,9 +29,10 @@ const chapters: Chapter[] = [
     city: "Lima",
     role: "Capitulo fundador",
     contact: "Silvia De Tomas",
-    info: "Two Brothers Brewing. Co-lider de Pink Boots Latinoamerica.",
+    info: "Two Brothers Brewing. Co-lider de Pink Boots Latinoamerica. Medalla de Bronce con Chica de Humo (Barranco Beer Co). Premiadas por La Republica y Premios WAPA. Beca internacional otorgada a Megan Garrity, Sara Lefevre y Ximena Gloria — viaje por cervecerias de Europa.",
+    instagram: "@pinkbootsperu",
     facebook: "PinkBootsPeru",
-    url: "https://www.facebook.com/PinkBootsPeru/",
+    url: "https://www.instagram.com/pinkbootsperu/",
   },
   {
     country: "Puerto Rico",
