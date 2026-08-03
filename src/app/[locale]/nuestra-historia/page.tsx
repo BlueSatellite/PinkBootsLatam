@@ -41,6 +41,18 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="mx-auto max-w-4xl px-4 -mt-8 relative z-10 sm:px-6 lg:px-8">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full rounded-xl shadow-xl"
+        >
+          <source src="/intro-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
