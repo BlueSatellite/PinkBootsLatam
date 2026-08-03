@@ -42,6 +42,11 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/cicerone.jpg",
     website: "https://www.cicerone.org/",
   },
+  {
+    name: "Blue Entropy — Creador Web",
+    logo: "/sponsors/blue-entropy.png",
+    website: "https://www.instagram.com/blue_ntropy/",
+  },
 ];
 
 export const mainSponsor = sponsors.find((s) => s.featured) ?? sponsors[0];
