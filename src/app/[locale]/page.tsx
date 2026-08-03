@@ -10,8 +10,17 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative flex min-h-[70vh] items-center bg-[var(--color-text-primary)] text-white">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20" aria-hidden="true" />
+      <section className="relative flex min-h-[70vh] items-center bg-[var(--color-text-primary)] text-white overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30" aria-hidden="true" />
 
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">

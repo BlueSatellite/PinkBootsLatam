@@ -9,6 +9,7 @@ const navItems = [
   { key: "chapters", href: "/capitulos" },
   { key: "membership", href: "/membresia" },
   { key: "events", href: "/eventos" },
+  { key: "forum", href: "/foro" },
   { key: "blog", href: "/blog" },
   { key: "sponsors", href: "/patrocinadores" },
 ] as const;
