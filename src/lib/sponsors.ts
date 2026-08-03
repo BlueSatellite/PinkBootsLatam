@@ -30,6 +30,7 @@ export const sponsors: Sponsor[] = [
   {
     name: "Fermenta Cociencia",
     logo: "/sponsors/fermenta-cociencia.svg",
+    website: "https://www.fermentaconciencia.com/",
   },
   {
     name: "BJCP",

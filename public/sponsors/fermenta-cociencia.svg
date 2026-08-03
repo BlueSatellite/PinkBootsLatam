@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
-  <rect width="280" height="80" rx="8" fill="#2d6a4f"/>
-  <text x="140" y="32" text-anchor="middle" fill="#d8f3dc" font-family="Arial, sans-serif" font-size="18" font-weight="700">FERMENTA</text>
-  <text x="140" y="56" text-anchor="middle" fill="#b7e4c7" font-family="Arial, sans-serif" font-size="14" font-weight="600">COCIENCIA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="none">
+  <rect width="300" height="80" rx="6" fill="#1b4332"/>
+  <text x="150" y="30" text-anchor="middle" fill="#d8f3dc" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">FERMENTA</text>
+  <text x="150" y="52" text-anchor="middle" fill="#95d5b2" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" letter-spacing="4">CON CIENCIA</text>
+  <circle cx="38" cy="22" r="6" fill="none" stroke="#52b788" stroke-width="2"/>
+  <circle cx="45" cy="18" r="5" fill="none" stroke="#52b788" stroke-width="1.5"/>
+  <circle cx="42" cy="28" r="4" fill="none" stroke="#52b788" stroke-width="1.5"/>
+  <circle cx="35" cy="24" r="3" fill="none" stroke="#74c69d" stroke-width="1.5"/>
 </svg>
