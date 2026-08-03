@@ -41,16 +41,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4 -mt-8 relative z-10 sm:px-6 lg:px-8">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full rounded-xl shadow-xl"
-        >
-          <source src="/intro-video.mp4" type="video/mp4" />
-        </video>
+      <div className="mx-auto max-w-xl px-4 -mt-6 relative z-10 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-xl border border-[var(--color-border-default)] bg-black shadow-lg">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            className="aspect-video w-full"
+            poster="/sponsors/pink-boots-web.png"
+          >
+            <source src="/intro-video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
 
       <section className="py-16 sm:py-20">
