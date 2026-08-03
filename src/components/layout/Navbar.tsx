@@ -45,7 +45,7 @@ export default function Navbar() {
             aria-label="Pink Boots Society Latin America - Inicio"
           >
             <img
-              src="/sponsors/pink-boots-logo.png"
+              src="/sponsors/pink-boots-web.png"
               alt="Pink Boots Society Latin America"
               className="h-12 w-auto"
             />

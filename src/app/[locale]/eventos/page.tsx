@@ -56,6 +56,13 @@ export default function EventsPage() {
             <p className="mt-5 text-sm font-medium text-[var(--color-text-secondary)]">
               Los equipos registrados elaboran cerveza y donan parte de las ganancias de sus ventas. Cada ano, mas cervecerias se suman a esta revolucion.
             </p>
+            <div className="mt-6 flex justify-center">
+              <img
+                src="/sponsors/collab-brew.png"
+                alt="Pink Boots Collaboration Brew Day"
+                className="h-36 w-auto rounded-lg"
+              />
+            </div>
           </div>
 
           <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
