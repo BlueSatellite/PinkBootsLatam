@@ -24,19 +24,28 @@ interface Post {
 export default function ForumPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [category, setCategory] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loadedCategory, setLoadedCategory] = useState<string | null>(null);
+
+  const loading = loadedCategory !== category;
 
   useEffect(() => {
     const url = category ? `/api/posts?category=${category}` : "/api/posts";
-    setLoading(true);
+    let cancelled = false;
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
-        if (Array.isArray(data)) setPosts(data);
-        else setPosts([]);
+        if (cancelled) return;
+        setPosts(Array.isArray(data) ? data : []);
+        setLoadedCategory(category);
       })
-      .catch(() => setPosts([]))
-      .finally(() => setLoading(false));
+      .catch(() => {
+        if (cancelled) return;
+        setPosts([]);
+        setLoadedCategory(category);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [category]);
 
   const catLabel = (key: string) => categories.find((c) => c.key === key)?.label ?? key;

@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
       : await db.select().from(posts).orderBy(desc(posts.createdAt));
 
     return NextResponse.json(result);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Error al cargar posts" }, { status: 500 });
   }
 }
@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
     }).returning();
 
     return NextResponse.json(post, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Error al crear post" }, { status: 500 });
   }
 }

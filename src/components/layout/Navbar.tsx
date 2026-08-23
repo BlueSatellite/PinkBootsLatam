@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 
 const navItems = [
   { key: "about", href: "/nuestra-historia" },
@@ -16,14 +16,9 @@ const navItems = [
 
 export default function Navbar() {
   const t = useTranslations("nav");
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const close = useCallback(() => setOpen(false), []);
-
-  useEffect(() => {
-    close();
-  }, [pathname, close]);
 
   useEffect(() => {
     if (open) {
@@ -42,6 +37,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
+            onClick={close}
             className="flex items-center gap-2.5 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-pink-brand)]"
             aria-label="Pink Boots Society Latin America - Inicio"
           >
