@@ -1,16 +1,27 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
-import { sponsors, mainSponsor, otherSponsors } from "@/lib/sponsors";
+import { sponsors } from "@/lib/sponsors";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Patrocinadores",
-    description: "Conoce a los aliados de Pink Boots Society Latin America: Costa Rica Beer School, Lallemand, White Labs, Yakima Chief y mas.",
+    description: "Conoce a los aliados de Pink Boots Society Latin America: semblanzas, videos y colaboraciones.",
   };
 }
 
+const instagramIcon = (
+  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+);
+
+const chevronIcon = (
+  <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6 9l6 6 6-6" />
+  </svg>
+);
+
 export default function SponsorsPage() {
   const t = useTranslations("sponsors");
+  const orderedSponsors = [...sponsors].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 
   return (
     <>
@@ -29,51 +40,116 @@ export default function SponsorsPage() {
       </section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center font-display text-base font-bold uppercase tracking-[0.15em] text-[var(--color-pink-brand)]">
-            {t("mainTitle")}
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Semblanzas de nuestros aliados
           </h2>
-          <div className="mt-8 flex justify-center">
-            <a
-              href={mainSponsor.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative rounded-2xl bg-white px-12 py-10 shadow-sm ring-1 ring-[var(--color-pink-200)] transition-all hover:scale-105 hover:shadow-lg"
-            >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--color-pink-brand)] px-4 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
-                Sponsor principal
-              </span>
-              <img
-                src={mainSponsor.logo}
-                alt={mainSponsor.name}
-                className="h-[150px] w-auto"
-              />
-            </a>
-          </div>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Haz clic en cada patrocinador para conocer su historia, su colaboracion con Pink Boots y su material grafico.
+          </p>
 
-          <h2 className="mt-16 text-center font-display text-base font-bold uppercase tracking-[0.15em] text-[var(--color-pink-brand)]">
-            {t("partnersTitle")}
-          </h2>
-          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3">
-            {otherSponsors.map((sponsor) => (
-              <a
+          <div className="mt-10 space-y-4">
+            {orderedSponsors.map((sponsor) => (
+              <details
                 key={sponsor.name}
-                href={sponsor.website ?? "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center gap-2 rounded-xl bg-white px-6 py-7 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
+                className="group rounded-xl border border-[var(--color-border-default)] bg-white open:border-[var(--color-pink-200)] open:shadow-sm"
               >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="h-[100px] w-auto object-contain"
-                />
-                {sponsor.label && (
-                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                    {sponsor.label}
+                <summary className="flex cursor-pointer list-none items-center gap-4 p-5">
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="h-16 w-auto shrink-0 object-contain"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                        {sponsor.name}
+                      </h3>
+                      {sponsor.featured && (
+                        <span className="rounded-full bg-[var(--color-pink-brand)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                          Sponsor principal
+                        </span>
+                      )}
+                      {sponsor.label && (
+                        <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                          {sponsor.label}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-0.5 text-xs text-[var(--color-text-muted)]">
+                      Click para ver la semblanza
+                    </p>
+                  </div>
+                  <span className="shrink-0 text-[var(--color-text-muted)] transition-transform group-open:rotate-180">
+                    {chevronIcon}
                   </span>
-                )}
-              </a>
+                </summary>
+
+                <div className="border-t border-[var(--color-border-light)] p-5">
+                  <h4 className="font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                    Sobre la empresa
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    {sponsor.description}
+                  </p>
+
+                  <h4 className="mt-4 font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                    Relacion con Pink Boots
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    {sponsor.relationship}
+                  </p>
+
+                  {(sponsor.website || sponsor.socials?.length) && (
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {sponsor.website && (
+                        <a
+                          href={sponsor.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-pink-brand)] px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+                        >
+                          Sitio web
+                        </a>
+                      )}
+                      {sponsor.socials?.map((social) => (
+                        <a
+                          key={social.label}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] px-4 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-pink-200)] hover:text-[var(--color-pink-brand)]"
+                        >
+                          {social.label === "Instagram" && instagramIcon}
+                          {social.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
+                  {sponsor.videos?.length && (
+                    <div className="mt-5 space-y-4">
+                      {sponsor.videos.map((video) => (
+                        <div key={video.src}>
+                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-muted)]">
+                            {video.title}
+                          </p>
+                          <div className="overflow-hidden rounded-xl border border-[var(--color-border-default)] bg-black">
+                            <video
+                              controls
+                              playsInline
+                              preload="metadata"
+                              className="max-h-[480px] w-full"
+                            >
+                              <source src={video.src} type="video/mp4" />
+                            </video>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </details>
             ))}
           </div>
 

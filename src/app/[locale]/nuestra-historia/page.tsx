@@ -1,6 +1,26 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
+const usaHistory = [
+  "Pink Boots Society nacio en 2007, cuando la maestra cervecera estadounidense Teri Fahrendorf emprendio un viaje en carretera por Estados Unidos elaborando cerveza junto a otras mujeres del gremio. Ese recorrido —que la llevo a colaborar con decenas de cerveceras en sus propias cervecerias— le mostro que habia una red de mujeres profesionales de la cerveza que no estaba conectada entre si.",
+  "Al terminar el viaje, Teri y las cerveceras que conocio en el camino fundaron Pink Boots Society, una organizacion sin fines de lucro dedicada a asistir, inspirar y motivar a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educacion. El nombre viene de las botas rosadas que Teri usaba en sus visitas a las cervecerias.",
+  "Desde entonces, Pink Boots Society crecio de un pequeno grupo de fundadoras a una red global con capitulos en distintos paises. Cada ano, el Pink Boots Collaboration Brew Day reune a cervecerias de todo el mundo para elaborar cerveza el mismo dia y recaudar fondos para becas educativas. La organizacion ha financiado becas para cientos de mujeres y personas no binarias, impulsando certificaciones, cursos y programas de formacion.",
+];
+
+const usaMilestones = [
+  { year: "2007", text: "Teri Fahrendorf realiza su viaje por cervecerias de Estados Unidos y se funda Pink Boots Society." },
+  { year: "2008", text: "Se constituye formalmente la organizacion sin fines de lucro y comienzan los primeros capitulos." },
+  { year: "2014", text: "Se celebra el primer Pink Boots Collaboration Brew Day, que se convierte en el evento insignia anual." },
+  { year: "Hoy", text: "Pink Boots Society es una red global con capitulos en multiples paises y un programa de becas que ha apoyado a cientos de profesionales." },
+];
+
+const latamHistory = [
+  "Pink Boots Society Latin America es el chapter padre de Pink Boots Society para toda la region. Nuestro camino comenzo con el capitulo de Brasil, fundado en 2015 por Alex Iunes: el capitulo mas antiguo de Latinoamerica, con actividad en Rio de Janeiro y Minas Gerais.",
+  "El capitulo Peru, con Silvia De Tomas como co-lider, se convirtio en un referente del movimiento en la region: desde Lima impulsaron cocciones premiadas como Chica de Humo, becas internacionales para sus integrantes y reconocimientos como los Premios La Republica y Premios WAPA.",
+  "Con Ericka Otero como co-fundadora, Panama se establecio como sede principal del chapter padre de Latinoamerica. Desde ahi, la red crecio hacia Mexico (con Viviana Lopez en Cuernavaca), Chile (con Veronica Carrasco en Santiago) y Argentina (con Cristina Saez en Buenos Aires).",
+  "En 2026 nacieron nuevos hitos: el sub-capitulo de Puerto Rico organizo el primer Collaboration Brew Day LATAM, y dos de nuestras lideres fueron seleccionadas como juezas del World Beer Cup 2026. De Mexico a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
+];
+
 const timeline = [
   { era: "4000 a.C.", title: "Sumeria", text: "Las mujeres eran las principales cerveceras. La elaboracion de cerveza era una actividad domestica dominada por mujeres." },
   { era: "Antiguo Egipto", title: "Sacerdotisas cerveceras", text: "Las mujeres, especialmente las sacerdotisas, elaboraban cerveza para rituales religiosos. Uno de los puestos mas importantes era el de 'supervisar las cervecerias'." },
@@ -21,7 +41,7 @@ const statsLatam = [
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Nuestra Historia",
-    description: "Conoce la historia de Pink Boots Society Latin America y el legado de las mujeres cerveceras desde la antiguedad hasta hoy.",
+    description: "Conoce la historia de Pink Boots Society desde sus origenes en Estados Unidos hasta su llegada a Latinoamerica, y el legado de las mujeres cerveceras.",
   };
 }
 
@@ -58,6 +78,43 @@ export default function AboutPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Pink Boots Society: los origenes
+          </h2>
+          <div className="mt-4 space-y-4">
+            {usaHistory.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="text-base leading-relaxed text-[var(--color-text-secondary)]">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-10 space-y-6">
+            {usaMilestones.map((milestone) => (
+              <div key={milestone.year} className="flex gap-4">
+                <div className="flex w-16 shrink-0 flex-col items-end pt-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                    {milestone.year}
+                  </span>
+                </div>
+                <div className="min-w-0 border-l-2 border-[var(--color-pink-200)] pb-4 pl-5">
+                  <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">{milestone.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Pink Boots en Latinoamerica
+          </h2>
+          <div className="mt-4 space-y-4">
+            {latamHistory.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="text-base leading-relaxed text-[var(--color-text-secondary)]">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             Mujeres cerveceras en la Historia
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
@@ -108,9 +165,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <p className="mt-6 text-base leading-relaxed text-[var(--color-text-secondary)]">
-            {t("latamIntro")}
-          </p>
+          <div className="mt-6 rounded-xl border border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6">
+            <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
+              {t("visionLabel")}
+            </h2>
+            <p className="mt-2 text-[var(--color-text-secondary)]">
+              {t("vision")}
+            </p>
+          </div>
 
           <h2 className="mt-10 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             {t("valuesTitle")}

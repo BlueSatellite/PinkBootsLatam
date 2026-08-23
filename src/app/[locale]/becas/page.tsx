@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import { awardedScholarships, upcomingScholarships } from "@/lib/scholarships";
 
-const scholarships = [
+const globalScholarships = [
   "Cicerone certifications",
   "White Labs courses and programs",
   "Barth Haas Hops Academy",
@@ -18,7 +19,7 @@ const scholarships = [
   "New Mexico State University",
 ];
 
-const sponsors = [
+const programSponsors = [
   { name: "Yuengling", desc: "America's Oldest Brewery — Since 1829" },
   { name: "Brew Pipeline", desc: "Patrocinador del programa de becas" },
   { name: "Yakima Chief Hops", desc: "Viaje experiencial de lupulo" },
@@ -27,7 +28,7 @@ const sponsors = [
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Becas",
-    description: "Becas educativas Pink Boots Society: Cicerone, White Labs, Siebel, UC Davis y mas para mujeres y personas no binarias en cerveza.",
+    description: "Becas obtenidas por integrantes de Pink Boots Latam, proximas convocatorias y el programa global de becas Pink Boots Society.",
   };
 }
 
@@ -56,7 +57,117 @@ export default function ScholarshipsPage() {
             {t("intro")}
           </p>
 
-          <div className="mt-8 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
+          <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Becas obtenidas por nuestras integrantes
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            El historial de apoyos educativos obtenidos por integrantes de Pink Boots Society Latin America.
+          </p>
+
+          <div className="mt-6 space-y-4">
+            {awardedScholarships.map((scholarship) => (
+              <div
+                key={scholarship.memberName}
+                className="rounded-xl border border-[var(--color-border-default)] bg-white p-5"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                    {scholarship.memberName}
+                  </h3>
+                  {scholarship.year && (
+                    <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                      {scholarship.year}
+                    </span>
+                  )}
+                </div>
+                <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Institucion:</span>{" "}
+                    {scholarship.institution}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Tipo de beca:</span>{" "}
+                    {scholarship.type}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Lugar:</span>{" "}
+                    {scholarship.place}
+                  </p>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <span className="font-semibold text-[var(--color-text-primary)]">Objetivo: </span>
+                  {scholarship.objective}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <span className="font-semibold text-[var(--color-text-primary)]">Experiencia: </span>
+                  {scholarship.experience}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Proximas becas y oportunidades
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Convocatorias abiertas para capacitacion y desarrollo profesional.
+          </p>
+
+          <div className="mt-6 space-y-4">
+            {upcomingScholarships.map((opportunity) => (
+              <div
+                key={opportunity.name}
+                className="rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5"
+              >
+                <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                  {opportunity.name}
+                </h3>
+                <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Institucion:</span>{" "}
+                    {opportunity.institution}
+                  </p>
+                  {opportunity.period && (
+                    <p>
+                      <span className="font-semibold text-[var(--color-text-primary)]">Convocatoria:</span>{" "}
+                      {opportunity.period}
+                    </p>
+                  )}
+                  {opportunity.deadline && (
+                    <p>
+                      <span className="font-semibold text-[var(--color-text-primary)]">Fecha limite:</span>{" "}
+                      {opportunity.deadline}
+                    </p>
+                  )}
+                </div>
+                <ul className="mt-3 space-y-1.5">
+                  {opportunity.requirements.map((requirement) => (
+                    <li key={requirement} className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]">
+                      <span className="mt-0.5 shrink-0 text-[var(--color-pink-brand)]">&#9642;</span>
+                      {requirement}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={opportunity.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+                >
+                  Consultar convocatoria
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Programa global Pink Boots Society
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+            Becas disponibles a traves del programa internacional de Pink Boots Society.
+          </p>
+
+          <div className="mt-6 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
             <h3 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">Como funciona el proceso</h3>
             <ul className="mt-3 space-y-2">
               <li className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]">
@@ -90,26 +201,26 @@ export default function ScholarshipsPage() {
             </ul>
           </div>
 
-          <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+          <h3 className="mt-10 font-display text-lg font-bold text-[var(--color-text-primary)]">
             Becas disponibles
-          </h2>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {scholarships.map((s) => (
+          </h3>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {globalScholarships.map((s) => (
               <div key={s} className="rounded-lg border border-[var(--color-border-default)] p-4">
                 <p className="text-sm font-medium text-[var(--color-text-primary)]">{s}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center">
             <p className="text-sm font-bold text-[var(--color-pink-brand)]">250+ socias han recibido una beca Pink Boots</p>
           </div>
 
-          <h3 className="mt-12 font-display text-lg font-bold text-[var(--color-text-primary)]">
+          <h3 className="mt-10 font-display text-lg font-bold text-[var(--color-text-primary)]">
             Patrocinadores del programa
           </h3>
           <div className="mt-4 grid gap-3 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-5 sm:grid-cols-3">
-            {sponsors.map((sp) => (
+            {programSponsors.map((sp) => (
               <div key={sp.name} className="text-center">
                 <p className="font-semibold text-sm text-[var(--color-text-primary)]">{sp.name}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{sp.desc}</p>

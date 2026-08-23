@@ -1,15 +1,22 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import { events, eventCategoryLabels, eventCategoryOrder, type EventCategory } from "@/lib/events";
+import { medals, sortMedalsChronologically } from "@/lib/medals";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Eventos",
-    description: "Collaboration Brew Day, webinars, networking y mas eventos de Pink Boots Society en Latinoamerica.",
+    description: "Cocciones, colaboraciones, ponencias, webinars, competencias BAP y eventos especiales de Pink Boots Society en Latinoamerica.",
   };
+}
+
+function eventsForCategory(category: EventCategory) {
+  return events.filter((event) => event.category === category);
 }
 
 export default function EventsPage() {
   const t = useTranslations("events");
+  const orderedMedals = sortMedalsChronologically(medals);
 
   return (
     <>
@@ -64,21 +71,110 @@ export default function EventsPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
 
-          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Tipos de eventos
+      <section className="bg-[var(--color-surface-alt)] py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Medallero y reconocimientos
           </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            {t.raw("types").map((type: { name: string; description: string }) => (
-              <div key={type.name} className="rounded-xl border border-[var(--color-border-default)] p-5">
-                <h3 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                  {type.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                  {type.description}
-                </p>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Los logros colectivos e individuales de nuestras integrantes en competencias cerveceras.
+          </p>
+
+          <div className="mt-10 space-y-4">
+            {orderedMedals.map((medal) => (
+              <div
+                key={`${medal.memberName}-${medal.competition}-${medal.recognition}`}
+                className="rounded-xl border border-[var(--color-border-default)] bg-white p-5"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                    {medal.memberName}
+                  </h3>
+                  <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${medal.award === "Medalla" ? "bg-[var(--color-pink-50)] text-[var(--color-pink-brand)]" : "bg-[var(--color-surface-muted)] text-[var(--color-text-secondary)]"}`}>
+                    {medal.award}
+                  </span>
+                </div>
+                <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Competencia:</span>{" "}
+                    {medal.competition}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Año:</span>{" "}
+                    {medal.year ?? "Por confirmar"}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Categoria o estilo:</span>{" "}
+                    {medal.category}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[var(--color-text-primary)]">Reconocimiento:</span>{" "}
+                    {medal.recognition}
+                  </p>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Eventos y actividades por tipo
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Consulta las principales actividades realizadas por Pink Boots en Latinoamerica.
+          </p>
+
+          <div className="mt-10 space-y-10">
+            {eventCategoryOrder.map((category) => {
+              const categoryEvents = eventsForCategory(category);
+              return (
+                <div key={category}>
+                  <h3 className="font-display text-lg font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                    {eventCategoryLabels[category]}
+                  </h3>
+                  {categoryEvents.length === 0 ? (
+                    <p className="mt-3 rounded-lg border border-dashed border-[var(--color-border-default)] p-4 text-sm text-[var(--color-text-muted)]">
+                      Aun no hay actividades registradas en esta categoria. Vuelve pronto o siguenos en Instagram para enterarte de las proximas.
+                    </p>
+                  ) : (
+                    <div className="mt-3 space-y-3">
+                      {categoryEvents.map((event) => (
+                        <div
+                          key={event.title}
+                          className="rounded-xl border border-[var(--color-border-default)] bg-white p-5"
+                        >
+                          <h4 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                            {event.title}
+                          </h4>
+                          <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
+                            {event.place} · {event.date}
+                          </p>
+                          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                            {event.description}
+                          </p>
+                          {event.media?.externalLink && (
+                            <a
+                              href={event.media.externalLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-3 inline-flex text-sm font-medium text-[var(--color-pink-brand)] hover:underline"
+                            >
+                              {event.media.externalLabel ?? "Ver mas"}
+                            </a>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
