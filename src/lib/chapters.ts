@@ -68,16 +68,17 @@ export const chaptersByCountry: CountryChapters[] = [
     country: "Puerto Rico",
     chapters: [
       {
-        name: "Sub-capitulo Puerto Rico",
+        name: "Pink Boots Latam-Puerto Rico",
         country: "Puerto Rico",
         city: "Guaynabo",
         role: "Sub-capitulo",
         foundedYear: 2026,
         representatives: [
+          { name: "Keishla Torres", role: "Lider del sub-capitulo" },
           { name: "Ocean Lab Brewing", role: "Cerveceria anfitriona" },
           { name: "Jevas Cerveceras", role: "Comunidad cervecera" },
         ],
-        info: "Primer Collaboration Brew Day LATAM 2026. Becas otorgadas a Nikole Negron y Minelis Mendez.",
+        info: "Sub-capitulo conformado por 21 integrantes. Primer Collaboration Brew Day LATAM 2026. Becas otorgadas a Nikole Negron y Minelis Mendez.",
         instagram: "@jevascerveceras",
         website: "https://www.instagram.com/jevascerveceras/",
       },

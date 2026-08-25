@@ -29,7 +29,11 @@ export default function MembershipPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+          <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
+            La membresia de Pink Boots Society esta abierta a mujeres y personas no binarias que esten activamente empleadas en algun aspecto de la industria de la cerveza, que esten en el proceso de abrir una cerveceria, o que sean estudiantes inscritas en un programa enfocado en la industria de la cerveza.
+          </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             Tipos de Membresia
           </h2>
 

@@ -2,8 +2,8 @@ import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
 const usaHistory = [
-  "Pink Boots Society nacio en 2007, cuando la maestra cervecera estadounidense Teri Fahrendorf emprendio un viaje en carretera por Estados Unidos elaborando cerveza junto a otras mujeres del gremio. Ese recorrido —que la llevo a colaborar con decenas de cerveceras en sus propias cervecerias— le mostro que habia una red de mujeres profesionales de la cerveza que no estaba conectada entre si.",
-  "Al terminar el viaje, Teri y las cerveceras que conocio en el camino fundaron Pink Boots Society, una organizacion sin fines de lucro dedicada a asistir, inspirar y motivar a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educacion. El nombre viene de las botas rosadas que Teri usaba en sus visitas a las cervecerias.",
+  "Pink Boots Society nacio en 2007, cuando la maestra cervecera estadounidense Teri Fahrendorf emprendio un viaje en carretera por Estados Unidos elaborando cerveza junto a otras mujeres del gremio. Ese recorrido —que la llevo a colaborar con decenas de cerveceras en sus propias cervecerias— le mostro que habia una red de mujeres profesionales de la cerveza que no estaba conectada entre si, y que muchas se sentian solas dentro de una industria predominantemente masculina.",
+  "Teri creo entonces una lista para conectarlas y la llamo Pink Boots Society, inspirada en las botas rosadas que llevaba durante su recorrido. Junto a las cerveceras que conocio en el camino, la lista se convirtio en una organizacion sin fines de lucro dedicada a asistir, inspirar y motivar a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educacion.",
   "Desde entonces, Pink Boots Society crecio de un pequeno grupo de fundadoras a una red global con capitulos en distintos paises. Cada ano, el Pink Boots Collaboration Brew Day reune a cervecerias de todo el mundo para elaborar cerveza el mismo dia y recaudar fondos para becas educativas. La organizacion ha financiado becas para cientos de mujeres y personas no binarias, impulsando certificaciones, cursos y programas de formacion.",
 ];
 
@@ -15,10 +15,10 @@ const usaMilestones = [
 ];
 
 const latamHistory = [
-  "Pink Boots Society Latin America es el chapter padre de Pink Boots Society para toda la region. Nuestro camino comenzo con el capitulo de Brasil, fundado en 2015 por Alex Iunes: el capitulo mas antiguo de Latinoamerica, con actividad en Rio de Janeiro y Minas Gerais.",
-  "El capitulo Peru, con Silvia De Tomas como co-lider, se convirtio en un referente del movimiento en la region: desde Lima impulsaron cocciones premiadas como Chica de Humo, becas internacionales para sus integrantes y reconocimientos como los Premios La Republica y Premios WAPA.",
+  "La semilla latinoamericana se sembro en 2015, cuando Alex Iunes fundo el capitulo de Brasil —el capitulo mas antiguo de Latinoamerica, con actividad en Rio de Janeiro y Minas Gerais. El capitulo Peru, con Silvia De Tomas como co-lider, se convirtio en un referente del movimiento en la region: desde Lima impulsaron cocciones premiadas como Chica de Humo, becas internacionales para sus integrantes y reconocimientos como los Premios La Republica y Premios WAPA.",
+  "Pink Boots Latin America como organizacion regional fue creada en 2023, con el objetivo de que no solamente las mujeres peruanas pudiesen obtener el beneficio de la educacion en bebidas fermentadas, sino extenderlo por toda Latinoamerica —con educacion de alto nivel en habla hispana. Liderada por Ericka Otero, busca impulsar la educacion, la colaboracion, el crecimiento profesional y la sororidad entre sus integrantes.",
   "Con Ericka Otero como co-fundadora, Panama se establecio como sede principal del chapter padre de Latinoamerica. Desde ahi, la red crecio hacia Mexico (con Viviana Lopez en Cuernavaca), Chile (con Veronica Carrasco en Santiago) y Argentina (con Cristina Saez en Buenos Aires).",
-  "En 2026 nacieron nuevos hitos: el sub-capitulo de Puerto Rico organizo el primer Collaboration Brew Day LATAM, y dos de nuestras lideres fueron seleccionadas como juezas del World Beer Cup 2026. De Mexico a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
+  "En 2026 nacieron nuevos hitos: el sub-capitulo Pink Boots Latam-Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizo el primer Collaboration Brew Day LATAM; y dos de nuestras lideres fueron seleccionadas como juezas del World Beer Cup 2026. De Mexico a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
 ];
 
 const timeline = [
