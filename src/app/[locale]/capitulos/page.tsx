@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
-import { chaptersByCountry } from "@/lib/chapters";
+import { officialChapters, regionNetwork } from "@/lib/chapters";
 import ChaptersMapWrapper from "@/components/ui/ChaptersMapWrapper";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Capitulos",
-    description: "Encuentra tu capitulo de Pink Boots Society en Latinoamerica. Red de mujeres y personas no binarias en la industria cervecera.",
+    description: "Conoce los capitulos oficiales de Pink Boots Society en Latinoamerica y la red de integrantes en la region.",
   };
 }
 
@@ -17,6 +17,86 @@ const instagramIcon = (
 const facebookIcon = (
   <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 );
+
+function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialChapters)[number]; featured?: boolean }) {
+  return (
+    <div
+      className={`rounded-xl border bg-white p-6 transition-all hover:shadow-sm ${
+        featured ? "border-2 border-[var(--color-pink-200)]" : "border-[var(--color-border-default)] hover:border-[var(--color-pink-200)]"
+      }`}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
+            {chapter.role}
+          </span>
+          <h3 className="mt-2 font-display text-lg font-bold text-[var(--color-text-primary)]">
+            {chapter.name}
+          </h3>
+          <p className="text-sm text-[var(--color-text-muted)]">
+            {chapter.city}, {chapter.country}
+          </p>
+        </div>
+      </div>
+
+      {chapter.foundedYear && (
+        <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
+          Año de creacion: {chapter.foundedYear}
+        </p>
+      )}
+
+      <div className="mt-4 space-y-1.5 text-sm">
+        {chapter.representatives.map((rep) => (
+          <p key={rep.name} className="leading-relaxed">
+            <span className="font-semibold text-[var(--color-text-primary)]">{rep.name}</span>
+            {rep.role && (
+              <span className="text-[var(--color-text-secondary)]"> — {rep.role}</span>
+            )}
+          </p>
+        ))}
+        <p className="leading-relaxed text-[var(--color-text-secondary)]">{chapter.info}</p>
+      </div>
+
+      {(chapter.instagram || chapter.facebook || chapter.facebookGroup) && (
+        <div className="mt-4 flex flex-wrap gap-3">
+          {chapter.instagram && (
+            <a
+              href={chapter.website ?? `https://www.instagram.com/${chapter.instagram.replace("@", "")}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+            >
+              {instagramIcon}
+              {chapter.instagram}
+            </a>
+          )}
+          {chapter.facebook && (
+            <a
+              href={`https://www.facebook.com/${chapter.facebook}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+            >
+              {facebookIcon}
+              Facebook
+            </a>
+          )}
+          {chapter.facebookGroup && (
+            <a
+              href={chapter.website ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+            >
+              {facebookIcon}
+              Grupo FB
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function ChaptersPage() {
   const t = useTranslations("chapters");
@@ -39,95 +119,58 @@ export default function ChaptersPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          {chaptersByCountry.map(({ country, chapters }) => (
-            <div key={country} className="mb-12 last:mb-0">
-              <h2 className="font-display text-xl font-bold tracking-tight text-[var(--color-text-primary)]">
-                {country}
-              </h2>
-              <div className="mt-4 grid gap-6 sm:grid-cols-2">
-                {chapters.map((chapter) => (
-                  <div
-                    key={chapter.name}
-                    className="rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-all hover:border-[var(--color-pink-200)] hover:shadow-sm"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                          {chapter.role}
-                        </span>
-                        <h3 className="mt-2 font-display text-lg font-bold text-[var(--color-text-primary)]">
-                          {chapter.name}
-                        </h3>
-                        <p className="text-sm text-[var(--color-text-muted)]">{chapter.city}</p>
-                      </div>
-                    </div>
+          <div className="mx-auto max-w-3xl rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
+            <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
+              Como funcionan los capitulos
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              Pink Boots Society tiene requisitos oficiales para abrir un capitulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              Por eso, en Latinoamerica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capitulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la region contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capitulo propio, pero que forman parte de nuestra red.
+            </p>
+          </div>
 
-                    {chapter.foundedYear && (
-                      <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
-                        Año de creacion: {chapter.foundedYear}
-                      </p>
-                    )}
+          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Nuestros capitulos
+          </h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {officialChapters.map((chapter) => (
+              <ChapterCard key={chapter.name} chapter={chapter} featured={chapter.role === "Chapter padre"} />
+            ))}
+          </div>
 
-                    <div className="mt-4 space-y-1.5 text-sm">
-                      {chapter.representatives.map((rep) => (
-                        <p key={rep.name} className="leading-relaxed">
-                          <span className="font-semibold text-[var(--color-text-primary)]">{rep.name}</span>
-                          {rep.role && (
-                            <span className="text-[var(--color-text-secondary)]"> — {rep.role}</span>
-                          )}
-                        </p>
-                      ))}
-                      <p className="leading-relaxed text-[var(--color-text-secondary)]">{chapter.info}</p>
-                    </div>
-
-                    {(chapter.instagram || chapter.facebook || chapter.facebookGroup) && (
-                      <div className="mt-4 flex flex-wrap gap-3">
-                        {chapter.instagram && (
-                          <a
-                            href={chapter.website ?? `https://www.instagram.com/${chapter.instagram.replace("@", "")}/`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
-                          >
-                            {instagramIcon}
-                            {chapter.instagram}
-                          </a>
-                        )}
-                        {chapter.facebook && (
-                          <a
-                            href={`https://www.facebook.com/${chapter.facebook}/`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
-                          >
-                            {facebookIcon}
-                            Facebook
-                          </a>
-                        )}
-                        {chapter.facebookGroup && (
-                          <a
-                            href={chapter.website ?? "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
-                          >
-                            {facebookIcon}
-                            Grupo FB
-                          </a>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+            Integrantes en la region
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Paises con integrantes activas de Pink Boots Latam que aun no cuentan con un capitulo oficial.
+          </p>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {regionNetwork.map((chapter) => (
+              <ChapterCard key={chapter.name} chapter={chapter} />
+            ))}
+          </div>
 
           <div className="mt-12 mx-auto max-w-3xl">
             <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
-              Mapa de capitulos
+              Mapa de presencia
             </p>
             <ChaptersMapWrapper />
+          </div>
+
+          <div className="mt-12 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6 text-center">
+            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              {t("cta")}
+            </p>
+            <a
+              href="https://www.instagram.com/pinkbootslatam/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+            >
+              Escribenos en Instagram
+            </a>
           </div>
         </div>
       </section>

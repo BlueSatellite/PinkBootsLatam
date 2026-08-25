@@ -15,13 +15,13 @@ const markerIcon = new L.Icon({
 });
 
 const locations = [
-  { country: "Panama", city: "Ciudad de Panama", lat: 8.9824, lng: -79.5199, role: "Sede principal" },
-  { country: "Peru", city: "Lima", lat: -12.0464, lng: -77.0428, role: "Capitulo fundador" },
+  { country: "Panama", city: "Ciudad de Panama", lat: 8.9824, lng: -79.5199, role: "Sede del chapter padre" },
   { country: "Puerto Rico", city: "Guaynabo", lat: 18.3574, lng: -66.1110, role: "Sub-capitulo" },
-  { country: "Mexico", city: "Cuernavaca", lat: 18.9242, lng: -99.2216, role: "Miembro activo" },
-  { country: "Chile", city: "Santiago", lat: -33.4489, lng: -70.6693, role: "Miembro activo" },
-  { country: "Brasil", city: "Rio de Janeiro", lat: -22.9068, lng: -43.1729, role: "Pionero (2015)" },
-  { country: "Argentina", city: "Buenos Aires", lat: -34.6037, lng: -58.3816, role: "Miembro activo" },
+  { country: "Peru", city: "Lima", lat: -12.0464, lng: -77.0428, role: "Integrantes de la red" },
+  { country: "Mexico", city: "Cuernavaca", lat: 18.9242, lng: -99.2216, role: "Integrantes de la red" },
+  { country: "Chile", city: "Santiago", lat: -33.4489, lng: -70.6693, role: "Integrantes de la red" },
+  { country: "Brasil", city: "Rio de Janeiro", lat: -22.9068, lng: -43.1729, role: "Integrantes de la red" },
+  { country: "Argentina", city: "Buenos Aires", lat: -34.6037, lng: -58.3816, role: "Integrantes de la red" },
 ];
 
 export default function ChaptersMap() {
