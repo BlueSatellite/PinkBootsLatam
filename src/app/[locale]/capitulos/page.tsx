@@ -119,19 +119,7 @@ export default function ChaptersPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
-            <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
-              Como funcionan los capitulos
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Pink Boots Society tiene requisitos oficiales para abrir un capitulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Por eso, en Latinoamerica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capitulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la region contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capitulo propio, pero que forman parte de nuestra red.
-            </p>
-          </div>
-
-          <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             Nuestros capitulos
           </h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
@@ -171,6 +159,18 @@ export default function ChaptersPage() {
             >
               Escribenos en Instagram
             </a>
+          </div>
+
+          <div className="mt-12 mx-auto max-w-3xl rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
+            <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
+              Como funcionan los capitulos
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              Pink Boots Society tiene requisitos oficiales para abrir un capitulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              Por eso, en Latinoamerica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capitulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la region contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capitulo propio, pero que forman parte de nuestra red.
+            </p>
           </div>
         </div>
       </section>
