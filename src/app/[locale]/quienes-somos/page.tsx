@@ -24,9 +24,9 @@ const leadership = [
   },
   {
     name: "Keishla Torres",
-    role: "Lider del sub-capitulo Puerto Rico",
+    role: "Lider del sub-capitulo Pink Boots Latam / Puerto Rico",
     country: "Puerto Rico",
-    bio: "Lidera Pink Boots Latam-Puerto Rico, el nuevo sub-capitulo de la organizacion, conformado por 21 integrantes.",
+    bio: "Lidera Pink Boots Latam / Puerto Rico, el nuevo sub-capitulo de la organizacion, conformado por 21 integrantes.",
   },
   {
     name: "Viviana Lopez",

@@ -46,15 +46,23 @@ export const eventCategoryOrder: EventCategory[] = [
 export const events: PinkEvent[] = [
   {
     category: "colaboraciones",
-    title: "Primer Pink Boots Collaboration Brew Day LATAM",
+    title: "Pink Boots Collaboration Brew Day Latam",
     place: "Ocean Lab Brewing, Guaynabo, Puerto Rico",
-    date: "2026",
+    date: "15 de marzo de 2026",
     description:
-      "La primera edicion del Collaboration Brew Day en Latinoamerica, organizada junto a Ocean Lab Brewing y Jevas Cerveceras. Parte del movimiento global de Pink Boots Society donde cervecerias de todo el mundo elaboran el mismo dia y donan parte de sus ventas a becas educativas.",
+      "Primera edicion latinoamericana del Collaboration Brew Day, en colaboracion entre Ocean Lab Brewing, Jevas Cerveceras, Salsipuedes Brewing Co. de Panama y Pink Boots Latam. Se elaboro una cerveza sour de tamarindo con causa social: las ganancias se donaron a mujeres maltratadas de Puerto Rico y a becas para el crecimiento profesional de las integrantes de Pink Boots Latam.",
     media: {
       externalLink: "https://www.instagram.com/pinkbootslatam/",
       externalLabel: "Ver en Instagram",
     },
+  },
+  {
+    category: "especiales",
+    title: "Primer encuentro oficial del subcapitulo de Puerto Rico",
+    place: "Ocean Lab Brewing, Guaynabo, Puerto Rico",
+    date: "3 de mayo de 2026",
+    description:
+      "Encuentro oficial para la conformacion del subcapitulo Pink Boots Latam / Puerto Rico, hoy conformado por 21 integrantes y liderado por Keishla Torres.",
   },
   {
     category: "cocciones",

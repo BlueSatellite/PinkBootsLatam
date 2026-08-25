@@ -11,14 +11,15 @@ export const posts: BlogPost[] = [
   {
     slug: "primer-collaboration-brew-day-latam-puerto-rico",
     title: "Puerto Rico recibe el primer Collaboration Brew Day de Latinoamerica",
-    date: "2026",
+    date: "Marzo 2026",
     excerpt:
-      "Ocean Lab Brewing y Jevas Cerveceras fueron el escenario de la primera edicion latinoamericana del evento insignia de Pink Boots Society.",
+      "El 15 de marzo de 2026, Ocean Lab Brewing, Jevas Cerveceras, Salsipuedes Brewing Co. y Pink Boots Latam elaboraron una sour de tamarindo con causa social.",
     tags: ["Collaboration Brew Day", "Puerto Rico"],
     content: [
-      "El sub-capitulo de Puerto Rico, nacido en 2026, fue anfitrion del primer Pink Boots Collaboration Brew Day de Latinoamerica. La coccion se realizo en Ocean Lab Brewing, en Guaynabo, de la mano de la comunidad Jevas Cerveceras.",
-      "El Collaboration Brew Day es el evento anual de recaudacion de fondos mas importante de Pink Boots Society: cervecerias de todo el mundo elaboran el mismo dia y donan parte de las ganancias de sus ventas para financiar becas educativas.",
-      "Esta primera edicion latinoamericana marca un hito para toda la region y abre la puerta a que mas capitulos de Latinoamerica se sumen a la celebracion global.",
+      "El 15 de marzo de 2026 se celebro en Ocean Lab Brewing (Guaynabo, Puerto Rico) el primer Pink Boots Collaboration Brew Day de Latinoamerica, en colaboracion entre Ocean Lab Brewing, Jevas Cerveceras, Salsipuedes Brewing Co. de Panama y Pink Boots Latam.",
+      "La cerveza elaborada fue una sour de tamarindo con causa social: las ganancias se destinaron a mujeres maltratadas de Puerto Rico y a becas para el crecimiento profesional de las integrantes de Pink Boots Latam.",
+      "Meses despues, el 3 de mayo de 2026, la comunidad de Puerto Rico celebro su primer encuentro oficial y se conformo el subcapitulo Pink Boots Latam / Puerto Rico, hoy integrado por 21 mujeres y liderado por Keishla Torres.",
+      "El Collaboration Brew Day es el evento anual de recaudacion de fondos mas importante de Pink Boots Society: cervecerias de todo el mundo elaboran el mismo dia y donan parte de las ganancias de sus ventas para financiar becas educativas. Esta primera edicion latinoamericana marca un hito para toda la region.",
     ].join("\n\n"),
   },
   {

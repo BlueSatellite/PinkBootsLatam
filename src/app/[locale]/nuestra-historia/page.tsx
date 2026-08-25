@@ -15,10 +15,10 @@ const usaMilestones = [
 ];
 
 const latamHistory = [
-  "La semilla latinoamericana se sembro en 2015, cuando Alex Iunes fundo el capitulo de Brasil —el capitulo mas antiguo de Latinoamerica, con actividad en Rio de Janeiro y Minas Gerais. El capitulo Peru, con Silvia De Tomas como co-lider, se convirtio en un referente del movimiento en la region: desde Lima impulsaron cocciones premiadas como Chica de Humo, becas internacionales para sus integrantes y reconocimientos como los Premios La Republica y Premios WAPA.",
+  "La semilla latinoamericana se sembro en 2015, cuando Alex Iunes fundo la comunidad de Brasil —la mas antigua de la region, con actividad en Rio de Janeiro y Minas Gerais. El grupo de Peru, con Silvia De Tomas como co-lider, se convirtio en un referente del movimiento: desde Lima impulsaron cocciones premiadas como Chica de Humo, becas internacionales para sus integrantes y reconocimientos como los Premios La Republica y Premios WAPA.",
   "Pink Boots Latin America como organizacion regional fue creada en 2023, con el objetivo de que no solamente las mujeres peruanas pudiesen obtener el beneficio de la educacion en bebidas fermentadas, sino extenderlo por toda Latinoamerica —con educacion de alto nivel en habla hispana. Liderada por Ericka Otero, busca impulsar la educacion, la colaboracion, el crecimiento profesional y la sororidad entre sus integrantes.",
-  "Con Ericka Otero como co-fundadora, Panama se establecio como sede principal del chapter padre de Latinoamerica. Desde ahi, la red crecio hacia Mexico (con Viviana Lopez en Cuernavaca), Chile (con Veronica Carrasco en Santiago) y Argentina (con Cristina Saez en Buenos Aires).",
-  "En 2026 nacieron nuevos hitos: el sub-capitulo Pink Boots Latam-Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizo el primer Collaboration Brew Day LATAM; y dos de nuestras lideres fueron seleccionadas como juezas del World Beer Cup 2026. De Mexico a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
+  "Con Ericka Otero como co-fundadora, Panama se establecio como sede del chapter padre de Latinoamerica. Desde ahi, la red sumo integrantes en Mexico (con Viviana Lopez en Cuernavaca), Chile (con Veronica Carrasco en Santiago) y Argentina (con Cristina Saez en Buenos Aires).",
+  "En 2026 nacio un nuevo hito: el sub-capitulo Pink Boots Latam / Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizo el primer Collaboration Brew Day LATAM en marzo y fue oficializado como sub-capitulo en mayo. Ademas, dos de nuestras lideres fueron seleccionadas como juezas del World Beer Cup 2026. De Mexico a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
 ];
 
 const timeline = [
