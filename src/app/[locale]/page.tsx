@@ -170,30 +170,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto max-w-3xl px-4">
-          <div className="rounded-2xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6 text-center sm:p-8">
-            <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
-              Apoya la causa
-            </h2>
-            <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Con un aporte anual voluntario mantienes la pagina viva: contenido actualizado, dominio, proyectos futuros y crecimiento de la comunidad. Desde $6, aporte sugerido $25.
-            </p>
-            <a
-              href="https://ko-fi.com/bluentropy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-[var(--color-pink-600)] hover:shadow-lg"
-            >
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              Apoyar en Ko-fi
-            </a>
-          </div>
-        </div>
-      </section>
-
       <InstagramFeed />
     </>
   );
