@@ -42,7 +42,7 @@ export default function DonatePage() {
                 Aporte anual voluntario
               </h3>
               <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Un unico aporte al año que nos permite mantener la pagina actualizada, comprar el dominio y seguir creciendo. Cada una contribuye con lo que pueda.
+                Un unico aporte al año que nos permite mantener la pagina actualizada, comprar el dominio, impulsar proyectos futuros y seguir creciendo. Cada una contribuye con lo que pueda.
               </p>
             </div>
 

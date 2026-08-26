@@ -177,7 +177,7 @@ export default function HomePage() {
               Apoya la causa
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Con un aporte anual voluntario mantienes la pagina viva: contenido actualizado, dominio y crecimiento de la comunidad. Desde $6, aporte sugerido $25.
+              Con un aporte anual voluntario mantienes la pagina viva: contenido actualizado, dominio, proyectos futuros y crecimiento de la comunidad. Desde $6, aporte sugerido $25.
             </p>
             <a
               href="https://ko-fi.com/bluentropy"
