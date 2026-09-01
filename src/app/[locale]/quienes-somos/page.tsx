@@ -69,12 +69,18 @@ export default function TeamPage() {
 
   return (
     <>
-      <section className="relative bg-[var(--color-text-primary)] py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
+        <img
+          src="/banners/quienes-somos.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-brand)]">
             Pink Boots Society Latin America
           </p>
-          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             {t("title")}
           </h1>
         </div>
