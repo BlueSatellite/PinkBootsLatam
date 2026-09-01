@@ -66,7 +66,7 @@ export const sponsors: Sponsor[] = [
   },
   {
     name: "Fermenta Cociencia",
-    logo: "/sponsors/fermenta-cociencia.svg",
+    logo: "/sponsors/fermenta-cociencia.jpg",
     website: "https://www.fermentaconciencia.com/",
     description:
       "Proyecto de divulgacion y formacion en ciencias de la fermentacion, liderado por la cientifica Lucia Alvarez, especializada en microbiologia de alimentos fermentados. Acompana a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
