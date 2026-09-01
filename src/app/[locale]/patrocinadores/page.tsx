@@ -25,17 +25,25 @@ export default function SponsorsPage() {
 
   return (
     <>
-      <section className="relative bg-[var(--color-text-primary)] py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
-            Pink Boots Society Latin America
-          </p>
-          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            {t("hero")}
-          </p>
+      <section className="relative overflow-hidden bg-white py-14 sm:py-16">
+        <img
+          src="/banners/patrocinadores.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="relative z-10 mx-auto max-w-3xl px-4">
+          <div className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+              Pink Boots Society Latin America
+            </p>
+            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              {t("title")}
+            </h1>
+            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
+              {t("hero")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -99,6 +107,25 @@ export default function SponsorsPage() {
                   <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                     {sponsor.relationship}
                   </p>
+
+                  {sponsor.featuredProduct && (
+                    <div className="mt-5 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
+                      <h4 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                        {sponsor.featuredProduct.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                        {sponsor.featuredProduct.description}
+                      </p>
+                      <a
+                        href={sponsor.featuredProduct.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+                      >
+                        {sponsor.featuredProduct.linkLabel}
+                      </a>
+                    </div>
+                  )}
 
                   {(sponsor.website || sponsor.socials?.length) && (
                     <div className="mt-4 flex flex-wrap gap-3">

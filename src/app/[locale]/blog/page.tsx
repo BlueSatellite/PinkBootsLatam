@@ -15,17 +15,25 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="relative bg-[var(--color-text-primary)] py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
-            Pink Boots Society Latin America
-          </p>
-          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            {t("hero")}
-          </p>
+      <section className="relative overflow-hidden bg-white py-14 sm:py-16">
+        <img
+          src="/banners/blog.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="relative z-10 mx-auto max-w-3xl px-4">
+          <div className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+              Pink Boots Society Latin America
+            </p>
+            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              {t("title")}
+            </h1>
+            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
+              {t("hero")}
+            </p>
+          </div>
         </div>
       </section>
 
