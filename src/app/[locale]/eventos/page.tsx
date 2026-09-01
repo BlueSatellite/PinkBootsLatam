@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/routing";
 import { events, eventCategoryLabels, eventCategoryOrder, type EventCategory } from "@/lib/events";
-import { medals, sortMedalsChronologically } from "@/lib/medals";
+import { specialRecognitions } from "@/lib/medals";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -16,7 +17,6 @@ function eventsForCategory(category: EventCategory) {
 
 export default function EventsPage() {
   const t = useTranslations("events");
-  const orderedMedals = sortMedalsChronologically(medals);
 
   return (
     <>
@@ -77,46 +77,54 @@ export default function EventsPage() {
       <section className="bg-[var(--color-surface-alt)] py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Medallero y reconocimientos
+            Reconocimientos
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Los logros colectivos e individuales de nuestras integrantes en competencias cerveceras.
+            Distinciones y selecciones especiales obtenidas por nuestras integrantes. Las medallas ganadas en competencias pueden consultarse en el medallero.
           </p>
 
           <div className="mt-10 space-y-4">
-            {orderedMedals.map((medal) => (
+            {specialRecognitions.map((recognition) => (
               <div
-                key={`${medal.memberName}-${medal.competition}-${medal.recognition}`}
+                key={`${recognition.memberName}-${recognition.competition}-${recognition.recognition}`}
                 className="rounded-xl border border-[var(--color-border-default)] bg-white p-5"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
-                    {medal.memberName}
+                    {recognition.memberName}
                   </h3>
-                  <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${medal.award === "Medalla" ? "bg-[var(--color-pink-50)] text-[var(--color-pink-brand)]" : "bg-[var(--color-surface-muted)] text-[var(--color-text-secondary)]"}`}>
-                    {medal.award}
+                  <span className="rounded-full bg-[var(--color-surface-muted)] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-text-secondary)]">
+                    {recognition.recognition}
                   </span>
                 </div>
                 <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
                   <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Competencia:</span>{" "}
-                    {medal.competition}
+                    <span className="font-semibold text-[var(--color-text-primary)]">Competencia o evento:</span>{" "}
+                    {recognition.competition}
                   </p>
                   <p>
                     <span className="font-semibold text-[var(--color-text-primary)]">Año:</span>{" "}
-                    {medal.year ?? "Por confirmar"}
+                    {recognition.year ?? "Por confirmar"}
                   </p>
                   <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Categoria o estilo:</span>{" "}
-                    {medal.category}
-                  </p>
-                  <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Reconocimiento:</span>{" "}
-                    {medal.recognition}
+                    <span className="font-semibold text-[var(--color-text-primary)]">Categoria:</span>{" "}
+                    {recognition.category}
                   </p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/medallero"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+            >
+              Ver el Medallero
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

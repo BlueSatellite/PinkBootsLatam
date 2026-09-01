@@ -7,6 +7,7 @@ const routes = [
   "/capitulos",
   "/membresia",
   "/eventos",
+  "/medallero",
   "/becas",
   "/blog",
   "/patrocinadores",

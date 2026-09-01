@@ -10,6 +10,7 @@ const footerLinks = [
   { key: "chapters", href: "/capitulos" },
   { key: "membership", href: "/membresia" },
   { key: "events", href: "/eventos" },
+  { key: "medals", href: "/medallero" },
   { key: "scholarships", href: "/becas" },
   { key: "blog", href: "/blog" },
   { key: "sponsors", href: "/patrocinadores" },

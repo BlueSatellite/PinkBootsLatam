@@ -1,10 +1,12 @@
+export type AwardType = "Medalla" | "Reconocimiento";
+
 export interface Medal {
   memberName: string;
   competition: string;
   year?: string;
   category: string;
   recognition: string;
-  award: string;
+  award: AwardType;
   country?: string;
 }
 
@@ -54,4 +56,34 @@ export function sortMedalsChronologically(medalList: Medal[]): Medal[] {
     if (!yearA && yearB) return 1;
     return 0;
   });
+}
+
+export const competitionMedals: Medal[] = sortMedalsChronologically(
+  medals.filter((medal) => medal.award === "Medalla")
+);
+
+export const specialRecognitions: Medal[] = sortMedalsChronologically(
+  medals.filter((medal) => medal.award === "Reconocimiento")
+);
+
+export interface CountryMedals {
+  country: string;
+  medals: Medal[];
+}
+
+export function groupMedalsByCountry(medalList: Medal[]): CountryMedals[] {
+  const groups = new Map<string, Medal[]>();
+  for (const medal of medalList) {
+    const country = medal.country ?? "Otros";
+    const existing = groups.get(country);
+    if (existing) {
+      existing.push(medal);
+    } else {
+      groups.set(country, [medal]);
+    }
+  }
+  return [...groups.entries()].map(([country, countryMedals]) => ({
+    country,
+    medals: sortMedalsChronologically(countryMedals),
+  }));
 }
