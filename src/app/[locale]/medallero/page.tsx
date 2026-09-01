@@ -21,14 +21,14 @@ export default function MedalsPage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
-          <div className="rounded-2xl bg-white/85 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-brand)]">
+          <div className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
               Pink Boots Society Latin America
             </p>
-            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Medallero
             </h1>
-            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
               Las medallas ganadas por nuestras integrantes en competencias cerveceras, organizadas por pais.
             </p>
           </div>
