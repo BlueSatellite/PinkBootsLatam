@@ -42,7 +42,7 @@ La pagina ya esta publicada temporalmente en:
 
 **Pagina de Capitulos**
 - Mapa interactivo de Latinoamerica con marcadores en cada pais donde tenemos presencia
-- Tarjetas por pais con datos reales: Panama (sede principal con Ericka Otero), Peru, Puerto Rico, Mexico (Viviana Lopez en Cuernavaca), Chile, Brasil y Argentina
+- Tarjetas por país y región: Pink Boots Latam (red regional con Ericka Otero), Puerto Rico (sub-capítulo), Perú, México (Viviana López), Chile (Verónica Carrasco) y Brasil (Fernanda de Acosta)
 - Links directos a Instagram y Facebook de cada capitulo
 
 **Pagina de Patrocinadores**

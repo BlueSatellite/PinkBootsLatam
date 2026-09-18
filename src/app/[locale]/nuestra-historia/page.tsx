@@ -18,7 +18,7 @@ const usaMilestones = [
 const latamHistory = [
   "La historia de Pink Boots en Latinoamérica comenzó en Perú, cuando Megan Garity —una cervecera estadounidense— fundó Pink Boots Perú, sembrando la semilla de la comunidad en la región. La organización continuó su camino en manos de Andrea Huertas, quien siguió impulsando el movimiento en el país.",
   "Pink Boots Latin America como organización regional nació con la visión de Silvia y Ericka Otero, quienes la formalizaron juntas con el objetivo de que no solamente las mujeres peruanas pudiesen obtener el beneficio de la educación en bebidas fermentadas, sino extenderlo por toda Latinoamérica —con educación de alto nivel en habla hispana. Ericka Otero continuó liderándola, buscando impulsar la educación, la colaboración, el crecimiento profesional y la sororidad entre sus integrantes.",
-  "Con Panamá como sede del chapter padre de Latinoamérica, la red sumó integrantes en México (con Viviana López en Cuernavaca), Chile (con Verónica Carrasco en Santiago) y Argentina (con Cristina Sáez en Buenos Aires).",
+  "Consolidando a Pink Boots Latam como una red regional, la comunidad sumó integrantes en México (con Viviana López en Cuernavaca), Chile (con Verónica Carrasco en Santiago), Brasil (con Fernanda de Acosta) y diversos países de la región.",
   "En 2026 nació un nuevo hito: el sub-capítulo Pink Boots Latam / Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizó el primer Collaboration Brew Day LATAM en marzo y fue oficializado como sub-capítulo en mayo. Además, Silvia y Ericka Otero fueron seleccionadas como juezas del World Beer Cup 2026. De México a la Patagonia, seguimos creciendo con una sola pasión: la cerveza.",
 ];
 

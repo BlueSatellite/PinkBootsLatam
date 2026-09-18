@@ -20,9 +20,9 @@ export interface Chapter {
 export const officialChapters: Chapter[] = [
   {
     name: "Pink Boots Latam",
-    country: "Panamá",
-    city: "Ciudad de Panamá",
-    role: "Chapter padre",
+    country: "Latinoamérica",
+    city: "",
+    role: "Capítulo regional",
     foundedYear: 2023,
     representatives: [
       {
@@ -30,7 +30,7 @@ export const officialChapters: Chapter[] = [
         role: "Co-Fundadora & Chapter Leader. Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],
-    info: "Chapter padre de Pink Boots Society para toda Latinoamérica. Creado en 2023 con el objetivo de extender la educación en bebidas fermentadas en habla hispana por toda la región.",
+    info: "Capítulo regional de Pink Boots Society para toda Latinoamérica. Creado en 2023 con el objetivo de extender la educación en bebidas fermentadas en habla hispana por toda la región.",
     instagram: "@salsipuedesbrewingco",
     website: "https://www.instagram.com/salsipuedesbrewingco/",
   },

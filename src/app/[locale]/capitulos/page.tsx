@@ -33,9 +33,13 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
           <h3 className="mt-2 font-display text-lg font-bold text-[var(--color-text-primary)]">
             {chapter.name}
           </h3>
-          <p className="text-sm text-[var(--color-text-muted)]">
-            {chapter.city}, {chapter.country}
-          </p>
+          {(chapter.city || chapter.country) && (
+            <p className="text-sm text-[var(--color-text-muted)]">
+              {chapter.city && chapter.country
+                ? `${chapter.city}, ${chapter.country}`
+                : chapter.city || chapter.country}
+            </p>
+          )}
         </div>
       </div>
 
@@ -132,7 +136,7 @@ export default function ChaptersPage() {
           </h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {officialChapters.map((chapter) => (
-              <ChapterCard key={chapter.name} chapter={chapter} featured={chapter.role === "Chapter padre"} />
+              <ChapterCard key={chapter.name} chapter={chapter} featured={chapter.name === "Pink Boots Latam"} />
             ))}
           </div>
 
@@ -177,7 +181,7 @@ export default function ChaptersPage() {
               Pink Boots Society tiene requisitos oficiales para abrir un capítulo: se necesita un mínimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerías o negocios cerveceros</strong> distintos, realizar un mínimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capítulos de forma trimestral.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros países de la región contamos con integrantes activas que todavía no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
+              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: la red regional <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros países de la región contamos con integrantes activas que todavía no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
             </p>
           </div>
         </div>
