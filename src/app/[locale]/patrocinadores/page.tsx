@@ -5,7 +5,7 @@ import { sponsors } from "@/lib/sponsors";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Patrocinadores",
-    description: "Conoce a los aliados de Pink Boots Society Latin America: semblanzas, videos y colaboraciones.",
+    description: "Conoce a los aliados de Pink Boots Society Latin America: semblanzas, videos y colaboraciónes.",
   };
 }
 
@@ -53,7 +53,7 @@ export default function SponsorsPage() {
             Semblanzas de nuestros aliados
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Haz clic en cada patrocinador para conocer su historia, su colaboracion con Pink Boots y su material grafico.
+            Haz clic en cada patrocinador para conocer su historia, su colaboración con Pink Boots y su material grafico.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -104,7 +104,7 @@ export default function SponsorsPage() {
                   </p>
 
                   <h4 className="mt-4 font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                    Relacion con Pink Boots
+                    Relación con Pink Boots
                   </h4>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                     {sponsor.relationship}

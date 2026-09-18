@@ -35,12 +35,12 @@ export const sponsors: Sponsor[] = [
     featured: true,
     website: "https://costaricabeerfactory.com/beer-school",
     description:
-      "Escuela de cerveza de Costa Rica, parte del proyecto de Costa Rica Beer Factory. Ofrece formacion profesional para cerveceros y cerveceras de la region, desde cursos introductorios hasta capacitacion tecnica especializada.",
+      "Escuela de cerveza de Costa Rica, parte del proyecto de Costa Rica Beer Factory. Ofrece formación profesional para cerveceros y cerveceras de la region, desde cursos introductorios hasta capacitación técnica especializada.",
     relationship:
-      "Sponsor principal de Pink Boots Society Latin America. Su apoyo es clave para impulsar la educacion cervecera de nuestras integrantes en toda la region.",
+      "Sponsor principal de Pink Boots Society Latin America. Su apoyo es clave para impulsar la educación cervecera de nuestras integrantes en toda la region.",
     videos: [
       {
-        title: "Video institucional — Costa Rica Beer School",
+        title: "Video instituciónal — Costa Rica Beer School",
         src: "/videos/costa-rica-beer-school.mp4",
       },
     ],
@@ -50,9 +50,9 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/lallemand.png",
     website: "https://www.lallemandbrewing.com/",
     description:
-      "Division cervecera de Lallemand Inc., lider mundial en el desarrollo, produccion y distribucion de levaduras y bacterias para la industria cervecera y de bebidas fermentadas. Sus productos llegan a cervecerias de mas de 50 paises.",
+      "Division cervecera de Lallemand Inc., líder mundial en el desarrollo, producción y distribución de levaduras y bacterias para la industria cervecera y de bebidas fermentadas. Sus productos llegan a cervecerias de más de 50 paises.",
     relationship:
-      "Aliado educativo de Pink Boots Society, apoyando la formacion de mujeres y personas no binarias en la industria de la fermentacion.",
+      "Aliado educativo de Pink Boots Society, apoyando la formación de mujeres y personas no binarias en la industria de la fermentación.",
   },
   {
     name: "White Labs",
@@ -61,20 +61,20 @@ export const sponsors: Sponsor[] = [
     description:
       "Pionera mundial en el suministro de levaduras liquidas para cervecerias artesanales. Fundada en San Diego, California, White Labs investiga y produce levaduras y bacterias para la industria de bebidas fermentadas.",
     relationship:
-      "Aliado del programa de becas y cursos de Pink Boots Society, facilitando acceso a educacion tecnica especializada en levaduras y fermentacion.",
+      "Aliado del programa de becas y cursos de Pink Boots Society, facilitando acceso a educación técnica especializada en levaduras y fermentación.",
   },
   {
     name: "Yakima Chief Hops",
     logo: "/sponsors/yakima-chief.png",
     website: "https://www.yakimachief.com/",
     description:
-      "Cooperativa de familias productoras de lupulo del valle de Yakima, Washington. Referencia mundial en variedades de lupulo y blends especiales para la industria cervecera.",
+      "Cooperativa de familias productoras de lúpulo del valle de Yakima, Washington. Referencia mundial en variedades de lúpulo y blends especiales para la industria cervecera.",
     relationship:
-      "Aliado de Pink Boots Society. Creadores del Pink Boots Blend, cuya venta apoya los programas educativos de la organizacion. Tambien patrocinan becas como el viaje experiencial de lupulo.",
+      "Aliado de Pink Boots Society. Creadores del Pink Boots Blend, cuya venta apoya los programas educativos de la organización. Tambien patrocinan becas como el viaje experiencial de lúpulo.",
     featuredProduct: {
       title: "Pink Boots Blend",
       description:
-        "Yakima Chief Hops dona $1 por cada libra vendida del Pink Boots Blend a Pink Boots Society. El blend cambia cada año y es seleccionado sensorialmente por las propias integrantes de Pink Boots, con un perfil unico pensado para la elaboracion creativa.",
+        "Yakima Chief Hops dona $1 por cada libra vendida del Pink Boots Blend a Pink Boots Society. El blend cambia cada año y es selecciónado sensorialmente por las propias integrantes de Pink Boots, con un perfil único pensado para la elaboración creativa.",
       link: "https://www.yakimachief.com/variety/pink-boots-blend",
       linkLabel: "Ver el Pink Boots Blend",
     },
@@ -100,27 +100,27 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/bjcp.png",
     website: "https://www.bjcp.org/",
     description:
-      "Beer Judge Certification Program, el programa de certificacion de jueces y juezas de cerveza mas reconocido a nivel mundial. Sus guias de estilo y examenes son el estandar para competencias cerveceras internacionales.",
+      "Beer Judge Certification Program, el programa de certificación de jueces y juezas de cerveza más reconocido a nivel mundial. Sus guias de estilo y examenes son el estándar para competencias cerveceras internacionales.",
     relationship:
-      "Aliado formativo de Pink Boots Society, apoyando la certificacion de juezas de cerveza de nuestra comunidad.",
+      "Aliado formativo de Pink Boots Society, apoyando la certificación de juezas de cerveza de nuestra comunidad.",
   },
   {
     name: "Cicerone",
     logo: "/sponsors/cicerone.jpg",
     website: "https://www.cicerone.org/",
     description:
-      "Programa de certificacion profesional de conocimiento y servicio de cerveza. Sus niveles (Certified Beer Server, Certified Cicerone, Advanced y Master Cicerone) son referencia de excelencia en la industria.",
+      "Programa de certificación profesional de conocimiento y servicio de cerveza. Sus niveles (Certified Beer Server, Certified Cicerone, Advanced y Master Cicerone) son referencia de excelencia en la industria.",
     relationship:
-      "Aliado del programa de becas de Pink Boots Society, ofreciendo certificaciones a integrantes de nuestra comunidad.",
+      "Aliado del programa de becas de Pink Boots Society, ofreciendo certificaciónes a integrantes de nuestra comunidad.",
   },
   {
     name: "Fermenta Cociencia",
     logo: "/sponsors/fermenta-cociencia.svg",
     website: "https://www.fermentaconciencia.com/",
     description:
-      "Proyecto de divulgacion y formacion en ciencias de la fermentacion, liderado por la cientifica Lucia Alvarez, especializada en microbiologia de alimentos fermentados. Acompana a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
+      "Proyecto de divulgación y formación en ciencias de la fermentación, liderado por la científica Lucia Alvarez, especializada en microbiología de alimentos fermentados. Acompaña a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
     relationship:
-      "Aliada educativa de Pink Boots Society Latin America, sumando conocimiento cientifico a la formacion de nuestras integrantes.",
+      "Aliada educativa de Pink Boots Society Latin America, sumando conocimiento científico a la formación de nuestras integrantes.",
     videos: [
       {
         title: "Video — Fermenta Cociencia",
@@ -134,7 +134,7 @@ export const sponsors: Sponsor[] = [
     description:
       "Marca de cosmetica natural aliada de Pink Boots Society Latin America, comprometida con el bienestar y el empoderamiento de las mujeres en la industria.",
     relationship:
-      "Patrocinadora de Pink Boots Society Latin America. Video institucional pendiente de publicacion.",
+      "Patrocinadora de Pink Boots Society Latin America. Video instituciónal pendiente de publicación.",
     // videos: [{ title: "Video — Academia Eco", src: "/videos/academia-eco.mp4" }], // pendiente
   },
 ];

@@ -1,6 +1,6 @@
 export type EventCategory =
   | "cocciones"
-  | "colaboraciones"
+  | "colaboraciónes"
   | "ponencias"
   | "congresos"
   | "webinars"
@@ -24,7 +24,7 @@ export interface PinkEvent {
 
 export const eventCategoryLabels: Record<EventCategory, string> = {
   cocciones: "Cocciones",
-  colaboraciones: "Colaboraciones",
+  colaboraciónes: "Colaboraciones",
   ponencias: "Ponencias",
   congresos: "Congresos",
   webinars: "Webinars",
@@ -33,7 +33,7 @@ export const eventCategoryLabels: Record<EventCategory, string> = {
 
 export const eventCategoryOrder: EventCategory[] = [
   "cocciones",
-  "colaboraciones",
+  "colaboraciónes",
   "ponencias",
   "congresos",
   "webinars",
@@ -45,10 +45,10 @@ export const events: PinkEvent[] = [
   {
     category: "cocciones",
     title: "Coccion colaborativa Pink Boots Latam — Cusco",
-    place: "Cusco, Peru",
+    place: "Cusco,  Perú",
     date: "Proximo",
     description:
-      "Proxima coccion colaborativa de Pink Boots Latam en Cusco, Peru. Detalles por confirmar.",
+      "Proxima coccion colaborativa de Pink Boots Latam en Cusco,  Perú. Detalles por confirmar.",
   },
   {
     category: "especiales",
@@ -60,12 +60,12 @@ export const events: PinkEvent[] = [
   },
   // --- EVENTOS RECIENTES ---
   {
-    category: "colaboraciones",
+    category: "colaboraciónes",
     title: "Pink Boots Collaboration Brew Day Latam",
     place: "Ocean Lab Brewing, Guaynabo, Puerto Rico",
     date: "15 de marzo de 2026",
     description:
-      "Primera edicion latinoamericana del Collaboration Brew Day, en colaboracion entre Ocean Lab Brewing, Jevas Cerveceras, Salsipuedes Brewing Co. de Panama y Pink Boots Latam. Se elaboro una cerveza sour de tamarindo con causa social: las ganancias se donaron a mujeres maltratadas de Puerto Rico y a becas para el crecimiento profesional de las integrantes de Pink Boots Latam.",
+      "Primera edicion latinoaméricana del Collaboration Brew Day, en colaboración entre Ocean Lab Brewing, Jevas Cerveceras, Salsipuedes Brewing Co. de Panamá y Pink Boots Latam. Se elaboro una cerveza sour de tamarindo con causa social: las ganancias se donaron a mujeres maltratadas de Puerto Rico y a becas para el crecimiento profesional de las integrantes de Pink Boots Latam.",
     media: {
       externalLink: "https://www.instagram.com/pinkbootslatam/",
       externalLabel: "Ver en Instagram",
@@ -77,6 +77,6 @@ export const events: PinkEvent[] = [
     place: "Ocean Lab Brewing, Guaynabo, Puerto Rico",
     date: "3 de mayo de 2026",
     description:
-      "Encuentro oficial para la conformacion del subcapitulo Pink Boots Latam / Puerto Rico, hoy conformado por 21 integrantes y liderado por Keishla Torres.",
+      "Encuentro oficial para la conformación del subcapitulo Pink Boots Latam / Puerto Rico, hoy conformado por 21 integrantes y liderado por Keishla Torres.",
   },
 ];

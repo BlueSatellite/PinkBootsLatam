@@ -20,7 +20,7 @@ export interface Chapter {
 export const officialChapters: Chapter[] = [
   {
     name: "Pink Boots Latam",
-    country: "Panama",
+    country: "Panamá",
     city: "Ciudad de Panama",
     role: "Chapter padre",
     foundedYear: 2023,
@@ -30,7 +30,7 @@ export const officialChapters: Chapter[] = [
         role: "Co-Fundadora & Chapter Leader. Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],
-    info: "Chapter padre de Pink Boots Society para toda Latinoamerica. Creado en 2023 con el objetivo de extender la educacion en bebidas fermentadas en habla hispana por toda la region.",
+    info: "Chapter padre de Pink Boots Society para toda Latinoamérica. Creado en 2023 con el objetivo de extender la educación en bebidas fermentadas en habla hispana por toda la region.",
     instagram: "@salsipuedesbrewingco",
     website: "https://www.instagram.com/salsipuedesbrewingco/",
   },
@@ -41,7 +41,7 @@ export const officialChapters: Chapter[] = [
     role: "Sub-capitulo",
     foundedYear: 2026,
     representatives: [
-      { name: "Keishla Torres", role: "Lider del sub-capitulo" },
+      { name: "Keishla Torres", role: "Líder del sub-capitulo" },
       { name: "Ocean Lab Brewing", role: "Cerveceria anfitriona" },
       { name: "Jevas Cerveceras", role: "Comunidad cervecera" },
     ],
@@ -53,30 +53,30 @@ export const officialChapters: Chapter[] = [
 
 export const regionNetwork: Chapter[] = [
   {
-    name: "Peru",
-    country: "Peru",
+    name: "Perú",
+    country: "Perú",
     city: "Lima",
     role: "Integrantes de la red",
     representatives: [
       {
         name: "Silvia",
-        role: "Co-lider de Pink Boots Latinoamerica. Seleccionada como jueza para el World Beer Cup 2026.",
+        role: "Co-líder de Pink Boots Latinoamérica. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],
     info: "",
     instagram: "@pinkbootsperu",
-    facebook: "PinkBootsPeru",
+    facebook: "PinkBootsPerú",
     website: "https://www.instagram.com/pinkbootsperu/",
   },
   {
-    name: "Mexico",
-    country: "Mexico",
+    name: "México",
+    country: "México",
     city: "Cuernavaca",
     role: "Integrantes de la red",
     representatives: [
       {
         name: "Viviana Lopez",
-        role: "Lider de comunidad en Mexico",
+        role: "Líder de comunidad en Mexico",
       },
     ],
     info: "",

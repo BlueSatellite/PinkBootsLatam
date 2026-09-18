@@ -24,7 +24,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     type: "Beca internacional — viaje por cervecerias de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formacion por cervecerias europeas junto a otras integrantes de Pink Boots Peru.",
+      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
     experience: "Por confirmar",
   },
   {
@@ -33,7 +33,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     type: "Beca internacional — viaje por cervecerias de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formacion por cervecerias europeas junto a otras integrantes de Pink Boots Peru.",
+      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
     experience: "Por confirmar",
   },
   {
@@ -42,7 +42,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     type: "Beca internacional — viaje por cervecerias de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formacion por cervecerias europeas junto a otras integrantes de Pink Boots Peru.",
+      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
     experience: "Por confirmar",
   },
   {

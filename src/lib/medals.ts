@@ -19,7 +19,7 @@ export const medals: Medal[] = [
     category: "Juzgamiento",
     recognition: "Seleccionada como jueza — no como ganadora",
     award: "Reconocimiento",
-    country: "Panama",
+    country: "Panamá",
   },
   {
     memberName: "Silvia",
@@ -28,9 +28,9 @@ export const medals: Medal[] = [
     category: "Juzgamiento",
     recognition: "Seleccionada como jueza — no como ganadora",
     award: "Reconocimiento",
-    country: "Peru",
+    country: "Perú",
   },
-  // --- MEDALLAS COMPETENCIAS (Ericka enviara la informacion de las 3 medallas) ---
+  // --- MEDALLAS COMPETENCIAS (Ericka enviara la información de las 3 medallas) ---
   // { memberName: "", competition: "Copa Guarani", year: "", category: "", recognition: "", award: "Medalla", country: "" },
   // { memberName: "", competition: "Copa Quetzal", year: "", category: "", recognition: "", award: "Medalla", country: "" },
   // { memberName: "", competition: "Copa Austral", year: "", category: "", recognition: "", award: "Medalla", country: "" },

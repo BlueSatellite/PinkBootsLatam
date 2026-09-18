@@ -2,9 +2,9 @@ import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
 const introParagraphs = [
-  "Pink Boots Society nacio en 2007 de la mano de la cervecera estadounidense Teri Fahrendorf, quien durante un viaje por Estados Unidos conocio a muchas mujeres cerveceras que se sentian solas dentro de una industria predominantemente masculina. Creo una lista para conectarlas y la llamo Pink Boots Society, inspirada en las botas rosadas que llevaba durante su recorrido. Es una organizacion sin fines de lucro conformada por mujeres vinculadas a la industria cervecera, con el objetivo de promover su crecimiento profesional a traves de la inspiracion, el conocimiento y la formacion.",
-  "Pink Boots LATAM nace como una comunidad regional para conectar, apoyar y visibilizar a las mujeres de Latinoamerica vinculadas a la industria cervecera y de bebidas fermentadas. Creada en 2023 y liderada por Ericka Otero, busca impulsar la educacion, la colaboracion, el crecimiento profesional y la sororidad entre sus integrantes, creando oportunidades que fortalezcan el papel de la mujer latinoamericana dentro de la industria. Su objetivo: extender por toda la region una educacion de alto nivel en habla hispana.",
-  "Somos un grupo de mujeres profesionales involucradas en la industria cervecera en cualquiera de sus aspectos: desde la creacion, elaboracion y supervision de una cerveza hasta funciones de distribucion, marketing, ventas y comunicaciones. Entre nuestras integrantes contamos con duenas de cervecerias, fundadoras de marcas y locales de cerveza, juezas BJCP, disenadoras, publicistas, marketeras, comunicadoras y especialistas en ventas y atencion al cliente.",
+  "Pink Boots Society nacio en 2007 de la mano de la cervecera estadounidense Teri Fahrendorf, quien durante un viaje por Estados Unidos conocio a muchas mujeres cerveceras que se sentian solas dentro de una industria predominantemente masculina. Creo una lista para conectarlas y la llamo Pink Boots Society, inspirada en las botas rosadas que llevaba durante su recorrido. Es una organización sin fines de lucro conformada por mujeres vinculadas a la industria cervecera, con el objetivo de promover su crecimiento profesional a traves de la inspiracion, el conocimiento y la formación.",
+  "Pink Boots LATAM nace como una comunidad regional para conectar, apoyar y visibilizar a las mujeres de Latinoamérica vinculadas a la industria cervecera y de bebidas fermentadas. Creada en 2023 y liderada por Ericka Otero, busca impulsar la educación, la colaboración, el crecimiento profesional y la sororidad entre sus integrantes, creando oportunidades que fortalezcan el papel de la mujer latinoaméricana dentro de la industria. Su objetivo: extender por toda la region una educación de alto nivel en habla hispana.",
+  "Somos un grupo de mujeres profesionales involucradas en la industria cervecera en cualquiera de sus aspectos: desde la creación, elaboración y supervision de una cerveza hasta funciones de distribución, marketing, ventas y comunicaciónes. Entre nuestras integrantes contamos con duenas de cervecerias, fundadoras de marcas y locales de cerveza, juezas BJCP, diseñadoras, publicistas, marketeras, comunicadoras y especialistas en ventas y atencion al cliente.",
   "Parte de nuestro objetivo es recaudar fondos para que nuestras integrantes puedan obtener becas de estudio y seguir profesionalizandose en el rubro. Pero, sobre todo, queremos comunicar e inspirar a que mas mujeres se unan a nuestra industria: queremos que el mundo sepa que es una profesion que tambien fue hecha para mujeres, y crear una comunidad en la que compartamos conocimientos entre asociadas actuales y mujeres que inician o estan interesadas en iniciar una carrera en la industria de bebidas fermentadas.",
 ];
 
@@ -13,26 +13,26 @@ const leadership = [
     name: "Ericka Otero",
     role: "Co-Fundadora & Chapter Leader",
     country: "Panama",
-    bio: "Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Lidera Pink Boots Latin America desde su creacion en 2023. Seleccionada como jueza para el World Beer Cup 2026.",
+    bio: "Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Lidera Pink Boots Latin America desde su creación en 2023. Seleccionada como jueza para el World Beer Cup 2026.",
     instagram: "@salsipuedesbrewingco",
   },
   {
     name: "Silvia De Tomas",
     role: "Co-Lider",
     country: "Peru",
-    bio: "Two Brothers Brewing. Co-lider de Pink Boots Latinoamerica. Seleccionada como jueza para el World Beer Cup 2026.",
+    bio: "Two Brothers Brewing. Co-líder de Pink Boots Latinoamérica. Seleccionada como jueza para el World Beer Cup 2026.",
   },
   {
     name: "Keishla Torres",
     role: "Lider del sub-capitulo Pink Boots Latam / Puerto Rico",
     country: "Puerto Rico",
-    bio: "Lidera Pink Boots Latam / Puerto Rico, el nuevo sub-capitulo de la organizacion, conformado por 21 integrantes.",
+    bio: "Lidera Pink Boots Latam / Puerto Rico, el nuevo sub-capitulo de la organización, conformado por 21 integrantes.",
   },
   {
     name: "Viviana Lopez",
     role: "Miembro activo",
     country: "Mexico",
-    bio: "Medalla de plata en Copa Guerreras del Lupulo. Lider de comunidad en Mexico.",
+    bio: "Medalla de plata en Copa Guerreras del Lupulo. Lider de comunidad en México.",
     instagram: "@tebana_laboratorio_cervecero",
   },
   {
@@ -52,7 +52,7 @@ const leadership = [
     name: "Amanda Henriques",
     role: "Coordinadora Brasil (RJ)",
     country: "Brasil",
-    bio: "Periodista, sommelier y editora de Maria Cevada. Coordina el capitulo mas antiguo de Latinoamerica desde 2015.",
+    bio: "Periodista, sommelier y editora de Maria Cevada. Coordina el capitulo mas antiguo de Latinoamérica desde 2015.",
     instagram: "@achamanda",
   },
 ];

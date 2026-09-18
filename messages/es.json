@@ -40,41 +40,41 @@
     "title": "Nuestra Historia",
     "intro": "Pink Boots Society nacio en 2007, fundada por Teri Fahrendorf, una maestra cervecera que recorrio Estados Unidos elaborando cerveza con otras mujeres del gremio. Lo que comenzo como un viaje en carretera se convirtio en un movimiento global.",
     "missionLabel": "Nuestra Mision",
-    "mission": "Pink Boots Society busca asistir, inspirar y motivar a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educacion.",
+    "mission": "Pink Boots Society busca asistir, inspirar y motivar a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educación.",
     "visionLabel": "Nuestra Vision",
-    "vision": "Ser la red lider de Latinoamerica que visibilice, conecte y haga crecer a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas, hasta lograr una industria diversa y equitativa.",
-    "latamIntro": "Pink Boots Society Latin America es el chapter padre para toda la region. Desde Mexico hasta la Patagonia, incluyendo Brasil, unimos a mujeres y personas no binarias apasionadas por la cerveza y las bebidas fermentadas. Creemos que nuestras distintas culturas comparten una sola pasion: la cerveza.",
+    "vision": "Ser la red líder de Latinoamérica que visibilice, conecte y haga crecer a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas, hasta lograr una industria diversa y equitativa.",
+    "latamIntro": "Pink Boots Society Latin America es el chapter padre para toda la region. Desde México hasta la Patagonia, incluyendo Brasil, unimos a mujeres y personas no binarias apasionadas por la cerveza y las bebidas fermentadas. Creemos que nuestras distintas culturas comparten una sola pasion: la cerveza.",
     "valuesTitle": "Nuestros Valores",
     "values": [
-      { "title": "Educacion", "description": "Impulsamos el crecimiento profesional mediante becas, webinars y programas de formacion." },
-      { "title": "Comunidad", "description": "Construimos redes de apoyo entre mujeres y personas no binarias en toda Latinoamerica." },
+      { "title": "Educacion", "description": "Impulsamos el crecimiento profesional mediante becas, webinars y programas de formación." },
+      { "title": "Comunidad", "description": "Construimos redes de apoyo entre mujeres y personas no binarias en toda Latinoamérica." },
       { "title": "Inclusion", "description": "Creemos en una industria donde todas las personas tengan las mismas oportunidades." },
       { "title": "Colaboracion", "description": "Trabajamos con aliados de la industria para crear espacios mas diversos y equitativos." }
     ]
   },
   "team": {
     "title": "Quienes Somos",
-    "intro": "Somos un equipo de profesionales apasionadas por la industria de bebidas fermentadas. Desde cerveceras hasta sommeliers, nuestra red abarca toda Latinoamerica.",
+    "intro": "Somos un equipo de profesionales apasionadas por la industria de bebidas fermentadas. Desde cerveceras hasta sommeliers, nuestra red abarca toda Latinoamérica.",
     "leadership": "Liderazgo",
-    "comingSoon": "Informacion de liderazgo proximamente."
+    "comingSoon": "Información de liderazgo proximamente."
   },
   "donate": {
     "title": "Donaciones",
-    "hero": "Tu apoyo impulsa el futuro de las mujeres y personas no binarias en la industria cervecera latinoamericana.",
+    "hero": "Tu apoyo impulsa el futuro de las mujeres y personas no binarias en la industria cervecera latinoaméricana.",
     "whyTitle": "Por que donar",
-    "whyText": "Cada contribucion nos permite financiar becas educativas, organizar eventos de networking, crear programas de mentoria y expandir nuestra comunidad a mas rincones de Latinoamerica. Pink Boots Society es una organizacion sin fines de lucro.",
+    "whyText": "Cada contribucion nos permite financiar becas educativas, organizar eventos de networking, crear programas de mentoria y expandir nuestra comunidad a mas rincones de Latinoamérica. Pink Boots Society es una organización sin fines de lucro.",
     "waysTitle": "Como contribuir",
     "ways": [
-      { "title": "Donacion directa", "description": "Realiza una contribucion unica o recurrente." },
+      { "title": "Donacion directa", "description": "Realiza una contribucion única o recurrente." },
       { "title": "Patrocinio corporativo", "description": "Convierte a tu empresa en aliada oficial de Pink Boots Latam." },
       { "title": "Voluntariado", "description": "Ofrece tu tiempo y experiencia para apoyar a nuestra comunidad." }
     ],
-    "cta": "Si deseas contribuir, escribenos a traves de nuestras redes sociales o acercate a tu capitulo local.",
+    "cta": "Si deseas contribuir, escribenos a traves de nuestras redes sociales o acercate a tu capítulo local.",
     "button": "Contactanos en Instagram"
   },
   "membership": {
     "title": "Membresia",
-    "hero": "Se parte de la comunidad mas grande de mujeres y personas no binarias en la industria de bebidas fermentadas de Latinoamerica.",
+    "hero": "Se parte de la comunidad más grande de mujeres y personas no binarias en la industria de bebidas fermentadas de Latinoamérica.",
     "benefitsTitle": "Beneficios",
     "benefits": [
       "Acceso a becas educativas y webinars exclusivos",
@@ -84,31 +84,31 @@
       "Directorio de miembros",
       "Oportunidades de voluntariado y liderazgo"
     ],
-    "howTo": "La membresia se tramita a traves del sitio oficial de Pink Boots Society (EE.UU.). Las membresias de Latinoamerica contribuyen al fondo global que se distribuye equitativamente entre todos los chapters al final del ano.",
+    "howTo": "La membresia se tramita a traves del sitio oficial de Pink Boots Society (EE.UU.). Las membresias de Latinoamérica contribuyen al fondo global que se distribuye equitativamente entre todos los chapters al final del ano.",
     "cta": "Unete en el sitio oficial",
     "ctaUrl": "https://www.pinkbootssociety.org/membership-information"
   },
   "sponsors": {
     "title": "Patrocinadores y Aliados",
-    "hero": "Gracias a nuestros aliados podemos impulsar la educacion, la comunidad y la inclusion en la industria cervecera latinoamericana.",
+    "hero": "Gracias a nuestros aliados podemos impulsar la educación, la comunidad y la inclusion en la industria cervecera latinoaméricana.",
     "mainTitle": "Sponsor Principal",
     "partnersTitle": "Aliados",
     "becomeTitle": "Conviertete en aliado",
-    "becomeText": "Si tu empresa u organizacion desea apoyar a Pink Boots Society Latin America, contactanos para conocer las oportunidades de patrocinio.",
+    "becomeText": "Si tu empresa u organización desea apoyar a Pink Boots Society Latin America, contactanos para conocer las oportunidades de patrocinio.",
     "becomeCta": "Escribenos en Instagram"
   },
   "chapters": {
     "title": "Capitulos",
-    "hero": "Encuentra un capitulo de Pink Boots cerca de ti en toda Latinoamerica.",
-    "comingSoon": "Estamos construyendo la red de capitulos en Latinoamerica. Pronto podras encontrar un capitulo en tu pais.",
-    "cta": "Si quieres iniciar o liderar un capitulo en tu pais, escribenos."
+    "hero": "Encuentra un capítulo de Pink Boots cerca de ti en toda Latinoamérica.",
+    "comingSoon": "Estamos construyendo la red de capítulos en Latinoamérica. Pronto podras encontrar un capítulo en tu país.",
+    "cta": "Si quieres iniciar o liderar un capítulo en tu país, escribenos."
   },
   "events": {
     "title": "Eventos",
-    "hero": "Conecta, aprende y celebra con la comunidad Pink Boots en toda Latinoamerica.",
-    "upcoming": "Proximos eventos",
+    "hero": "Conecta, aprende y celebra con la comunidad Pink Boots en toda Latinoamérica.",
+    "upcoming": "Próximos eventos",
     "past": "Eventos pasados",
-    "empty": "No hay eventos programados en este momento. Vuelve pronto o siguenos en Instagram para enterarte de los proximos.",
+    "empty": "No hay eventos programados en este momento. Vuelve pronto o siguenos en Instagram para enterarte de los próximos.",
     "types": [
       { "name": "Collaboration Brew Day", "description": "El evento insignia de Pink Boots donde capítulos de todo el mundo elaboran cerveza colaborativa el mismo dia." },
       { "name": "Webinars", "description": "Sesiones educativas virtuales con expertas de la industria." },
@@ -118,11 +118,11 @@
   "scholarships": {
     "title": "Becas",
     "hero": "Impulsamos tu crecimiento profesional a traves de oportunidades educativas.",
-    "intro": "Pink Boots Society ofrece becas para mujeres y personas no binarias en la industria de bebidas fermentadas. Las becas cubren desde certificaciones profesionales hasta programas academicos completos.",
+    "intro": "Pink Boots Society ofrece becas para mujeres y personas no binarias en la industria de bebidas fermentadas. Las becas cubren desde certificaciónes profesionales hasta programas academicos completos.",
     "availableTitle": "Becas disponibles",
     "available": [
-      { "name": "Certificacion Cicerone", "description": "Apoyo para obtener la certificacion de conocimiento cervecero mas reconocida a nivel mundial." },
-      { "name": "BJCP Beer Judge", "description": "Formacion y certificacion como jueza de cerveza del Beer Judge Certification Program." },
+      { "name": "Certificacion Cicerone", "description": "Apoyo para obtener la certificación de conocimiento cervecero mas reconocida a nivel mundial." },
+      { "name": "BJCP Beer Judge", "description": "Formacion y certificación como jueza de cerveza del Beer Judge Certification Program." },
       { "name": "Educacion continua", "description": "Cursos, diplomados y programas academicos en universidades e institutos aliados." }
     ],
     "howTo": "Las becas se solicitan a traves del programa global de Pink Boots Society. Visita el sitio oficial para conocer las convocatorias abiertas.",
@@ -131,7 +131,7 @@
   },
   "blog": {
     "title": "Blog",
-    "hero": "Historias, noticias y recursos de la comunidad Pink Boots en Latinoamerica.",
+    "hero": "Historias, noticias y recursos de la comunidad Pink Boots en Latinoamérica.",
     "empty": "Pronto tendremos contenido para compartir. Mientras tanto, siguenos en Instagram para estar al dia.",
     "cta": "Seguir en Instagram"
   }

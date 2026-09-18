@@ -49,7 +49,7 @@ export default function MembershipPage() {
             <div className="rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
               <h3 className="font-display text-sm font-bold text-[var(--color-pink-brand)]">Membresia Profesional</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Profesionales actuales o jubilados de la industria de bebidas fermentadas/alcoholicas que reciben el 25% o mas de sus ingresos de la industria, o retirados con minimo 10 anos en el rubro.
+                Profesionales actuales o jubilados de la industria de bebidas fermentadas/alcoholicas que reciben el 25% o mas de sus ingresos de la industria, o retirados con mínimo 10 años en el rubro.
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border-default)] p-5">
