@@ -5,8 +5,8 @@ import ChaptersMapWrapper from "@/components/ui/ChaptersMapWrapper";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Capitulos",
-    description: "Conoce los capitulos oficiales de Pink Boots Society en Latinoamérica y la red de integrantes en la región.",
+    title: "Capítulos",
+    description: "Conoce los capítulos oficiales de Pink Boots Society en Latinoamérica y la red de integrantes en la región.",
   };
 }
 
@@ -128,7 +128,7 @@ export default function ChaptersPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Nuestros capitulos
+            Nuestros capítulos
           </h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {officialChapters.map((chapter) => (
@@ -140,7 +140,7 @@ export default function ChaptersPage() {
             Integrantes en la región
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Paises con integrantes activas de Pink Boots Latam que aun no cuentan con un capítulo oficial.
+            Países con integrantes activas de Pink Boots Latam que aún no cuentan con un capítulo oficial.
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {regionNetwork.map((chapter) => (
@@ -165,19 +165,19 @@ export default function ChaptersPage() {
               rel="noopener noreferrer"
               className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
             >
-              Escribenos en Instagram
+              Escríbenos en Instagram
             </a>
           </div>
 
           <div className="mt-12 mx-auto max-w-3xl rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-6">
             <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
-              Como funcionan los capitulos
+              Cómo funcionan los capítulos
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Pink Boots Society tiene requisitos oficiales para abrir un capítulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
+              Pink Boots Society tiene requisitos oficiales para abrir un capítulo: se necesita un mínimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerías o negocios cerveceros</strong> distintos, realizar un mínimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capítulos de forma trimestral.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la región contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
+              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros países de la región contamos con integrantes activas que todavía no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
             </p>
           </div>
         </div>

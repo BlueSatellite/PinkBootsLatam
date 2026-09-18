@@ -44,16 +44,16 @@ export default function EventsPage() {
               Pink Boots Collaboration Brew Day
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--color-text-secondary)]">
-              Es una celebracion internacional de mujeres en la industria de bebidas fermentadas y alcohólicas. Un movimiento para reconocer el impacto que tienen en nuestra industria. Es nuestro evento anual de recaudacion de fondos <strong>mas importante</strong>.
+              Es una celebración internacional de mujeres en la industria de bebidas fermentadas y alcohólicas. Un movimiento para reconocer el impacto que tienen en nuestra industria. Es nuestro evento anual de recaudación de fondos <strong>más importante</strong>.
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               <div className="rounded-lg bg-white p-4 text-center shadow-sm">
                 <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">$235K+</p>
-                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Recaudados en 2022 por cervecerias participantes</p>
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Recaudados en 2022 por cervecerías participantes</p>
               </div>
               <div className="rounded-lg bg-white p-4 text-center shadow-sm">
                 <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">Global</p>
-                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Capitulos de todo el mundo elaboran el mismo dia</p>
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">Capítulos de todo el mundo elaboran el mismo día</p>
               </div>
               <div className="rounded-lg bg-white p-4 text-center shadow-sm">
                 <p className="font-display text-2xl font-extrabold text-[var(--color-pink-brand)]">Becas</p>
@@ -61,7 +61,7 @@ export default function EventsPage() {
               </div>
             </div>
             <p className="mt-5 text-sm font-medium text-[var(--color-text-secondary)]">
-              Los equipos registrados elaboran cerveza y donan parte de las ganancias de sus ventas. Cada ano, mas cervecerias se suman a esta revolucion.
+              Los equipos registrados elaboran cerveza y donan parte de las ganancias de sus ventas. Cada año, más cervecerías se suman a esta revolución.
             </p>
             <div className="mt-6 flex justify-center">
               <img
@@ -107,7 +107,7 @@ export default function EventsPage() {
                     {recognition.year ?? "Por confirmar"}
                   </p>
                   <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Categoria:</span>{" "}
+                    <span className="font-semibold text-[var(--color-text-primary)]">Categoría:</span>{" "}
                     {recognition.category}
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export default function EventsPage() {
                   </h3>
                   {categoryEvents.length === 0 ? (
                     <p className="mt-3 rounded-lg border border-dashed border-[var(--color-border-default)] p-4 text-sm text-[var(--color-text-muted)]">
-                      Aun no hay actividades registradas en esta categoria. Vuelve pronto o siguenos en Instagram para enterarte de las proximas.
+                      Aún no hay actividades registradas en esta categoría. Vuelve pronto o síguenos en Instagram para enterarte de las próximas.
                     </p>
                   ) : (
                     <div className="mt-3 space-y-3">
@@ -173,7 +173,7 @@ export default function EventsPage() {
                               rel="noopener noreferrer"
                               className="mt-3 inline-flex text-sm font-medium text-[var(--color-pink-brand)] hover:underline"
                             >
-                              {event.media.externalLabel ?? "Ver mas"}
+                              {event.media.externalLabel ?? "Ver más"}
                             </a>
                           )}
                         </div>

@@ -38,18 +38,18 @@ export default function MembershipPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
-            La membresia de Pink Boots Society esta abierta a mujeres y personas no binarias que esten activamente empleadas en algun aspecto de la industria de la cerveza, que esten en el proceso de abrir una cerveceria, o que sean estudiantes inscritas en un programa enfocado en la industria de la cerveza.
+            La membresía de Pink Boots Society está abierta a mujeres y personas no binarias que estén activamente empleadas en algún aspecto de la industria de la cerveza, que estén en el proceso de abrir una cervecería, o que sean estudiantes inscritas en un programa enfocado en la industria de la cerveza.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Tipos de Membresia
+            Tipos de Membresía
           </h2>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-3">
             <div className="rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
-              <h3 className="font-display text-sm font-bold text-[var(--color-pink-brand)]">Membresia Profesional</h3>
+              <h3 className="font-display text-sm font-bold text-[var(--color-pink-brand)]">Membresía Profesional</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Profesionales actuales o jubilados de la industria de bebidas fermentadas/alcohólicas que reciben el 25% o mas de sus ingresos de la industria, o retirados con mínimo 10 años en el rubro.
+                Profesionales actuales o jubilados de la industria de bebidas fermentadas/alcohólicas que reciben el 25% o más de sus ingresos de la industria, o retirados con mínimo 10 años en el rubro.
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border-default)] p-5">
@@ -59,9 +59,9 @@ export default function MembershipPage() {
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border-default)] p-5">
-              <h3 className="font-display text-sm font-bold text-[var(--color-text-primary)]">Negocio en Planificacion</h3>
+              <h3 className="font-display text-sm font-bold text-[var(--color-text-primary)]">Negocio en Planificación</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Personas en proceso de abrir un negocio en la industria: cerveceria, taberna, sala de degustacion, bar, tienda de botellas u otro proveedor.
+                Personas en proceso de abrir un negocio en la industria: cervecería, taberna, sala de degustación, bar, tienda de botellas u otro proveedor.
               </p>
             </div>
           </div>

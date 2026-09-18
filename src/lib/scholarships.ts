@@ -21,32 +21,32 @@ export const awardedScholarships: AwardedScholarship[] = [
   {
     memberName: "Megan Garrity",
     institution: "Por confirmar",
-    type: "Beca internacional — viaje por cervecerias de Europa",
+    type: "Beca internacional — viaje por cervecerías de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
+      "Recorrido de formación por cervecerías europeas junto a otras integrantes de Pink Boots Perú.",
     experience: "Por confirmar",
   },
   {
     memberName: "Sara Lefevre",
     institution: "Por confirmar",
-    type: "Beca internacional — viaje por cervecerias de Europa",
+    type: "Beca internacional — viaje por cervecerías de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
+      "Recorrido de formación por cervecerías europeas junto a otras integrantes de Pink Boots Perú.",
     experience: "Por confirmar",
   },
   {
     memberName: "Ximena Gloria",
     institution: "Por confirmar",
-    type: "Beca internacional — viaje por cervecerias de Europa",
+    type: "Beca internacional — viaje por cervecerías de Europa",
     place: "Europa",
     objective:
-      "Recorrido de formación por cervecerias europeas junto a otras integrantes de Pink Boots  Perú.",
+      "Recorrido de formación por cervecerías europeas junto a otras integrantes de Pink Boots Perú.",
     experience: "Por confirmar",
   },
   {
-    memberName: "Nikole Negron",
+    memberName: "Nikole Negrón",
     institution: "Por confirmar",
     type: "Beca educativa Pink Boots",
     place: "Puerto Rico",
@@ -54,7 +54,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     experience: "Por confirmar",
   },
   {
-    memberName: "Minelis Mendez",
+    memberName: "Minelis Méndez",
     institution: "Por confirmar",
     type: "Beca educativa Pink Boots",
     place: "Puerto Rico",
@@ -71,8 +71,8 @@ export const upcomingScholarships: UpcomingScholarship[] = [
     requirements: [
       "Ser mujer o persona no binaria",
       "Trabajar en la industria de bebidas fermentadas y/o alcohólicas",
-      "Contar con membresia activa de Pink Boots Society",
-      "Carta de recomendacion de una persona de la industria",
+      "Contar con membresía activa de Pink Boots Society",
+      "Carta de recomendación de una persona de la industria",
     ],
     deadline: "Consultar en el sitio oficial",
     link: "https://www.pinkbootssociety.org/scholarships",

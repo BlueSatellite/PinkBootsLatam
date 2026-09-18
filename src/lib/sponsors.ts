@@ -50,7 +50,7 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/lallemand.png",
     website: "https://www.lallemandbrewing.com/",
     description:
-      "Division cervecera de Lallemand Inc., líder mundial en el desarrollo, producción y distribución de levaduras y bacterias para la industria cervecera y de bebidas fermentadas. Sus productos llegan a cervecerias de más de 50 paises.",
+      "División cervecera de Lallemand Inc., líder mundial en el desarrollo, producción y distribución de levaduras y bacterias para la industria cervecera y de bebidas fermentadas. Sus productos llegan a cervecerías de más de 50 países.",
     relationship:
       "Aliado educativo de Pink Boots Society, apoyando la formación de mujeres y personas no binarias en la industria de la fermentación.",
   },
@@ -59,7 +59,7 @@ export const sponsors: Sponsor[] = [
     logo: "/sponsors/white-labs.svg",
     website: "https://www.whitelabs.com/",
     description:
-      "Pionera mundial en el suministro de levaduras liquidas para cervecerias artesanales. Fundada en San Diego, California, White Labs investiga y produce levaduras y bacterias para la industria de bebidas fermentadas.",
+      "Pionera mundial en el suministro de levaduras líquidas para cervecerías artesanales. Fundada en San Diego, California, White Labs investiga y produce levaduras y bacterias para la industria de bebidas fermentadas.",
     relationship:
       "Aliado del programa de becas y cursos de Pink Boots Society, facilitando acceso a educación técnica especializada en levaduras y fermentación.",
   },
