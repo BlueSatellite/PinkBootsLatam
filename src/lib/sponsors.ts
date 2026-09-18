@@ -35,9 +35,9 @@ export const sponsors: Sponsor[] = [
     featured: true,
     website: "https://costaricabeerfactory.com/beer-school",
     description:
-      "Escuela de cerveza de Costa Rica, parte del proyecto de Costa Rica Beer Factory. Ofrece formación profesional para cerveceros y cerveceras de la region, desde cursos introductorios hasta capacitación técnica especializada.",
+      "Escuela de cerveza de Costa Rica, parte del proyecto de Costa Rica Beer Factory. Ofrece formación profesional para cerveceros y cerveceras de la región, desde cursos introductorios hasta capacitación técnica especializada.",
     relationship:
-      "Sponsor principal de Pink Boots Society Latin America. Su apoyo es clave para impulsar la educación cervecera de nuestras integrantes en toda la region.",
+      "Sponsor principal de Pink Boots Society Latin America. Su apoyo es clave para impulsar la educación cervecera de nuestras integrantes en toda la región.",
     videos: [
       {
         title: "Video instituciónal — Costa Rica Beer School",

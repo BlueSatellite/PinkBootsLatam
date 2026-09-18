@@ -40,16 +40,16 @@
     "title": "Nuestra Historia",
     "intro": "Pink Boots Society nacio en 2007, fundada por Teri Fahrendorf, una maestra cervecera que recorrio Estados Unidos elaborando cerveza con otras mujeres del gremio. Lo que comenzo como un viaje en carretera se convirtio en un movimiento global.",
     "missionLabel": "Nuestra Mision",
-    "mission": "Pink Boots Society busca asistir, inspirar y motivar a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educación.",
+    "mission": "Pink Boots Society busca asistir, inspirar y motivar a mujeres y personas no binarias en la industria de bebidas fermentadas y alcohólicas a avanzar en sus carreras a traves de la educación.",
     "visionLabel": "Nuestra Vision",
-    "vision": "Ser la red líder de Latinoamérica que visibilice, conecte y haga crecer a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas, hasta lograr una industria diversa y equitativa.",
-    "latamIntro": "Pink Boots Society Latin America es el chapter padre para toda la region. Desde México hasta la Patagonia, incluyendo Brasil, unimos a mujeres y personas no binarias apasionadas por la cerveza y las bebidas fermentadas. Creemos que nuestras distintas culturas comparten una sola pasion: la cerveza.",
+    "vision": "Ser la red líder de Latinoamérica que visibilice, conecte y haga crecer a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcohólicas, hasta lograr una industria diversa y equitativa.",
+    "latamIntro": "Pink Boots Society Latin America es el chapter padre para toda la región. Desde México hasta la Patagonia, incluyendo Brasil, unimos a mujeres y personas no binarias apasionadas por la cerveza y las bebidas fermentadas. Creemos que nuestras distintas culturas comparten una sola pasión: la cerveza.",
     "valuesTitle": "Nuestros Valores",
     "values": [
-      { "title": "Educacion", "description": "Impulsamos el crecimiento profesional mediante becas, webinars y programas de formación." },
+      { "title": "Educación", "description": "Impulsamos el crecimiento profesional mediante becas, webinars y programas de formación." },
       { "title": "Comunidad", "description": "Construimos redes de apoyo entre mujeres y personas no binarias en toda Latinoamérica." },
       { "title": "Inclusion", "description": "Creemos en una industria donde todas las personas tengan las mismas oportunidades." },
-      { "title": "Colaboracion", "description": "Trabajamos con aliados de la industria para crear espacios mas diversos y equitativos." }
+      { "title": "Colaboración", "description": "Trabajamos con aliados de la industria para crear espacios mas diversos y equitativos." }
     ]
   },
   "team": {
@@ -79,7 +79,7 @@
     "benefits": [
       "Acceso a becas educativas y webinars exclusivos",
       "Descuentos en eventos y conferencias",
-      "Conexion con profesionales de toda la region",
+      "Conexion con profesionales de toda la región",
       "Programa de mentoria",
       "Directorio de miembros",
       "Oportunidades de voluntariado y liderazgo"
@@ -123,7 +123,7 @@
     "available": [
       { "name": "Certificacion Cicerone", "description": "Apoyo para obtener la certificación de conocimiento cervecero mas reconocida a nivel mundial." },
       { "name": "BJCP Beer Judge", "description": "Formacion y certificación como jueza de cerveza del Beer Judge Certification Program." },
-      { "name": "Educacion continua", "description": "Cursos, diplomados y programas academicos en universidades e institutos aliados." }
+      { "name": "Educación continua", "description": "Cursos, diplomados y programas academicos en universidades e institutos aliados." }
     ],
     "howTo": "Las becas se solicitan a traves del programa global de Pink Boots Society. Visita el sitio oficial para conocer las convocatorias abiertas.",
     "cta": "Ver becas en sitio oficial",

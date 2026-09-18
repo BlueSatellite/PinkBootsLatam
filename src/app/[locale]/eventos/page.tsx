@@ -7,7 +7,7 @@ import { specialRecognitions } from "@/lib/medals";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Eventos",
-    description: "Cocciones, colaboraciones, ponencias, webinars, competencias BAP y eventos especiales de Pink Boots Society en Latinoamerica.",
+    description: "Cocciones, colaboraciones, ponencias, webinars, competencias BAP y eventos especiales de Pink Boots Society en Latinoamérica.",
   };
 }
 
@@ -44,7 +44,7 @@ export default function EventsPage() {
               Pink Boots Collaboration Brew Day
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--color-text-secondary)]">
-              Es una celebracion internacional de mujeres en la industria de bebidas fermentadas y alcoholicas. Un movimiento para reconocer el impacto que tienen en nuestra industria. Es nuestro evento anual de recaudacion de fondos <strong>mas importante</strong>.
+              Es una celebracion internacional de mujeres en la industria de bebidas fermentadas y alcohólicas. Un movimiento para reconocer el impacto que tienen en nuestra industria. Es nuestro evento anual de recaudacion de fondos <strong>mas importante</strong>.
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
               <div className="rounded-lg bg-white p-4 text-center shadow-sm">
@@ -135,7 +135,7 @@ export default function EventsPage() {
             Eventos y actividades por tipo
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Consulta las principales actividades realizadas por Pink Boots en Latinoamerica.
+            Consulta las principales actividades realizadas por Pink Boots en Latinoamérica.
           </p>
 
           <div className="mt-10 space-y-10">

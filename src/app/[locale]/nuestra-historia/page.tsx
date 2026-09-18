@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 const usaHistory = [
   "Pink Boots Society nacio en 2007, cuando la maestra cervecera estadounidense Teri Fahrendorf emprendio un viaje en carretera por Estados Unidos elaborando cerveza junto a otras mujeres del gremio. Ese recorrido —que la llevo a colaborar con decenas de cerveceras en sus propias cervecerias— le mostro que habia una red de mujeres profesionales de la cerveza que no estaba conectada entre si, y que muchas se sentian solas dentro de una industria predominantemente masculina.",
-  "Teri creo entonces una lista para conectarlas y la llamo Pink Boots Society, inspirada en las botas rosadas que llevaba durante su recorrido. Junto a las cerveceras que conocio en el camino, la lista se convirtio en una organización sin fines de lucro dedicada a asistir, inspirar y motivar a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcoholicas a avanzar en sus carreras a traves de la educación.",
+  "Teri creo entonces una lista para conectarlas y la llamo Pink Boots Society, inspirada en las botas rosadas que llevaba durante su recorrido. Junto a las cerveceras que conocio en el camino, la lista se convirtio en una organización sin fines de lucro dedicada a asistir, inspirar y motivar a las mujeres y personas no binarias de la industria de bebidas fermentadas y alcohólicas a avanzar en sus carreras a traves de la educación.",
   "Desde entonces, Pink Boots Society crecio de un pequeño grupo de fundadoras a una red global con capitulos en distintos paises. Cada ano, el Pink Boots Collaboration Brew Day reune a cervecerias de todo el mundo para elaborar cerveza el mismo dia y recaudar fondos para becas educativas. La organización ha financiado becas para cientos de mujeres y personas no binarias, impulsando certificaciónes, cursos y programas de formación.",
 ];
 
@@ -15,10 +15,10 @@ const usaMilestones = [
 ];
 
 const latamHistory = [
-  "La historia de Pink Boots en Latinoamérica comenzo en Perú, cuando Megan Garity —una cervecera estadounidense— fundo Pink Boots Perú, sembrando la semilla de la comunidad en la region. La organización continuo su camino en manos de Andrea Huertas, quien siguio impulsando el movimiento en el país.",
+  "La historia de Pink Boots en Latinoamérica comenzo en Perú, cuando Megan Garity —una cervecera estadounidense— fundo Pink Boots Perú, sembrando la semilla de la comunidad en la región. La organización continuo su camino en manos de Andrea Huertas, quien siguio impulsando el movimiento en el país.",
   "Pink Boots Latin America como organización regional nacio con la vision de Silvia y Ericka Otero, quienes la formalizaron juntas con el objetivo de que no solamente las mujeres peruanas pudiesen obtener el beneficio de la educación en bebidas fermentadas, sino extenderlo por toda Latinoamérica —con educación de alto nivel en habla hispana. Ericka Otero continuo liderandola, buscando impulsar la educación, la colaboración, el crecimiento profesional y la sororidad entre sus integrantes.",
   "Con Panamá como sede del chapter padre de Latinoamérica, la red sumo integrantes en México (con Viviana Lopez en Cuernavaca), Chile (con Veronica Carrasco en Santiago) y Argentina (con Cristina Saez en Buenos Aires).",
-  "En 2026 nacio un nuevo hito: el sub-capitulo Pink Boots Latam / Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizo el primer Collaboration Brew Day LATAM en marzo y fue oficializado como sub-capitulo en mayo. Ademas, Silvia y Ericka Otero fueron selecciónadas como juezas del World Beer Cup 2026. De México a la Patagonia, seguimos creciendo con una sola pasion: la cerveza.",
+  "En 2026 nacio un nuevo hito: el sub-capítulo Pink Boots Latam / Puerto Rico, conformado por 21 integrantes y liderado por Keishla Torres, organizo el primer Collaboration Brew Day LATAM en marzo y fue oficializado como sub-capítulo en mayo. Ademas, Silvia y Ericka Otero fueron seleccionadas como juezas del World Beer Cup 2026. De México a la Patagonia, seguimos creciendo con una sola pasión: la cerveza.",
 ];
 
 const timeline = [
@@ -32,7 +32,7 @@ const timeline = [
 
 const statsLatam = [
   { country: "Brasil", pct: 27 },
-  { country: "Mexico", pct: 24 },
+  { country: "México", pct: 24 },
   { country: "Chile", pct: 20 },
   { country: "Colombia", pct: 17 },
   { country: "Argentina", pct: 12 },

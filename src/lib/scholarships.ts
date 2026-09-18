@@ -50,7 +50,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     institution: "Por confirmar",
     type: "Beca educativa Pink Boots",
     place: "Puerto Rico",
-    objective: "Beca otorgada en el marco del sub-capitulo Puerto Rico.",
+    objective: "Beca otorgada en el marco del sub-capítulo Puerto Rico.",
     experience: "Por confirmar",
   },
   {
@@ -58,7 +58,7 @@ export const awardedScholarships: AwardedScholarship[] = [
     institution: "Por confirmar",
     type: "Beca educativa Pink Boots",
     place: "Puerto Rico",
-    objective: "Beca otorgada en el marco del sub-capitulo Puerto Rico.",
+    objective: "Beca otorgada en el marco del sub-capítulo Puerto Rico.",
     experience: "Por confirmar",
   },
 ];
@@ -70,7 +70,7 @@ export const upcomingScholarships: UpcomingScholarship[] = [
     period: "Convocatoria trimestral",
     requirements: [
       "Ser mujer o persona no binaria",
-      "Trabajar en la industria de bebidas fermentadas y/o alcoholicas",
+      "Trabajar en la industria de bebidas fermentadas y/o alcohólicas",
       "Contar con membresia activa de Pink Boots Society",
       "Carta de recomendacion de una persona de la industria",
     ],

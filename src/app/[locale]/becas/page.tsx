@@ -16,13 +16,13 @@ const globalScholarships = [
   "Yakima Chief Hops Experiential Trip",
   "Crafting a Strategy program",
   "Sheehan Family Companies SkillPath Training",
-  "New Mexico State University",
+  "New México State University",
 ];
 
 const programSponsors = [
   { name: "Yuengling", desc: "America's Oldest Brewery — Since 1829" },
   { name: "Brew Pipeline", desc: "Patrocinador del programa de becas" },
-  { name: "Yakima Chief Hops", desc: "Viaje experiencial de lupulo" },
+  { name: "Yakima Chief Hops", desc: "Viaje experiencial de lúpulo" },
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -90,7 +90,7 @@ export default function ScholarshipsPage() {
                 </div>
                 <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
                   <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Institucion:</span>{" "}
+                    <span className="font-semibold text-[var(--color-text-primary)]">Institución:</span>{" "}
                     {scholarship.institution}
                   </p>
                   <p>
@@ -132,7 +132,7 @@ export default function ScholarshipsPage() {
                 </h3>
                 <div className="mt-2 grid gap-x-6 gap-y-1 text-sm text-[var(--color-text-secondary)] sm:grid-cols-2">
                   <p>
-                    <span className="font-semibold text-[var(--color-text-primary)]">Institucion:</span>{" "}
+                    <span className="font-semibold text-[var(--color-text-primary)]">Institución:</span>{" "}
                     {opportunity.institution}
                   </p>
                   {opportunity.period && (

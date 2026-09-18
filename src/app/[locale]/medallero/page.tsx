@@ -4,7 +4,7 @@ import { competitionMedals, groupMedalsByCountry } from "@/lib/medals";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Medallero",
-    description: "Las medallas ganadas por las integrantes de Pink Boots Society Latin America en competencias cerveceras, organizadas por pais.",
+    description: "Las medallas ganadas por las integrantes de Pink Boots Society Latin America en competencias cerveceras, organizadas por país.",
   };
 }
 
@@ -29,7 +29,7 @@ export default function MedalsPage() {
               Medallero
             </h1>
             <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
-              Las medallas ganadas por nuestras integrantes en competencias cerveceras, organizadas por pais.
+              Las medallas ganadas por nuestras integrantes en competencias cerveceras, organizadas por país.
             </p>
           </div>
         </div>

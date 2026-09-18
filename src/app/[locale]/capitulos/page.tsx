@@ -6,7 +6,7 @@ import ChaptersMapWrapper from "@/components/ui/ChaptersMapWrapper";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Capitulos",
-    description: "Conoce los capitulos oficiales de Pink Boots Society en Latinoamerica y la red de integrantes en la region.",
+    description: "Conoce los capitulos oficiales de Pink Boots Society en Latinoamérica y la red de integrantes en la región.",
   };
 }
 
@@ -41,7 +41,7 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
 
       {chapter.foundedYear && (
         <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-secondary)]">
-          Año de creacion: {chapter.foundedYear}
+          Año de creación: {chapter.foundedYear}
         </p>
       )}
 
@@ -137,10 +137,10 @@ export default function ChaptersPage() {
           </div>
 
           <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Integrantes en la region
+            Integrantes en la región
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Paises con integrantes activas de Pink Boots Latam que aun no cuentan con un capitulo oficial.
+            Paises con integrantes activas de Pink Boots Latam que aun no cuentan con un capítulo oficial.
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {regionNetwork.map((chapter) => (
@@ -174,10 +174,10 @@ export default function ChaptersPage() {
               Como funcionan los capitulos
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Pink Boots Society tiene requisitos oficiales para abrir un capitulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
+              Pink Boots Society tiene requisitos oficiales para abrir un capítulo: se necesita un minimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerias o negocios cerveceros</strong> distintos, realizar un minimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capitulos de forma trimestral.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Por eso, en Latinoamerica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capitulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la region contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capitulo propio, pero que forman parte de nuestra red.
+              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: el chapter padre <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros paises de la región contamos con integrantes activas que todavia no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
             </p>
           </div>
         </div>

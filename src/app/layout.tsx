@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Pink Boots Latam",
   },
   description:
-    "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas en Latinoamerica. Distintas culturas, una sola pasion: la cerveza.",
+    "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcohólicas en Latinoamérica. Distintas culturas, una sola pasión: la cerveza.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Pink Boots Society Latin America",
     title: "Pink Boots Society Latin America",
     description:
-      "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas en Latinoamerica.",
+      "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcohólicas en Latinoamérica.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pink Boots Society Latin America",
     description:
-      "Distintas culturas, una sola pasion: la cerveza.",
+      "Distintas culturas, una sola pasión: la cerveza.",
   },
   icons: {
     icon: "/sponsors/pinkbootslatam.png",
@@ -84,7 +84,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Pink Boots Society Latin America",
               alternateName: "Pink Boots Latam",
-              description: "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcoholicas en Latinoamerica.",
+              description: "Apoyando a mujeres y personas no binarias en la industria de bebidas fermentadas y alcohólicas en Latinoamérica.",
               url: "https://pinkbootslatam.org",
               logo: "https://pinkbootslatam.org/sponsors/pink-boots-logo.png",
               sameAs: [
@@ -92,7 +92,7 @@ export default function RootLayout({
                 "https://www.facebook.com/PinkBootsPeru/",
               ],
               foundingLocation: { "@type": "Place", address: { addressCountry: "PA" } },
-              knowsAbout: ["cerveza", "brewing", "mujeres cerveceras", "bebidas fermentadas", "educacion cervecera"],
+              knowsAbout: ["cerveza", "brewing", "mujeres cerveceras", "bebidas fermentadas", "educación cervecera"],
             }),
           }}
         />

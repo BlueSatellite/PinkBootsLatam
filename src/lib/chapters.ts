@@ -21,7 +21,7 @@ export const officialChapters: Chapter[] = [
   {
     name: "Pink Boots Latam",
     country: "Panamá",
-    city: "Ciudad de Panama",
+    city: "Ciudad de Panamá",
     role: "Chapter padre",
     foundedYear: 2023,
     representatives: [
@@ -30,7 +30,7 @@ export const officialChapters: Chapter[] = [
         role: "Co-Fundadora & Chapter Leader. Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],
-    info: "Chapter padre de Pink Boots Society para toda Latinoamérica. Creado en 2023 con el objetivo de extender la educación en bebidas fermentadas en habla hispana por toda la region.",
+    info: "Chapter padre de Pink Boots Society para toda Latinoamérica. Creado en 2023 con el objetivo de extender la educación en bebidas fermentadas en habla hispana por toda la región.",
     instagram: "@salsipuedesbrewingco",
     website: "https://www.instagram.com/salsipuedesbrewingco/",
   },
@@ -38,14 +38,14 @@ export const officialChapters: Chapter[] = [
     name: "Pink Boots Latam / Puerto Rico",
     country: "Puerto Rico",
     city: "Guaynabo",
-    role: "Sub-capitulo",
+    role: "Sub-capítulo",
     foundedYear: 2026,
     representatives: [
-      { name: "Keishla Torres", role: "Líder del sub-capitulo" },
+      { name: "Keishla Torres", role: "Líder del sub-capítulo" },
       { name: "Ocean Lab Brewing", role: "Cerveceria anfitriona" },
       { name: "Jevas Cerveceras", role: "Comunidad cervecera" },
     ],
-        info: "Sub-capitulo conformado por 21 integrantes y oficializado el 3 de mayo de 2026. Primer Collaboration Brew Day LATAM (15 de marzo de 2026): cerveza sour de tamarindo elaborada junto a Ocean Lab Brewing, Jevas Cerveceras y Salsipuedes Brewing Co. Becas otorgadas a Nikole Negron y Minelis Mendez.",
+        info: "Sub-capítulo conformado por 21 integrantes y oficializado el 3 de mayo de 2026. Primer Collaboration Brew Day LATAM (15 de marzo de 2026): cerveza sour de tamarindo elaborada junto a Ocean Lab Brewing, Jevas Cerveceras y Salsipuedes Brewing Co. Becas otorgadas a Nikole Negron y Minelis Mendez.",
     instagram: "@jevascerveceras",
     website: "https://www.instagram.com/jevascerveceras/",
   },
@@ -76,7 +76,7 @@ export const regionNetwork: Chapter[] = [
     representatives: [
       {
         name: "Viviana Lopez",
-        role: "Líder de comunidad en Mexico",
+        role: "Líder de comunidad en México",
       },
     ],
     info: "",

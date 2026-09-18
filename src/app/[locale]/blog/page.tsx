@@ -6,7 +6,7 @@ import { posts } from "@/lib/posts";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Blog",
-    description: "Historias, noticias y recursos de la comunidad Pink Boots Society en Latinoamerica.",
+    description: "Historias, noticias y recursos de la comunidad Pink Boots Society en Latinoamérica.",
   };
 }
 

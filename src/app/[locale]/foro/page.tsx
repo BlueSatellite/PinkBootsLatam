@@ -6,7 +6,7 @@ import { Link } from "@/i18n/routing";
 const categories = [
   { key: "tecnicas", label: "Preguntas tecnicas", emoji: "🔬" },
   { key: "eventos", label: "Eventos y encuentros", emoji: "🎉" },
-  { key: "becas", label: "Becas y educacion", emoji: "🎓" },
+  { key: "becas", label: "Becas y educación", emoji: "🎓" },
   { key: "networking", label: "Networking y empleos", emoji: "🤝" },
   { key: "historias", label: "Historias y comunidad", emoji: "💬" },
   { key: "general", label: "General", emoji: "🍺" },
@@ -94,7 +94,7 @@ export default function ForumPage() {
               href="/foro/nuevo"
               className="rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
             >
-              Nueva publicacion
+              Nueva publicación
             </Link>
           </div>
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Donaciones",
-    description: "Apoya a Pink Boots Society Latin America. Tus donaciones impulsan becas, eventos y comunidad para mujeres cerveceras en Latinoamerica.",
+    description: "Apoya a Pink Boots Society Latin America. Tus donaciones impulsan becas, eventos y comunidad para mujeres cerveceras en Latinoamérica.",
   };
 }
 

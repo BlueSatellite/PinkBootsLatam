@@ -6,7 +6,7 @@ import { useRouter } from "@/i18n/routing";
 const categories = [
   { key: "tecnicas", label: "Preguntas tecnicas" },
   { key: "eventos", label: "Eventos y encuentros" },
-  { key: "becas", label: "Becas y educacion" },
+  { key: "becas", label: "Becas y educación" },
   { key: "networking", label: "Networking y empleos" },
   { key: "historias", label: "Historias y comunidad" },
   { key: "general", label: "General" },
@@ -54,7 +54,7 @@ export default function NewPostPage() {
             Comunidad
           </p>
           <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Nueva publicacion
+            Nueva publicación
           </h1>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function NewPostPage() {
 
             <div>
               <label className="block text-sm font-semibold text-[var(--color-text-primary)]">Titulo</label>
-              <input name="title" required className="mt-1.5 w-full rounded-lg border border-[var(--color-border-default)] px-4 py-2.5 text-sm focus:border-[var(--color-pink-brand)] focus:outline-none" placeholder="¿De que trata tu publicacion?" />
+              <input name="title" required className="mt-1.5 w-full rounded-lg border border-[var(--color-border-default)] px-4 py-2.5 text-sm focus:border-[var(--color-pink-brand)] focus:outline-none" placeholder="¿De que trata tu publicación?" />
             </div>
 
             <div>
