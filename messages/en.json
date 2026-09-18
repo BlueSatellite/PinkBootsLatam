@@ -11,6 +11,7 @@
     "chapters": "Chapters",
     "membership": "Membership",
     "events": "Events",
+    "forum": "Forum",
     "medals": "Medals",
     "scholarships": "Scholarships",
     "blog": "Blog",
@@ -22,7 +23,7 @@
     "heroTitle": "Different cultures, one passion: beer",
     "heroSubtitle": "We support women and non-binary individuals in the fermented and alcoholic beverage industry across Latin America.",
     "missionTitle": "Our Mission",
-    "missionText": "Pink Boots Society aims to assist, inspire and encourage women and non-binary individuals in the fermented/alcoholic beverage industry to advance their careers through education.",
+    "missionText": "Pink Boots Society aims to assist, inspire and encourage women and non-binary individuals in the fermented and alcoholic beverage industry to advance their careers through education.",
     "sponsorsTitle": "Our Allies",
     "eventsTitle": "Upcoming Events",
     "joinCTA": "Join Pink Boots",
@@ -34,5 +35,104 @@
     "rights": "Pink Boots Society Latin America. All rights reserved.",
     "quickLinks": "Quick Links",
     "followUs": "Follow Us"
+  },
+  "about": {
+    "title": "Our Story",
+    "intro": "Pink Boots Society was founded in 2007 by Teri Fahrendorf, a master brewer who traveled across the United States brewing beer alongside other women in the industry. What began as a road trip became a global movement.",
+    "missionLabel": "Our Mission",
+    "mission": "Pink Boots Society aims to assist, inspire and encourage women and non-binary individuals in the fermented and alcoholic beverage industry to advance their careers through education.",
+    "visionLabel": "Our Vision",
+    "vision": "To be Latin America's leading network that makes women and non-binary individuals in the fermented and alcoholic beverage industry more visible, connected, and empowered — until we achieve a diverse and equitable industry.",
+    "latamIntro": "Pink Boots Society Latin America is the parent chapter for the entire region. From Mexico to Patagonia, including Brazil, we unite women and non-binary individuals passionate about beer and fermented beverages. We believe our different cultures share one passion: beer.",
+    "valuesTitle": "Our Values",
+    "values": [
+      { "title": "Education", "description": "We drive professional growth through scholarships, webinars, and training programs." },
+      { "title": "Community", "description": "We build support networks among women and non-binary individuals across Latin America." },
+      { "title": "Inclusion", "description": "We believe in an industry where everyone has equal opportunities." },
+      { "title": "Collaboration", "description": "We work with industry allies to create more diverse and equitable spaces." }
+    ]
+  },
+  "team": {
+    "title": "Who We Are",
+    "intro": "We are a team of professionals passionate about the fermented beverage industry. From brewers to sommeliers, our network spans all of Latin America.",
+    "leadership": "Leadership",
+    "comingSoon": "Leadership information coming soon."
+  },
+  "donate": {
+    "title": "Donations",
+    "hero": "Your support drives the future of women and non-binary individuals in the Latin American brewing industry.",
+    "whyTitle": "Why donate",
+    "whyText": "Every contribution allows us to fund educational scholarships, organize networking events, create mentorship programs, and expand our community to more corners of Latin America. Pink Boots Society is a non-profit organization.",
+    "waysTitle": "How to contribute",
+    "ways": [
+      { "title": "Direct donation", "description": "Make a one-time or recurring contribution." },
+      { "title": "Corporate sponsorship", "description": "Make your company an official ally of Pink Boots Latam." },
+      { "title": "Volunteering", "description": "Offer your time and expertise to support our community." }
+    ],
+    "cta": "If you'd like to contribute, reach out through our social media or contact your local chapter.",
+    "button": "Contact us on Instagram"
+  },
+  "membership": {
+    "title": "Membership",
+    "hero": "Be part of the largest community of women and non-binary individuals in the fermented beverage industry in Latin America.",
+    "benefitsTitle": "Benefits",
+    "benefits": [
+      "Access to educational scholarships and exclusive webinars",
+      "Discounts on events and conferences",
+      "Connection with professionals from across the region",
+      "Mentorship program",
+      "Members directory",
+      "Volunteering and leadership opportunities"
+    ],
+    "howTo": "Membership is processed through the official Pink Boots Society website (USA). Latin American memberships contribute to the global fund, which is distributed equitably among all chapters at the end of the year.",
+    "cta": "Join on the official site",
+    "ctaUrl": "https://www.pinkbootssociety.org/membership-information"
+  },
+  "sponsors": {
+    "title": "Sponsors & Allies",
+    "hero": "Thanks to our allies, we can drive education, community, and inclusion in the Latin American brewing industry.",
+    "mainTitle": "Main Sponsor",
+    "partnersTitle": "Allies",
+    "becomeTitle": "Become an ally",
+    "becomeText": "If your company or organization would like to support Pink Boots Society Latin America, contact us to learn about sponsorship opportunities.",
+    "becomeCta": "Message us on Instagram"
+  },
+  "chapters": {
+    "title": "Chapters",
+    "hero": "Find a Pink Boots chapter near you across Latin America.",
+    "comingSoon": "We are building the chapter network in Latin America. Soon you will be able to find a chapter in your country.",
+    "cta": "If you want to start or lead a chapter in your country, reach out to us."
+  },
+  "events": {
+    "title": "Events",
+    "hero": "Connect, learn and celebrate with the Pink Boots community across Latin America.",
+    "upcoming": "Upcoming events",
+    "past": "Past events",
+    "empty": "No events scheduled at this time. Check back soon or follow us on Instagram to stay updated.",
+    "types": [
+      { "name": "Collaboration Brew Day", "description": "Pink Boots' signature event where chapters from around the world brew collaborative beer on the same day." },
+      { "name": "Webinars", "description": "Virtual educational sessions with industry experts." },
+      { "name": "Networking", "description": "In-person and virtual meetups to connect with other professionals." }
+    ]
+  },
+  "scholarships": {
+    "title": "Scholarships",
+    "hero": "We drive your professional growth through educational opportunities.",
+    "intro": "Pink Boots Society offers scholarships for women and non-binary individuals in the fermented beverage industry. Scholarships cover everything from professional certifications to full academic programs.",
+    "availableTitle": "Available scholarships",
+    "available": [
+      { "name": "Cicerone Certification", "description": "Support to obtain the world's most recognized beer knowledge certification." },
+      { "name": "BJCP Beer Judge", "description": "Training and certification as a Beer Judge Certification Program judge." },
+      { "name": "Continuing Education", "description": "Courses, diplomas, and academic programs at partner universities and institutes." }
+    ],
+    "howTo": "Scholarships are requested through the global Pink Boots Society program. Visit the official site to see open applications.",
+    "cta": "View scholarships on official site",
+    "ctaUrl": "https://www.pinkbootssociety.org/scholarships"
+  },
+  "blog": {
+    "title": "Blog",
+    "hero": "Stories, news, and resources from the Pink Boots community in Latin America.",
+    "empty": "Content coming soon. In the meantime, follow us on Instagram to stay up to date.",
+    "cta": "Follow us on Instagram"
   }
 }
