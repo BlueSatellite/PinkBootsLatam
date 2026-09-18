@@ -11,40 +11,29 @@ export interface Medal {
 }
 
 export const medals: Medal[] = [
+  // --- RECONOCIMIENTOS CONFIRMADOS ---
   {
     memberName: "Ericka Otero",
     competition: "World Beer Cup",
     year: "2026",
     category: "Juzgamiento",
-    recognition: "Seleccionada como jueza",
+    recognition: "Seleccionada como jueza — no como ganadora",
     award: "Reconocimiento",
     country: "Panama",
   },
   {
-    memberName: "Silvia De Tomas",
+    memberName: "Silvia",
     competition: "World Beer Cup",
     year: "2026",
     category: "Juzgamiento",
-    recognition: "Seleccionada como jueza",
+    recognition: "Seleccionada como jueza — no como ganadora",
     award: "Reconocimiento",
     country: "Peru",
   },
-  {
-    memberName: "Silvia De Tomas",
-    competition: "Competencia por confirmar",
-    category: "Chica de Humo — Barranco Beer Co",
-    recognition: "Medalla de Bronce",
-    award: "Medalla",
-    country: "Peru",
-  },
-  {
-    memberName: "Viviana Lopez",
-    competition: "Copa Guerreras del Lupulo",
-    category: "Por confirmar",
-    recognition: "Medalla de Plata",
-    award: "Medalla",
-    country: "Mexico",
-  },
+  // --- MEDALLAS COMPETENCIAS (Ericka enviara la informacion de las 3 medallas) ---
+  // { memberName: "", competition: "Copa Guarani", year: "", category: "", recognition: "", award: "Medalla", country: "" },
+  // { memberName: "", competition: "Copa Quetzal", year: "", category: "", recognition: "", award: "Medalla", country: "" },
+  // { memberName: "", competition: "Copa Austral", year: "", category: "", recognition: "", award: "Medalla", country: "" },
 ];
 
 export function sortMedalsChronologically(medalList: Medal[]): Medal[] {

@@ -4,7 +4,6 @@ export type EventCategory =
   | "ponencias"
   | "congresos"
   | "webinars"
-  | "competencias"
   | "especiales";
 
 export interface EventMedia {
@@ -29,7 +28,6 @@ export const eventCategoryLabels: Record<EventCategory, string> = {
   ponencias: "Ponencias",
   congresos: "Congresos",
   webinars: "Webinars",
-  competencias: "Competencias BAP",
   especiales: "Eventos especiales",
 };
 
@@ -39,11 +37,28 @@ export const eventCategoryOrder: EventCategory[] = [
   "ponencias",
   "congresos",
   "webinars",
-  "competencias",
   "especiales",
 ];
 
 export const events: PinkEvent[] = [
+  // --- PROXIMOS EVENTOS (por confirmar con Ericka) ---
+  {
+    category: "cocciones",
+    title: "Coccion colaborativa Pink Boots Latam — Cusco",
+    place: "Cusco, Peru",
+    date: "Proximo",
+    description:
+      "Proxima coccion colaborativa de Pink Boots Latam en Cusco, Peru. Detalles por confirmar.",
+  },
+  {
+    category: "especiales",
+    title: "Lanzamiento Cerveza Colaborativa Pink Boots Latam",
+    place: "Por confirmar",
+    date: "Noviembre 2026",
+    description:
+      "Lanzamiento oficial de la nueva cerveza colaborativa de Pink Boots Latin America. Detalles por confirmar.",
+  },
+  // --- EVENTOS RECIENTES ---
   {
     category: "colaboraciones",
     title: "Pink Boots Collaboration Brew Day Latam",
@@ -63,29 +78,5 @@ export const events: PinkEvent[] = [
     date: "3 de mayo de 2026",
     description:
       "Encuentro oficial para la conformacion del subcapitulo Pink Boots Latam / Puerto Rico, hoy conformado por 21 integrantes y liderado por Keishla Torres.",
-  },
-  {
-    category: "cocciones",
-    title: "Chica de Humo — Barranco Beer Co",
-    place: "Lima, Peru",
-    date: "Por confirmar",
-    description:
-      "Coccion de Chica de Humo junto a Barranco Beer Co, que obtuvo Medalla de Bronce. Un ejemplo del talento cervecero de las integrantes de Pink Boots Peru.",
-  },
-  {
-    category: "competencias",
-    title: "Copa Guerreras del Lupulo",
-    place: "Cuernavaca, Mexico",
-    date: "Por confirmar",
-    description:
-      "Participacion de Viviana Lopez con Medalla de Plata en la Copa Guerreras del Lupulo, competencia que visibiliza el trabajo de las mujeres cerveceras mexicanas.",
-  },
-  {
-    category: "especiales",
-    title: "Premios La Republica y Premios WAPA",
-    place: "Lima, Peru",
-    date: "Por confirmar",
-    description:
-      "Pink Boots Peru fue reconocida con los Premios La Republica y Premios WAPA por su labor impulsando a las mujeres en la industria cervecera peruana.",
   },
 ];

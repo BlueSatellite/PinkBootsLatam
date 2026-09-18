@@ -8,6 +8,13 @@ export interface SponsorVideo {
   src: string;
 }
 
+export interface SponsorFeaturedProduct {
+  title: string;
+  description: string;
+  link: string;
+  linkLabel: string;
+}
+
 export interface Sponsor {
   name: string;
   logo: string;
@@ -18,6 +25,7 @@ export interface Sponsor {
   relationship: string;
   socials?: SponsorSocial[];
   videos?: SponsorVideo[];
+  featuredProduct?: SponsorFeaturedProduct;
 }
 
 export const sponsors: Sponsor[] = [
@@ -63,6 +71,13 @@ export const sponsors: Sponsor[] = [
       "Cooperativa de familias productoras de lupulo del valle de Yakima, Washington. Referencia mundial en variedades de lupulo y blends especiales para la industria cervecera.",
     relationship:
       "Aliado de Pink Boots Society. Creadores del Pink Boots Blend, cuya venta apoya los programas educativos de la organizacion. Tambien patrocinan becas como el viaje experiencial de lupulo.",
+    featuredProduct: {
+      title: "Pink Boots Blend",
+      description:
+        "Yakima Chief Hops dona $1 por cada libra vendida del Pink Boots Blend a Pink Boots Society. El blend cambia cada año y es seleccionado sensorialmente por las propias integrantes de Pink Boots, con un perfil unico pensado para la elaboracion creativa.",
+      link: "https://www.yakimachief.com/variety/pink-boots-blend",
+      linkLabel: "Ver el Pink Boots Blend",
+    },
   },
   {
     name: "Fermenta Cociencia",
@@ -78,6 +93,15 @@ export const sponsors: Sponsor[] = [
         src: "/videos/fermenta-conciencia.mp4",
       },
     ],
+  },
+  {
+    name: "Academia Eco",
+    logo: "/sponsors/academia-eco.png",
+    description:
+      "Marca de cosmetica natural aliada de Pink Boots Society Latin America, comprometida con el bienestar y el empoderamiento de las mujeres en la industria.",
+    relationship:
+      "Patrocinadora de Pink Boots Society Latin America. Video institucional pendiente de publicacion.",
+    // videos: [{ title: "Video — Academia Eco", src: "/videos/academia-eco.mp4" }], // pendiente
   },
   {
     name: "BJCP",

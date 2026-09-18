@@ -59,11 +59,11 @@ export const regionNetwork: Chapter[] = [
     role: "Integrantes de la red",
     representatives: [
       {
-        name: "Silvia De Tomas",
-        role: "Co-lider de Pink Boots Latinoamerica. Two Brothers Brewing. Seleccionada como jueza para el World Beer Cup 2026.",
+        name: "Silvia",
+        role: "Co-lider de Pink Boots Latinoamerica. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],
-    info: "Medalla de Bronce con Chica de Humo (Barranco Beer Co). Premiadas por La Republica y Premios WAPA. Beca internacional otorgada a Megan Garrity, Sara Lefevre y Ximena Gloria — viaje por cervecerias de Europa.",
+    info: "",
     instagram: "@pinkbootsperu",
     facebook: "PinkBootsPeru",
     website: "https://www.instagram.com/pinkbootsperu/",
@@ -76,10 +76,10 @@ export const regionNetwork: Chapter[] = [
     representatives: [
       {
         name: "Viviana Lopez",
-        role: "Lider de comunidad en Mexico. @tebana_laboratorio_cervecero",
+        role: "Lider de comunidad en Mexico",
       },
     ],
-    info: "Medalla de plata en Copa Guerreras del Lupulo.",
+    info: "",
     instagram: "@tebana_laboratorio_cervecero",
     website: "https://www.instagram.com/tebana_laboratorio_cervecero/",
   },
@@ -94,34 +94,18 @@ export const regionNetwork: Chapter[] = [
         role: "Fundadora de Cerveza Vericcio",
       },
     ],
-    info: "Participante en Copa Capital.",
+    info: "",
     instagram: "@cervezavericcio",
     website: "https://www.instagram.com/cervezavericcio/",
   },
   {
     name: "Brasil",
     country: "Brasil",
-    city: "Rio de Janeiro / Minas Gerais",
+    city: "Brasil",
     role: "Integrantes de la red",
     representatives: [
-      { name: "Amanda Henriques", role: "Rio de Janeiro" },
-      { name: "Priscilla Colares", role: "Minas Gerais" },
+      { name: "Fernanda de Acosta" },
     ],
-    info: "Comunidad pionera de la region, activa desde 2015 gracias a Alex Iunes.",
-    facebookGroup: "Pink Boots Society - Rio de Janeiro",
-    website: "https://www.facebook.com/groups/885771154845187",
-  },
-  {
-    name: "Argentina",
-    country: "Argentina",
-    city: "Buenos Aires",
-    role: "Integrantes de la red",
-    representatives: [
-      {
-        name: "Cristina Saez",
-        role: "Maestra cervecera en Birra & Blues",
-      },
-    ],
-    info: "Brewed 'Iniquity' West Coast IPA para PBS.",
+    info: "",
   },
 ];
