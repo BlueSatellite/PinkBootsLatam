@@ -63,11 +63,13 @@ export default function SponsorsPage() {
                 className="group rounded-xl border border-[var(--color-border-default)] bg-white open:border-[var(--color-pink-200)] open:shadow-sm"
               >
                 <summary className="flex cursor-pointer list-none items-center gap-4 p-5">
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="h-16 w-auto shrink-0 object-contain"
-                  />
+                  <div className="flex h-12 w-24 shrink-0 items-center justify-center">
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
