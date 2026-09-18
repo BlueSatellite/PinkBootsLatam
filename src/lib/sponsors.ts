@@ -79,21 +79,7 @@ export const sponsors: Sponsor[] = [
       linkLabel: "Ver el Pink Boots Blend",
     },
   },
-  {
-    name: "Fermenta Cociencia",
-    logo: "/sponsors/fermenta-cociencia.jpg",
-    website: "https://www.fermentaconciencia.com/",
-    description:
-      "Proyecto de divulgacion y formacion en ciencias de la fermentacion, liderado por la cientifica Lucia Alvarez, especializada en microbiologia de alimentos fermentados. Acompana a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
-    relationship:
-      "Aliada educativa de Pink Boots Society Latin America, sumando conocimiento cientifico a la formacion de nuestras integrantes.",
-    videos: [
-      {
-        title: "Video — Fermenta Cociencia",
-        src: "/videos/fermenta-conciencia.mp4",
-      },
-    ],
-  },
+
   {
     name: "Academia Eco",
     logo: "/sponsors/academia-eco.png",
@@ -120,6 +106,21 @@ export const sponsors: Sponsor[] = [
       "Programa de certificacion profesional de conocimiento y servicio de cerveza. Sus niveles (Certified Beer Server, Certified Cicerone, Advanced y Master Cicerone) son referencia de excelencia en la industria.",
     relationship:
       "Aliado del programa de becas de Pink Boots Society, ofreciendo certificaciones a integrantes de nuestra comunidad.",
+  },
+  {
+    name: "Fermenta Cociencia",
+    logo: "/sponsors/fermenta-cociencia.jpg",
+    website: "https://www.fermentaconciencia.com/",
+    description:
+      "Proyecto de divulgacion y formacion en ciencias de la fermentacion, liderado por la cientifica Lucia Alvarez, especializada en microbiologia de alimentos fermentados. Acompana a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
+    relationship:
+      "Aliada educativa de Pink Boots Society Latin America, sumando conocimiento cientifico a la formacion de nuestras integrantes.",
+    videos: [
+      {
+        title: "Video — Fermenta Cociencia",
+        src: "/videos/fermenta-conciencia.mp4",
+      },
+    ],
   },
   {
     name: "Blue Entropy",
