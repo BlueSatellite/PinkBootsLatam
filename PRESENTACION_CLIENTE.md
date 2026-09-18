@@ -69,7 +69,7 @@ La pagina ya esta publicada temporalmente en:
 - Lleva al Instagram para contacto directo
 
 **Pagina de Quienes Somos**
-- Tarjetas con 6 lideres reales de la comunidad: Ericka Otero, Silvia De Tomas, Viviana Lopez, Veronica Carrasco, Cristina Saez y Amanda Henriques
+- Tarjetas con las líderes de la comunidad: Ericka Otero, Silvia De Tomás, Keishla Torres, Viviana López, Verónica Carrasco y Fernanda de Acosta
 - Foto-placeholder inicial de cada persona con su rol, pais y biografia
 
 **Pagina de Nuestra Historia**

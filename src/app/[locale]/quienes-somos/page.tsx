@@ -17,7 +17,7 @@ const leadership = [
     instagram: "@salsipuedesbrewingco",
   },
   {
-    name: "Silvia De Tomas",
+    name: "Silvia De Tomás",
     role: "Co-Líder",
     country: "Perú",
     bio: "Two Brothers Brewing. Co-líder de Pink Boots Latinoamérica. Seleccionada como jueza para el World Beer Cup 2026.",

@@ -59,7 +59,7 @@ export const regionNetwork: Chapter[] = [
     role: "Integrantes de la red",
     representatives: [
       {
-        name: "Silvia",
+        name: "Silvia De Tomás",
         role: "Co-líder de Pink Boots Latinoamérica. Seleccionada como jueza para el World Beer Cup 2026.",
       },
     ],

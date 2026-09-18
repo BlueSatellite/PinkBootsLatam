@@ -22,7 +22,7 @@ export const medals: Medal[] = [
     country: "Panamá",
   },
   {
-    memberName: "Silvia",
+    memberName: "Silvia De Tomás",
     competition: "World Beer Cup",
     year: "2026",
     category: "Juzgamiento",

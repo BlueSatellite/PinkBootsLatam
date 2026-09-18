@@ -24,15 +24,15 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "ericka-otero-silvia-de-tomas-juezas-world-beer-cup-2026",
-    title: "Ericka Otero y Silvia De Tomas, juezas del World Beer Cup 2026",
+    title: "Ericka Otero y Silvia De Tomás, juezas del World Beer Cup 2026",
     date: "2026",
     excerpt:
       "Dos líderes de Pink Boots Society Latam fueron seleccionadas para juzgar en la competencia cervecera más grande del mundo.",
     tags: ["World Beer Cup", "Reconocimientos"],
     content: [
-      "La co-fundadora de Pink Boots Society Latam, Ericka Otero (Panamá), y la co-líder Silvia De Tomas (Perú), fueron seleccionadas como juezas del World Beer Cup 2026.",
+      "La co-fundadora de Pink Boots Society Latam, Ericka Otero (Panamá), y la co-líder Silvia De Tomás (Perú), fueron seleccionadas como juezas del World Beer Cup 2026.",
       "El World Beer Cup, organizado por la Brewers Association, es la competencia cervecera comercial más grande del mundo y contar con representación latinoamericana en su cuerpo de juzgamiento es un reconocimiento al nivel de nuestra comunidad.",
-      "Felicitamos a Ericka y a Silvia por representar a las mujeres cerveceras de Latinoamérica en el escenario internacional.",
+      "Felicitamos a Ericka y a Silvia De Tomás por representar a las mujeres cerveceras de Latinoamérica en el escenario internacional.",
     ].join("\n\n"),
   },
   {
