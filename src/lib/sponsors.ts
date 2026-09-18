@@ -79,15 +79,21 @@ export const sponsors: Sponsor[] = [
       linkLabel: "Ver el Pink Boots Blend",
     },
   },
-
   {
-    name: "Academia Eco",
-    logo: "/sponsors/academia-eco.png",
+    name: "Blue Entropy",
+    logo: "/sponsors/blue-entropy.png",
+    website: "https://www.instagram.com/blue_ntropy/",
+    label: "Creador de la pagina web",
     description:
-      "Marca de cosmetica natural aliada de Pink Boots Society Latin America, comprometida con el bienestar y el empoderamiento de las mujeres en la industria.",
+      "Equipo creativo y de desarrollo detras de la pagina web de Pink Boots Society Latin America.",
     relationship:
-      "Patrocinadora de Pink Boots Society Latin America. Video institucional pendiente de publicacion.",
-    // videos: [{ title: "Video — Academia Eco", src: "/videos/academia-eco.mp4" }], // pendiente
+      "Aliado tecnologico: diseno y desarrollo del sitio oficial de Pink Boots Society Latam.",
+    socials: [
+      {
+        label: "Instagram",
+        url: "https://www.instagram.com/blue_ntropy/",
+      },
+    ],
   },
   {
     name: "BJCP",
@@ -123,20 +129,13 @@ export const sponsors: Sponsor[] = [
     ],
   },
   {
-    name: "Blue Entropy",
-    logo: "/sponsors/blue-entropy.png",
-    website: "https://www.instagram.com/blue_ntropy/",
-    label: "Creador de la pagina web",
+    name: "Academia Eco",
+    logo: "/sponsors/academia-eco.png",
     description:
-      "Equipo creativo y de desarrollo detras de la pagina web de Pink Boots Society Latin America.",
+      "Marca de cosmetica natural aliada de Pink Boots Society Latin America, comprometida con el bienestar y el empoderamiento de las mujeres en la industria.",
     relationship:
-      "Aliado tecnologico: diseno y desarrollo del sitio oficial de Pink Boots Society Latam.",
-    socials: [
-      {
-        label: "Instagram",
-        url: "https://www.instagram.com/blue_ntropy/",
-      },
-    ],
+      "Patrocinadora de Pink Boots Society Latin America. Video institucional pendiente de publicacion.",
+    // videos: [{ title: "Video — Academia Eco", src: "/videos/academia-eco.mp4" }], // pendiente
   },
 ];
 
