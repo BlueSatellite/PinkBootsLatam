@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import { sponsors } from "@/lib/sponsors";
+import { FadeIn } from "@/components/ui/animations/FadeIn";
+import { StaggerContainer, StaggerItem } from "@/components/ui/animations/Stagger";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -33,7 +35,7 @@ export default function SponsorsPage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
-          <div className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
+          <FadeIn className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
               Pink Boots Society Latin America
             </p>
@@ -43,146 +45,149 @@ export default function SponsorsPage() {
             <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
               {t("hero")}
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-            Semblanzas de nuestros aliados
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Haz clic en cada patrocinador para conocer su historia, su colaboración con Pink Boots y su material grafico.
-          </p>
+          <FadeIn>
+            <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
+              Semblanzas de nuestros aliados
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-[var(--color-text-muted)]">
+              Haz clic en cada patrocinador para conocer su historia, su colaboración con Pink Boots y su material grafico.
+            </p>
+          </FadeIn>
 
-          <div className="mt-10 space-y-4">
+          <StaggerContainer delayChildren={0.1} className="mt-10 space-y-4">
             {orderedSponsors.map((sponsor) => (
-              <details
-                key={sponsor.name}
-                className="group rounded-xl border border-[var(--color-border-default)] bg-white open:border-[var(--color-pink-200)] open:shadow-sm"
-              >
-                <summary className="flex cursor-pointer list-none items-center gap-4 p-5">
-                  <div className="flex h-12 w-24 shrink-0 items-center justify-center">
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
-                        {sponsor.name}
-                      </h3>
-                      {sponsor.featured && (
-                        <span className="rounded-full bg-[var(--color-pink-brand)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                          Sponsor principal
-                        </span>
-                      )}
-                      {sponsor.label && (
-                        <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                          {sponsor.label}
-                        </span>
-                      )}
+              <StaggerItem key={sponsor.name}>
+                <details
+                  className="group rounded-xl border border-[var(--color-border-default)] bg-white open:border-[var(--color-pink-200)] open:shadow-sm"
+                >
+                  <summary className="flex cursor-pointer list-none items-center gap-4 p-5 transition-colors hover:bg-gray-50/50">
+                    <div className="flex h-12 w-24 shrink-0 items-center justify-center">
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="max-h-full max-w-full object-contain"
+                      />
                     </div>
-                    <p className="mt-0.5 text-xs text-[var(--color-text-muted)]">
-                      Click para ver la semblanza
-                    </p>
-                  </div>
-                  <span className="shrink-0 text-[var(--color-text-muted)] transition-transform group-open:rotate-180">
-                    {chevronIcon}
-                  </span>
-                </summary>
-
-                <div className="border-t border-[var(--color-border-light)] p-5">
-                  <h4 className="font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                    Sobre la empresa
-                  </h4>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                    {sponsor.description}
-                  </p>
-
-                  <h4 className="mt-4 font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                    Relación con Pink Boots
-                  </h4>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                    {sponsor.relationship}
-                  </p>
-
-                  {sponsor.featuredProduct && (
-                    <div className="mt-5 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
-                      <h4 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                        {sponsor.featuredProduct.title}
-                      </h4>
-                      <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                        {sponsor.featuredProduct.description}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+                          {sponsor.name}
+                        </h3>
+                        {sponsor.featured && (
+                          <span className="rounded-full bg-[var(--color-pink-brand)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                            Sponsor principal
+                          </span>
+                        )}
+                        {sponsor.label && (
+                          <span className="rounded-full bg-[var(--color-pink-50)] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                            {sponsor.label}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-0.5 text-xs text-[var(--color-text-muted)]">
+                        Click para ver la semblanza
                       </p>
-                      <a
-                        href={sponsor.featuredProduct.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 inline-flex rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
-                      >
-                        {sponsor.featuredProduct.linkLabel}
-                      </a>
                     </div>
-                  )}
+                    <span className="shrink-0 text-[var(--color-text-muted)] transition-transform group-open:rotate-180">
+                      {chevronIcon}
+                    </span>
+                  </summary>
 
-                  {(sponsor.website || sponsor.socials?.length) && (
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      {sponsor.website && (
+                  <div className="border-t border-[var(--color-border-light)] p-5">
+                    <h4 className="font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                      Sobre la empresa
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      {sponsor.description}
+                    </p>
+
+                    <h4 className="mt-4 font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                      Relación con Pink Boots
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      {sponsor.relationship}
+                    </p>
+
+                    {sponsor.featuredProduct && (
+                      <div className="mt-5 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
+                        <h4 className="font-display text-sm font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
+                          {sponsor.featuredProduct.title}
+                        </h4>
+                        <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                          {sponsor.featuredProduct.description}
+                        </p>
                         <a
-                          href={sponsor.website}
+                          href={sponsor.featuredProduct.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-pink-brand)] px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+                          className="mt-3 inline-flex rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
                         >
-                          Sitio web
+                          {sponsor.featuredProduct.linkLabel}
                         </a>
-                      )}
-                      {sponsor.socials?.map((social) => (
-                        <a
-                          key={social.label}
-                          href={social.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] px-4 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-pink-200)] hover:text-[var(--color-pink-brand)]"
-                        >
-                          {social.label === "Instagram" && instagramIcon}
-                          {social.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                      </div>
+                    )}
 
-                  {sponsor.videos?.length && (
-                    <div className="mt-5 space-y-4">
-                      {sponsor.videos.map((video) => (
-                        <div key={video.src}>
-                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-muted)]">
-                            {video.title}
-                          </p>
-                          <div className="overflow-hidden rounded-xl border border-[var(--color-border-default)] bg-black">
-                            <video
-                              controls
-                              playsInline
-                              preload="metadata"
-                              className="max-h-[480px] w-full"
-                            >
-                              <source src={video.src} type="video/mp4" />
-                            </video>
+                    {(sponsor.website || sponsor.socials?.length) && (
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        {sponsor.website && (
+                          <a
+                            href={sponsor.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-pink-brand)] px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+                          >
+                            Sitio web
+                          </a>
+                        )}
+                        {sponsor.socials?.map((social) => (
+                          <a
+                            key={social.label}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] px-4 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-pink-200)] hover:text-[var(--color-pink-brand)]"
+                          >
+                            {social.label === "Instagram" && instagramIcon}
+                            {social.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+
+                    {sponsor.videos?.length && (
+                      <div className="mt-5 space-y-4">
+                        {sponsor.videos.map((video) => (
+                          <div key={video.src}>
+                            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[var(--color-text-muted)]">
+                              {video.title}
+                            </p>
+                            <div className="overflow-hidden rounded-xl border border-[var(--color-border-default)] bg-black">
+                              <video
+                                controls
+                                playsInline
+                                preload="metadata"
+                                className="max-h-[480px] w-full"
+                              >
+                                <source src={video.src} type="video/mp4" />
+                              </video>
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </details>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </details>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
-          <div className="mt-16 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-8 text-center">
+          <FadeIn className="mt-16 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-8 text-center">
             <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
               {t("becomeTitle")}
             </h2>
@@ -197,7 +202,7 @@ export default function SponsorsPage() {
             >
               {t("becomeCta")}
             </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
     </>

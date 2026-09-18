@@ -4,6 +4,9 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { mainSponsor, otherSponsors } from "@/lib/sponsors";
 import InstagramFeed from "@/components/ui/InstagramFeed";
+import { FadeIn } from "@/components/ui/animations/FadeIn";
+import { StaggerContainer, StaggerItem } from "@/components/ui/animations/Stagger";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   const t = useTranslations("home");
@@ -22,51 +25,65 @@ export default function HomePage() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30" aria-hidden="true" />
 
-        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
-            Pink Boots Society Latin America
-          </p>
-          <h1 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-            {t("heroTitle")}
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/80">
-            {t("heroSubtitle")}
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/membresia"
-              className="inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[var(--color-pink-600)] hover:shadow-lg"
-            >
-              {t("joinCTA")}
-            </Link>
-            <Link
-              href="/donaciones"
-              className="inline-flex rounded-full border border-white/30 px-6 py-2.5 text-sm font-semibold text-white transition-all hover:border-white/60 hover:bg-white/10"
-            >
-              {t("donateCTA")}
-            </Link>
-          </div>
-        </div>
+        <StaggerContainer className="relative z-10 mx-auto max-w-3xl px-4 text-center">
+          <StaggerItem>
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+              Pink Boots Society Latin America
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h1 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+              {t("heroTitle")}
+            </h1>
+          </StaggerItem>
+          <StaggerItem>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/80">
+              {t("heroSubtitle")}
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/membresia"
+                  className="inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)] shadow-sm"
+                >
+                  {t("joinCTA")}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/donaciones"
+                  className="inline-flex rounded-full border border-white/30 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10"
+                >
+                  {t("donateCTA")}
+                </Link>
+              </motion.div>
+            </div>
+          </StaggerItem>
+        </StaggerContainer>
       </section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
+        <FadeIn className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
             {t("missionTitle")}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[var(--color-text-secondary)]">
             {t("missionText")}
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       <section className="bg-[var(--color-surface-alt)] py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
-            {t("sponsorsTitle")}
-          </h2>
+          <FadeIn>
+            <h2 className="text-center font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+              {t("sponsorsTitle")}
+            </h2>
+          </FadeIn>
 
-          <div className="mt-14 flex justify-center">
+          <FadeIn delay={0.1} className="mt-14 flex justify-center">
             <a
               href={mainSponsor.website}
               target="_blank"
@@ -82,119 +99,130 @@ export default function HomePage() {
                 className="h-[140px] w-auto"
               />
             </a>
-          </div>
+          </FadeIn>
 
-          <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3">
+          <StaggerContainer delayChildren={0.2} className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3">
             {otherSponsors.map((sponsor) => (
-              <a
-                key={sponsor.name}
-                href={sponsor.website ?? "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center gap-2 rounded-xl bg-white px-6 py-6 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="h-[100px] w-auto object-contain"
-                />
-                {sponsor.label && (
-                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                    {sponsor.label}
-                  </span>
-                )}
-              </a>
+              <StaggerItem key={sponsor.name}>
+                <a
+                  href={sponsor.website ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-full flex-col items-center justify-center gap-2 rounded-xl bg-white px-6 py-6 shadow-sm ring-1 ring-gray-100 transition-all hover:scale-110 hover:shadow-md hover:ring-[var(--color-pink-200)]"
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="h-[100px] w-auto object-contain"
+                  />
+                  {sponsor.label && (
+                    <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)] text-center">
+                      {sponsor.label}
+                    </span>
+                  )}
+                </a>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <StaggerContainer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <Link
-              href="/capitulos"
-              className="group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-colors hover:border-[var(--color-pink-200)]"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
-                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
-                {t("chaptersCTA")}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                Conecta con capítulos locales en toda Latinoamérica.
-              </p>
-            </Link>
+            <StaggerItem>
+              <Link
+                href="/capitulos"
+                className="block h-full group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-all hover:border-[var(--color-pink-200)] hover:shadow-md hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
+                  {t("chaptersCTA")}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  Conecta con capítulos locales en toda Latinoamérica.
+                </p>
+              </Link>
+            </StaggerItem>
 
-            <Link
-              href="/eventos"
-              className="group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-colors hover:border-[var(--color-pink-200)]"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
-                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
-                {t("eventsTitle")}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                Descubre webinars y Collaboration Brew Days.
-              </p>
-            </Link>
+            <StaggerItem>
+              <Link
+                href="/eventos"
+                className="block h-full group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-all hover:border-[var(--color-pink-200)] hover:shadow-md hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </div>
+                <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
+                  {t("eventsTitle")}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  Descubre webinars y Collaboration Brew Days.
+                </p>
+              </Link>
+            </StaggerItem>
 
-            <Link
-              href="/becas"
-              className="group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-colors hover:border-[var(--color-pink-200)]"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
-                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
-                {t("scholarships")}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                Accede a oportunidades educativas para tu carrera.
-              </p>
-            </Link>
+            <StaggerItem>
+              <Link
+                href="/becas"
+                className="block h-full group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-all hover:border-[var(--color-pink-200)] hover:shadow-md hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
+                  {t("scholarships")}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  Accede a oportunidades educativas para tu carrera.
+                </p>
+              </Link>
+            </StaggerItem>
           </div>
-        </div>
+        </StaggerContainer>
       </section>
 
       <section className="py-12 sm:py-16">
-        <div className="mx-auto max-w-3xl px-4">
+        <FadeIn className="mx-auto max-w-3xl px-4">
           <div className="rounded-2xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6 text-center sm:p-8">
             <h2 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
               Apoya la causa
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Con un aporte anual voluntario mantienes la pagina viva: contenido actualizado, dominio, proyectos futuros y crecimiento de la comunidad. Desde $6, aporte sugerido $25.
+              Con un aporte anual voluntario mantienes la página viva: contenido actualizado, dominio, proyectos futuros y crecimiento de la comunidad. Desde $6, aporte sugerido $25.
             </p>
-            <a
-              href="https://ko-fi.com/bluentropy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-bold text-white transition-all hover:bg-[var(--color-pink-600)] hover:shadow-lg"
-            >
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              Apoyar en Ko-fi
-            </a>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block mt-4">
+              <a
+                href="https://ko-fi.com/bluentropy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[var(--color-pink-600)] shadow-sm"
+              >
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Apoyar en Ko-fi
+              </a>
+            </motion.div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
-      <InstagramFeed />
+      <FadeIn>
+        <InstagramFeed />
+      </FadeIn>
     </>
   );
 }

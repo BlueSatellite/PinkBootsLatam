@@ -1,5 +1,8 @@
+"use client";
+
 import { forwardRef } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
@@ -24,6 +27,11 @@ const base =
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "primary", href, external, className = "", ...props }, ref) => {
     const classes = `${base} ${variantStyles[variant]} ${className}`;
+    const motionProps = {
+      whileHover: { scale: 1.05 },
+      whileTap: { scale: 0.95 },
+      className: "inline-block", // ensure the wrapper matches inline-flex/block behavior
+    };
 
     if (href) {
       const externalProps = external
@@ -31,14 +39,18 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         : {};
 
       return (
-        <Link href={href} className={classes} {...externalProps}>
-          {props.children}
-        </Link>
+        <motion.div {...motionProps}>
+          <Link href={href} className={classes} {...externalProps}>
+            {props.children}
+          </Link>
+        </motion.div>
       );
     }
 
     return (
-      <button ref={ref} className={classes} {...props} />
+      <motion.div {...motionProps}>
+        <button ref={ref} className={classes} {...props} />
+      </motion.div>
     );
   }
 );

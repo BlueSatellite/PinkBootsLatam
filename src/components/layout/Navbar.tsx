@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -33,7 +34,12 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border-light)] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+      className="sticky top-0 z-50 border-b border-[var(--color-border-light)] bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link
@@ -57,17 +63,19 @@ export default function Navbar() {
               <Link
                 key={item.key}
                 href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-pink-50)] hover:text-[var(--color-pink-brand)]"
+                className="relative rounded-md px-3 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-pink-50)] hover:text-[var(--color-pink-brand)]"
               >
                 {t(item.key)}
               </Link>
             ))}
-            <Link
-              href="/donaciones"
-              className="ml-3 rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
-            >
-              {t("donate")}
-            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="/donaciones"
+                className="ml-3 rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+              >
+                {t("donate")}
+              </Link>
+            </motion.div>
           </nav>
 
           <button
@@ -87,32 +95,40 @@ export default function Navbar() {
           </button>
         </div>
 
-        {open && (
-          <nav
-            id="mobile-menu"
-            className="border-t border-[var(--color-border-light)] pb-4 pt-2 lg:hidden"
-            aria-label="Menú móvil"
-          >
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                onClick={close}
-                className="block rounded-lg px-4 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-pink-50)] hover:text-[var(--color-pink-brand)]"
-              >
-                {t(item.key)}
-              </Link>
-            ))}
-            <Link
-              href="/donaciones"
-              onClick={close}
-              className="mt-2 block rounded-full bg-[var(--color-pink-brand)] px-5 py-2.5 text-center text-sm font-semibold text-white"
+        <AnimatePresence>
+          {open && (
+            <motion.nav
+              id="mobile-menu"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="overflow-hidden border-t border-[var(--color-border-light)] lg:hidden"
+              aria-label="Menú móvil"
             >
-              {t("donate")}
-            </Link>
-          </nav>
-        )}
+              <div className="pb-4 pt-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    onClick={close}
+                    className="block rounded-lg px-4 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-pink-50)] hover:text-[var(--color-pink-brand)]"
+                  >
+                    {t(item.key)}
+                  </Link>
+                ))}
+                <Link
+                  href="/donaciones"
+                  onClick={close}
+                  className="mt-2 block rounded-full bg-[var(--color-pink-brand)] px-5 py-2.5 text-center text-sm font-semibold text-white"
+                >
+                  {t("donate")}
+                </Link>
+              </div>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 }
