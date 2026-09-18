@@ -72,6 +72,17 @@ export default function HomePage() {
           <p className="mt-4 text-base leading-relaxed text-[var(--color-text-secondary)]">
             {t("missionText")}
           </p>
+          <div className="mt-6">
+            <Link
+              href="/quienes-somos"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-pink-brand)] hover:underline"
+            >
+              Conoce quiénes somos y a nuestro equipo de liderazgo
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </FadeIn>
       </section>
 
@@ -129,7 +140,29 @@ export default function HomePage() {
 
       <section className="py-16 sm:py-20">
         <StaggerContainer className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <StaggerItem>
+              <Link
+                href="/quienes-somos"
+                className="block h-full group rounded-xl border border-[var(--color-border-default)] bg-white p-6 transition-all hover:border-[var(--color-pink-200)] hover:shadow-md hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-pink-50)] text-[var(--color-pink-brand)] group-hover:bg-[var(--color-pink-brand)] group-hover:text-white transition-colors" aria-hidden="true">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3 className="font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors">
+                  Quiénes Somos
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                  Conoce a nuestras líderes y profesionales en toda la región.
+                </p>
+              </Link>
+            </StaggerItem>
+
             <StaggerItem>
               <Link
                 href="/capitulos"
