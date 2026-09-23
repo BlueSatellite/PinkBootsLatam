@@ -6,6 +6,6 @@ out/
 *.pem
 dist/
 .vercel
-
-.vercel
 public/hero-video.mov
+tsconfig.tsbuildinfo
+*.tsbuildinfo

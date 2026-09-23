@@ -64,7 +64,8 @@ export default function MemberDirectory() {
         m.occupation.toLowerCase().includes(q) ||
         m.company.toLowerCase().includes(q) ||
         m.city.toLowerCase().includes(q) ||
-        m.country.toLowerCase().includes(q)
+        m.country.toLowerCase().includes(q) ||
+        (m.bio ? m.bio.toLowerCase().includes(q) : false)
       );
     });
   }, [selectedCountry, searchQuery]);
@@ -189,10 +190,12 @@ export default function MemberDirectory() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filteredMembers.map((member) => {
               const socialInfo = parseSocialLink(member.social);
-              const hasImage = member.photoDriveId && !imageErrors[member.id];
-              const driveImageUrl = member.photoDriveId
-                ? `https://drive.google.com/thumbnail?id=${member.photoDriveId}&sz=w400`
-                : null;
+              const imageSrc =
+                member.image ||
+                (member.photoDriveId
+                  ? `https://drive.google.com/thumbnail?id=${member.photoDriveId}&sz=w400`
+                  : null);
+              const hasImage = Boolean(imageSrc) && !imageErrors[member.id];
 
               return (
                 <div
@@ -203,9 +206,9 @@ export default function MemberDirectory() {
                     {/* Header: Avatar + Badges */}
                     <div className="flex items-start gap-4">
                       <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[var(--color-pink-100)] bg-gradient-to-br from-[var(--color-pink-400)] to-[var(--color-pink-brand)] flex items-center justify-center text-white font-bold text-base shadow-inner">
-                        {hasImage && driveImageUrl ? (
+                        {hasImage && imageSrc ? (
                           <img
-                            src={driveImageUrl}
+                            src={imageSrc}
                             alt={member.name}
                             onError={() => handleImageError(member.id)}
                             className="h-full w-full object-cover"
@@ -265,17 +268,23 @@ export default function MemberDirectory() {
                   {/* Actions / Contact */}
                   <div className="mt-5 border-t border-[var(--color-border-light)] pt-3.5 flex items-center justify-between gap-2">
                     {/* Direct Contact Mailto */}
-                    <a
-                      href={`mailto:${member.email}?subject=Contacto%20Pink%20Boots%20Latam`}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border-default)] px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:border-[var(--color-pink-brand)] hover:text-[var(--color-pink-brand)] transition-colors"
-                      title={`Escribir a ${member.name} (${member.email})`}
-                    >
-                      <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
-                      </svg>
-                      <span>Conectar</span>
-                    </a>
+                    {member.email ? (
+                      <a
+                        href={`mailto:${member.email}?subject=Contacto%20Pink%20Boots%20Latam`}
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border-default)] px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:border-[var(--color-pink-brand)] hover:text-[var(--color-pink-brand)] transition-colors"
+                        title={`Escribir a ${member.name} (${member.email})`}
+                      >
+                        <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                          <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span>Conectar</span>
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 rounded-lg border border-transparent px-2.5 py-1.5 text-xs font-medium text-[var(--color-text-muted)]">
+                        Pink Boots Latam
+                      </span>
+                    )}
 
                     {/* Social Link */}
                     {socialInfo && socialInfo.url !== "#" ? (

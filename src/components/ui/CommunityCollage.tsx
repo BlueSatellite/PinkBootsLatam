@@ -326,6 +326,21 @@ export default function CommunityCollage() {
                     </p>
                   </div>
 
+                  {/* Biography / Story */}
+                  {selectedMember.bio && (
+                    <div className="rounded-xl border border-[var(--color-border-light)] bg-white p-3.5 sm:p-4 shadow-2xs">
+                      <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        Biografía y Trayectoria
+                      </p>
+                      <div className="mt-2 max-h-52 overflow-y-auto pr-1 text-xs leading-relaxed text-[var(--color-text-secondary)] whitespace-pre-line">
+                        {selectedMember.bio}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Email Section */}
                   {selectedMember.email && (
                     <div className="rounded-xl border border-[var(--color-border-light)] bg-white p-3.5">
