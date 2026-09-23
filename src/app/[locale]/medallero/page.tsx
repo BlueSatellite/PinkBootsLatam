@@ -201,13 +201,13 @@ export default function MedalsPage() {
           <section id="reconocimientos-red" className="scroll-mt-24">
             <div className="border-b border-[var(--color-border-light)] pb-5">
               <span className="rounded-full bg-[var(--color-pink-50)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                Liderazgo y Juzgamiento Global
+                Juzgamiento y Nivel Técnico Global
               </span>
               <h2 className="mt-2 font-display text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
                 Reconocimientos Oficiales de la Red
               </h2>
               <p className="mt-2 text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-3xl">
-                Distinciones de máximo nivel técnico otorgadas por entidades cerveceras internacionales a las líderes de Pink Boots Society Latin America.
+                Distinciones de máximo nivel técnico otorgadas por entidades cerveceras internacionales a integrantes de Pink Boots Society Latin America.
               </p>
             </div>
 

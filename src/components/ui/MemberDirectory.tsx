@@ -223,11 +223,7 @@ export default function MemberDirectory() {
                               {member.roleBadge}
                             </span>
                           )}
-                          {member.isLeadership && (
-                            <span className="rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-bold text-amber-700">
-                              ★ Liderazgo
-                            </span>
-                          )}
+
                         </div>
 
                         <h3 className="mt-1 font-display text-base font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-pink-brand)] transition-colors leading-snug">

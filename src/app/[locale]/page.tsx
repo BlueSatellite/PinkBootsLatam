@@ -77,7 +77,7 @@ export default function HomePage() {
               href="/quienes-somos"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-pink-brand)] hover:underline"
             >
-              Conoce quiénes somos y a nuestro equipo de liderazgo
+              Conoce quiénes somos y a nuestra comunidad de integrantes
               <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
@@ -158,7 +158,7 @@ export default function HomePage() {
                   Quiénes Somos
                 </h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-muted)]">
-                  Conoce a nuestras líderes y profesionales en toda la región.
+                  Conoce a nuestras socias y profesionales en toda la región.
                 </p>
               </Link>
             </StaggerItem>

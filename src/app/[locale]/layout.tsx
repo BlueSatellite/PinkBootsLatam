@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import InstallAppPrompt from "@/components/ui/InstallAppPrompt";
 
 export default async function LocaleLayout({
   children,
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
       <main className="min-h-screen">{children}</main>
       <Footer />
       <WhatsAppButton />
+      <InstallAppPrompt />
     </NextIntlClientProvider>
   );
 }

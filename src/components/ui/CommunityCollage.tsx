@@ -258,11 +258,7 @@ export default function CommunityCollage() {
                         {selectedMember.roleBadge}
                       </span>
                     )}
-                    {selectedMember.isLeadership && (
-                      <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-black shadow-xs">
-                        ★ Liderazgo
-                      </span>
-                    )}
+
                     {selectedMember.chapter && selectedMember.chapter !== selectedMember.country && (
                       <span className="rounded-full bg-gray-100 text-gray-700 px-3 py-1 text-xs font-medium">
                         {selectedMember.chapter}

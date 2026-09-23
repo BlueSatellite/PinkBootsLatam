@@ -141,7 +141,7 @@ export default function ChaptersPage() {
                 ✨ Ahora los Capítulos y la Red Regional forman parte de &quot;Quiénes Somos&quot;
               </p>
               <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
-                Descubre el mapa junto al mosaico comunitario de fotos, el equipo de liderazgo y el directorio de socias.
+                Descubre el mapa junto al mosaico comunitario de fotos y el directorio de socias.
               </p>
             </div>
             <Link

@@ -125,12 +125,12 @@ export default function AboutPage() {
 
           <div className="mt-8 rounded-2xl border border-[var(--color-pink-200)] bg-gradient-to-r from-[var(--color-pink-50)] to-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">Nuestro Equipo</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">Nuestra Comunidad</span>
               <h3 className="mt-1 font-display text-lg font-bold text-[var(--color-text-primary)]">
-                Conoce a las líderes de Pink Boots en Latinoamérica
+                Conoce a las integrantes de Pink Boots en Latinoamérica
               </h3>
               <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
-                Descubre los perfiles, trayectoria y proyectos de las profesionales que guían nuestra comunidad.
+                Descubre los perfiles, trayectoria y proyectos de las profesionales que conforman nuestra comunidad.
               </p>
             </div>
             <Link
@@ -222,17 +222,17 @@ export default function AboutPage() {
 
           <div className="mt-12 rounded-2xl border border-[var(--color-border-default)] bg-[var(--color-surface-alt)] p-6 sm:p-8 text-center">
             <h3 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
-              ¿Quieres conocer al equipo que lidera la comunidad?
+              ¿Quieres conocer a las integrantes de la comunidad?
             </h3>
             <p className="mx-auto mt-2 max-w-md text-sm text-[var(--color-text-muted)]">
-              Conoce a las fundadoras, líderes de capítulos y colaboradoras activas en toda la región.
+              Conoce a las socias, profesionales y colaboradoras activas en toda la región.
             </p>
             <div className="mt-4">
               <Link
                 href="/quienes-somos"
                 className="inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[var(--color-pink-600)] shadow-sm"
               >
-                Conoce a nuestro Equipo en Quiénes Somos
+                Conoce a nuestras Integrantes en Quiénes Somos
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
