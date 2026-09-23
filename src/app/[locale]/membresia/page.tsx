@@ -1,10 +1,11 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/routing";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Membresia",
-    description: "Unete a Pink Boots Society Latin America. Membresia Profesional, Aspirante y de Negocio en Planificacion.",
+    title: "Membresía",
+    description: "Únete a Pink Boots Society Latin America. Membresía Profesional, Aspirante y de Negocio en Planificación.",
   };
 }
 
@@ -38,7 +39,7 @@ export default function MembershipPage() {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
           <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
-            La membresía de Pink Boots Society está abierta a mujeres y personas no binarias que estén activamente empleadas en algún aspecto de la industria de la cerveza, que estén en el proceso de abrir una cervecería, o que sean estudiantes inscritas en un programa enfocado en la industria de la cerveza.
+            La membresía de Pink Boots Society está abierta a mujeres y personas no binarias que estén activamente empleadas en algún aspecto de la industria de la cerveza y bebidas fermentadas, que estén en el proceso de abrir una cervecería o negocio relacionado, o que sean estudiantes inscritas en un programa enfocado en la industria.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
@@ -49,19 +50,19 @@ export default function MembershipPage() {
             <div className="rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
               <h3 className="font-display text-sm font-bold text-[var(--color-pink-brand)]">Membresía Profesional</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Profesionales actuales o jubilados de la industria de bebidas fermentadas/alcohólicas que reciben el 25% o más de sus ingresos de la industria, o retirados con mínimo 10 años en el rubro.
+                Profesionales actuales o jubiladas de la industria de bebidas fermentadas/alcohólicas que reciben el 25% o más de sus ingresos de la industria, o retiradas con mínimo 10 años en el rubro.
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border-default)] p-5">
               <h3 className="font-display text-sm font-bold text-[var(--color-text-primary)]">Aspirante</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Abierto a mujeres que actualmente estudian o se capacitan para ingresar a una carrera en la industria de bebidas.
+                Abierto a mujeres que actualmente estudian o se capacitan para ingresar a una carrera en la industria de bebidas fermentadas.
               </p>
             </div>
             <div className="rounded-xl border border-[var(--color-border-default)] p-5">
               <h3 className="font-display text-sm font-bold text-[var(--color-text-primary)]">Negocio en Planificación</h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Personas en proceso de abrir un negocio en la industria: cervecería, taberna, sala de degustación, bar, tienda de botellas u otro proveedor.
+                Personas en proceso de abrir un negocio en la industria: cervecería, taberna, sala de degustación, bar, tienda o laboratorio.
               </p>
             </div>
           </div>
@@ -81,8 +82,39 @@ export default function MembershipPage() {
             ))}
           </ul>
 
-          <div className="mt-10 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6">
-            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+          {/* Directory Access Callout */}
+          <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-pink-brand)] text-white">
+                <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
+                  Directorio de Integrantes
+                </h3>
+                <p className="text-xs text-[var(--color-text-secondary)]">
+                  Conoce a las profesionales y entusiastas de nuestra red en toda Latinoamérica.
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/quienes-somos#directorio"
+              className="shrink-0 self-start sm:self-auto inline-flex items-center rounded-full bg-[var(--color-pink-brand)] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
+            >
+              Ver Directorio
+            </Link>
+          </div>
+
+          <div className="mt-10 rounded-xl border-2 border-[var(--color-pink-200)] bg-white p-6 shadow-xs">
+            <h3 className="font-display text-base font-bold text-[var(--color-text-primary)]">
+              ¿Cómo afiliarse?
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
               {t("howTo")}
             </p>
             <a href={t("ctaUrl")} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex rounded-full bg-[var(--color-pink-brand)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]">

@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
 const navItems = [
+  { key: "team", href: "/quienes-somos" },
   { key: "about", href: "/nuestra-historia" },
-  { key: "chapters", href: "/capitulos" },
   { key: "membership", href: "/membresia" },
   { key: "events", href: "/eventos" },
   { key: "medals", href: "/medallero" },

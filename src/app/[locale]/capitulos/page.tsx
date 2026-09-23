@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/routing";
 import { officialChapters, regionNetwork } from "@/lib/chapters";
 import ChaptersMapWrapper from "@/components/ui/ChaptersMapWrapper";
 
@@ -49,7 +50,7 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
         </p>
       )}
 
-      <div className="mt-4 space-y-1.5 text-sm">
+      <div className="mt-4 space-y-2 text-sm">
         {chapter.representatives.map((rep) => (
           <p key={rep.name} className="leading-relaxed">
             <span className="font-semibold text-[var(--color-text-primary)]">{rep.name}</span>
@@ -58,17 +59,19 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
             )}
           </p>
         ))}
-        <p className="leading-relaxed text-[var(--color-text-secondary)]">{chapter.info}</p>
+        {chapter.info && (
+          <p className="leading-relaxed text-[var(--color-text-secondary)] pt-1 border-t border-gray-100">{chapter.info}</p>
+        )}
       </div>
 
-      {(chapter.instagram || chapter.facebook || chapter.facebookGroup) && (
+      {(chapter.instagram || chapter.facebook || chapter.facebookGroup || chapter.website) && (
         <div className="mt-4 flex flex-wrap gap-3">
           {chapter.instagram && (
             <a
               href={chapter.website ?? `https://www.instagram.com/${chapter.instagram.replace("@", "")}/`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline text-xs font-medium"
             >
               {instagramIcon}
               {chapter.instagram}
@@ -79,7 +82,7 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
               href={`https://www.facebook.com/${chapter.facebook}/`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline text-xs font-medium"
             >
               {facebookIcon}
               Facebook
@@ -90,7 +93,7 @@ function ChapterCard({ chapter, featured = false }: { chapter: (typeof officialC
               href={chapter.website ?? "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline"
+              className="inline-flex items-center gap-1 text-[var(--color-pink-brand)] hover:underline text-xs font-medium"
             >
               {facebookIcon}
               Grupo FB
@@ -131,6 +134,24 @@ export default function ChaptersPage() {
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          {/* Integration notice */}
+          <div className="mb-10 rounded-2xl border border-[var(--color-pink-200)] bg-[var(--color-pink-50)]/80 p-5 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
+            <div>
+              <p className="font-display text-sm font-bold text-[var(--color-pink-900)]">
+                ✨ Ahora los Capítulos y la Red Regional forman parte de &quot;Quiénes Somos&quot;
+              </p>
+              <p className="mt-1 text-xs text-[var(--color-text-secondary)]">
+                Descubre el mapa junto al mosaico comunitario de fotos, el equipo de liderazgo y el directorio de socias.
+              </p>
+            </div>
+            <Link
+              href="/quienes-somos#capitulos"
+              className="mt-3 inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--color-pink-brand)] px-5 py-2 text-xs font-bold text-white shadow-xs hover:bg-[var(--color-pink-600)] transition-colors sm:mt-0 sm:ml-4"
+            >
+              Ver en Quiénes Somos →
+            </Link>
+          </div>
+
           <h2 className="font-display text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
             Nuestros capítulos
           </h2>
@@ -144,7 +165,7 @@ export default function ChaptersPage() {
             Integrantes en la región
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
-            Países con integrantes activas de Pink Boots Latam que aún no cuentan con un capítulo oficial.
+            Países con integrantes activas de Pink Boots Latam que forman parte de nuestra red latinoamericana.
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {regionNetwork.map((chapter) => (
@@ -152,11 +173,29 @@ export default function ChaptersPage() {
             ))}
           </div>
 
-          <div className="mt-12 mx-auto max-w-3xl">
+          <div className="mt-14 mx-auto max-w-4xl">
             <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
-              Mapa de presencia
+              Mapa de presencia regional
             </p>
             <ChaptersMapWrapper />
+          </div>
+
+          {/* Banner to Member Directory */}
+          <div className="mt-12 rounded-2xl bg-gradient-to-r from-[var(--color-pink-500)] to-[var(--color-pink-brand)] p-6 sm:p-8 text-white text-center shadow-sm">
+            <h3 className="font-display text-xl font-bold">
+              Conoce a todas nuestras integrantes en la región
+            </h3>
+            <p className="mt-2 text-sm text-white/90 max-w-xl mx-auto">
+              Explora el Directorio de la Comunidad con perfiles profesionales, cervecerías, roles y formas de contacto de cada una de nuestras integrantes.
+            </p>
+            <div className="mt-5">
+              <Link
+                href="/quienes-somos#directorio"
+                className="inline-flex rounded-full bg-white px-6 py-2.5 text-sm font-bold text-[var(--color-pink-brand)] shadow-sm hover:bg-pink-50 transition-colors"
+              >
+                Ver Directorio de Integrantes
+              </Link>
+            </div>
           </div>
 
           <div className="mt-12 rounded-xl border-2 border-[var(--color-pink-200)] bg-[var(--color-pink-50)] p-6 text-center">
@@ -181,7 +220,7 @@ export default function ChaptersPage() {
               Pink Boots Society tiene requisitos oficiales para abrir un capítulo: se necesita un mínimo de <strong>15 integrantes activas</strong> provenientes de al menos <strong>dos cervecerías o negocios cerveceros</strong> distintos, realizar un mínimo de <strong>2 reuniones al año con enfoque educativo</strong> y constituirse como <strong>entidad sin fines de lucro</strong>. La Junta Directiva revisa y aprueba los nuevos capítulos de forma trimestral.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: la red regional <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por 21 integrantes. En otros países de la región contamos con integrantes activas que todavía no cumplen con los requisitos para formar un capítulo propio, pero que forman parte de nuestra red.
+              Por eso, en Latinoamérica actualmente existen dos estructuras oficiales: la red regional <strong>Pink Boots Latam</strong> y el sub-capítulo <strong>Pink Boots Latam / Puerto Rico</strong>, conformado por más de 20 integrantes. En otros países de la región contamos con integrantes activas que todavía no cumplen con los requisitos para formar un capítulo propio, pero que forman parte integral de nuestra red.
             </p>
           </div>
         </div>
