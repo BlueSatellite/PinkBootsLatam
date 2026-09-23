@@ -201,57 +201,55 @@ export default function CommunityCollage() {
         </div>
       </div>
 
-      {/* Modal Dialog with 100% Uncropped Photo and Complete Information */}
+      {/* Modal Dialog with Massive Uncropped Centered Photo and Complete Information */}
       {selectedMember && (
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
           onClick={closeMember}
         >
           <div
-            className="relative w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl transition-all border border-gray-200 max-h-[92vh] flex flex-col"
+            className="relative w-full max-w-5xl overflow-hidden rounded-3xl bg-white shadow-2xl transition-all border border-gray-200 max-h-[92vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header Toolbar (Close & Quick Nav) */}
-            <div className="absolute right-3 top-3 z-30 flex items-center gap-2">
-              <button
-                onClick={closeMember}
-                aria-label="Cerrar"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm transition-transform hover:scale-110 hover:bg-black/90 cursor-pointer shadow-md"
-              >
-                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </button>
-            </div>
+            {/* Header Close Button */}
+            <button
+              onClick={closeMember}
+              aria-label="Cerrar modal"
+              className="absolute right-4 top-4 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm transition-transform hover:scale-110 hover:bg-black/95 cursor-pointer shadow-lg"
+            >
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
 
-            {/* Scrollable Modal Content */}
-            <div className="overflow-y-auto">
-              {/* Photo Container: Zero cropping! Fully preserves entire face and body with ambient blur */}
-              <div className="relative flex items-center justify-center w-full min-h-[280px] max-h-[420px] sm:max-h-[460px] bg-neutral-950 overflow-hidden select-none p-3 sm:p-4">
+            {/* Modal Body: Two Columns on Desktop (Large Photo Left + Rich Info Right) */}
+            <div className="grid grid-cols-1 md:grid-cols-12 overflow-y-auto max-h-[82vh] md:max-h-[84vh]">
+              {/* Left Column: Big Centered Uncropped Photo */}
+              <div className="md:col-span-6 lg:col-span-7 relative flex items-center justify-center min-h-[340px] sm:min-h-[440px] md:min-h-[580px] bg-neutral-950 overflow-hidden select-none p-4 sm:p-6">
                 {/* Ambient blurred backdrop so any aspect ratio fills organically */}
                 <img
                   src={selectedMember.image}
                   alt=""
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-2xl opacity-40 scale-110"
+                  className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-3xl opacity-40 scale-120"
                 />
 
-                {/* Main uncropped photo: object-contain guarantees 0% of face or photo is cut */}
+                {/* Main uncropped photo: Centered, large, object-contain guarantees 0% cropping */}
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="relative z-10 max-h-[380px] sm:max-h-[430px] w-auto max-w-full rounded-xl object-contain mx-auto shadow-2xl drop-shadow-md"
+                  className="relative z-10 max-h-[380px] sm:max-h-[460px] md:max-h-[540px] w-auto max-w-full rounded-2xl object-contain mx-auto shadow-2xl drop-shadow-xl"
                 />
               </div>
 
-              {/* Complete Member Information Panel */}
-              <div className="p-6 sm:p-8">
-                {/* Name & Badges */}
-                <div>
-                  <div className="flex flex-wrap items-center gap-2">
+              {/* Right Column: Complete Member Information Panel */}
+              <div className="md:col-span-6 lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 bg-white border-t md:border-t-0 md:border-l border-gray-100">
+                <div className="space-y-4">
+                  {/* Badges Row */}
+                  <div className="flex flex-wrap items-center gap-1.5 pt-1">
                     <span className="rounded-full bg-[var(--color-pink-brand)] px-3 py-1 text-xs font-bold text-white uppercase tracking-wider shadow-xs">
                       {selectedMember.country}
                     </span>
@@ -262,7 +260,7 @@ export default function CommunityCollage() {
                     )}
                     {selectedMember.isLeadership && (
                       <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-black shadow-xs">
-                        ★ Equipo de Liderazgo
+                        ★ Liderazgo
                       </span>
                     )}
                     {selectedMember.chapter && selectedMember.chapter !== selectedMember.country && (
@@ -272,178 +270,179 @@ export default function CommunityCollage() {
                     )}
                   </div>
 
-                  <h3 className="mt-3 font-display text-2xl sm:text-3xl font-extrabold text-[var(--color-text-primary)]">
+                  {/* Member Name */}
+                  <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-[var(--color-text-primary)] leading-tight">
                     {selectedMember.name}
                   </h3>
-                </div>
 
-                {/* Key Details Grid: Location & Company */}
-                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {/* Location */}
-                  <div className="flex items-start gap-3 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-muted)]/50 p-3.5">
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--color-pink-100)] text-[var(--color-pink-brand)]">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
+                  {/* Location & Company Cards */}
+                  <div className="space-y-2 pt-1">
+                    {/* Location */}
+                    <div className="flex items-center gap-2.5 rounded-xl border border-[var(--color-border-light)] bg-gray-50/70 px-3.5 py-2.5">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[var(--color-pink-100)] text-[var(--color-pink-brand)]">
+                        <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                          Ubicación
+                        </p>
+                        <p className="text-xs sm:text-sm font-semibold text-[var(--color-text-primary)] truncate">
+                          {selectedMember.city ? `${selectedMember.city}, ` : ""}{selectedMember.country}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                        Ubicación
-                      </p>
-                      <p className="text-sm font-semibold text-[var(--color-text-primary)]">
-                        {selectedMember.city ? `${selectedMember.city}, ` : ""}{selectedMember.country}
-                      </p>
-                    </div>
-                  </div>
 
-                  {/* Company / Project */}
-                  <div className="flex items-start gap-3 rounded-xl border border-[var(--color-border-light)] bg-[var(--color-surface-muted)]/50 p-3.5">
-                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--color-pink-100)] text-[var(--color-pink-brand)]">
-                      <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path d="M3 21h18M3 7v14M21 7v14M6 11h2M6 15h2M16 11h2M16 15h2M10 21v-4h4v4M12 3l9 4H3l9-4z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                        Empresa / Proyecto
-                      </p>
-                      <p className="text-sm font-semibold text-[var(--color-text-primary)]">
-                        {selectedMember.company || "Independiente / Comunidad cervecera"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Occupation / Dedication Full Text */}
-                <div className="mt-4 rounded-xl border border-pink-100 bg-pink-50/40 p-4 sm:p-5">
-                  <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
-                    <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                    ¿A qué se dedica en el rubro cervecero o bebidas fermentadas?
-                  </div>
-                  <p className="mt-2 text-sm sm:text-base leading-relaxed text-[var(--color-text-primary)] font-medium">
-                    {selectedMember.occupation}
-                  </p>
-                </div>
-
-                {/* Contact Email Section */}
-                {selectedMember.email && (
-                  <div className="mt-4 rounded-xl border border-[var(--color-border-light)] bg-white p-4">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
-                      Correo Electrónico de Contacto
-                    </p>
-                    <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
-                      <span className="font-mono text-xs sm:text-sm font-semibold text-[var(--color-text-primary)] select-all break-all">
-                        {selectedMember.email}
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <button
-                          type="button"
-                          onClick={() => handleCopyEmail(selectedMember.email)}
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border-default)] px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:bg-gray-50 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
-                        >
-                          {copiedEmail ? (
-                            <>
-                              <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-emerald-600">
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
-                              <span className="text-emerald-600">¡Copiado!</span>
-                            </>
-                          ) : (
-                            <>
-                              <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                              </svg>
-                              <span>Copiar</span>
-                            </>
-                          )}
-                        </button>
-                        <a
-                          href={`mailto:${selectedMember.email}?subject=Contacto%20Pink%20Boots%20Latam`}
-                          className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--color-pink-brand)] px-3.5 py-1.5 text-xs font-semibold text-white shadow-xs hover:bg-[var(--color-pink-600)] transition-colors"
-                        >
-                          <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                            <polyline points="22,6 12,13 2,6" />
-                          </svg>
-                          <span>Escribir correo</span>
-                        </a>
+                    {/* Company */}
+                    <div className="flex items-center gap-2.5 rounded-xl border border-[var(--color-border-light)] bg-gray-50/70 px-3.5 py-2.5">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[var(--color-pink-100)] text-[var(--color-pink-brand)]">
+                        <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path d="M3 21h18M3 7v14M21 7v14M6 11h2M6 15h2M16 11h2M16 15h2M10 21v-4h4v4M12 3l9 4H3l9-4z" />
+                        </svg>
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                          Empresa / Proyecto
+                        </p>
+                        <p className="text-xs sm:text-sm font-semibold text-[var(--color-text-primary)] truncate">
+                          {selectedMember.company || "Independiente / Red cervecera"}
+                        </p>
                       </div>
                     </div>
                   </div>
-                )}
 
-                {/* Social Networks List */}
-                {selectedMember.social && (
-                  <div className="mt-4">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
-                      Redes Sociales Compartidas
+                  {/* Occupation / Dedication */}
+                  <div className="rounded-xl border border-pink-100 bg-pink-50/50 p-3.5 sm:p-4">
+                    <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                      <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                      ¿A qué se dedica en el rubro?
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {parseAllSocials(selectedMember.social).map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3.5 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:border-[var(--color-pink-brand)] hover:text-[var(--color-pink-brand)] hover:bg-pink-50/50 transition-all shadow-2xs"
-                        >
-                          {item.platform === "instagram" && (
-                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                            </svg>
-                          )}
-                          {item.platform === "tiktok" && (
-                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                            </svg>
-                          )}
-                          {item.platform === "web" && (
-                            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                              <circle cx="12" cy="12" r="10" />
-                              <line x1="2" y1="12" x2="22" y2="12" />
-                              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                            </svg>
-                          )}
-                          <span>{item.label}</span>
-                        </a>
-                      ))}
-                    </div>
+                    <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[var(--color-text-primary)] font-medium">
+                      {selectedMember.occupation}
+                    </p>
                   </div>
-                )}
+
+                  {/* Email Section */}
+                  {selectedMember.email && (
+                    <div className="rounded-xl border border-[var(--color-border-light)] bg-white p-3.5">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)]">
+                        Correo de Contacto
+                      </p>
+                      <div className="mt-1.5 flex flex-wrap items-center justify-between gap-2">
+                        <span className="font-mono text-xs font-semibold text-[var(--color-text-primary)] select-all break-all">
+                          {selectedMember.email}
+                        </span>
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => handleCopyEmail(selectedMember.email)}
+                            className="inline-flex items-center gap-1 rounded-md border border-[var(--color-border-default)] px-2.5 py-1 text-[11px] font-semibold text-[var(--color-text-secondary)] hover:bg-gray-50 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                          >
+                            {copiedEmail ? (
+                              <>
+                                <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="text-emerald-600">
+                                  <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span className="text-emerald-600">Copiado</span>
+                              </>
+                            ) : (
+                              <>
+                                <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                <span>Copiar</span>
+                              </>
+                            )}
+                          </button>
+                          <a
+                            href={`mailto:${selectedMember.email}?subject=Contacto%20Pink%20Boots%20Latam`}
+                            className="inline-flex items-center gap-1 rounded-md bg-[var(--color-pink-brand)] px-2.5 py-1 text-[11px] font-semibold text-white shadow-xs hover:bg-[var(--color-pink-600)] transition-colors"
+                          >
+                            <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                              <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>Escribir</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Social Networks */}
+                  {selectedMember.social && (
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-text-muted)] mb-1.5">
+                        Redes Sociales
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {parseAllSocials(selectedMember.social).map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3 py-1 text-xs font-semibold text-[var(--color-text-secondary)] hover:border-[var(--color-pink-brand)] hover:text-[var(--color-pink-brand)] hover:bg-pink-50/50 transition-all shadow-2xs"
+                          >
+                            {item.platform === "instagram" && (
+                              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                              </svg>
+                            )}
+                            {item.platform === "tiktok" && (
+                              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                              </svg>
+                            )}
+                            {item.platform === "web" && (
+                              <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                              </svg>
+                            )}
+                            <span>{item.label}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Footer Controls inside Right Column */}
+                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <button
+                    type="button"
+                    onClick={showPrev}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                  >
+                    <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                    <span>Anterior</span>
+                  </button>
+
+                  <span className="text-xs font-bold text-[var(--color-text-secondary)]">
+                    {selectedIndex + 1} de {collageMembers.length} socias
+                  </span>
+
+                  <button
+                    type="button"
+                    onClick={showNext}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                  >
+                    <span>Siguiente</span>
+                    <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-
-            {/* Modal Bottom Footer (Navigation between members) */}
-            <div className="flex items-center justify-between border-t border-[var(--color-border-light)] bg-gray-50/90 px-6 py-3.5">
-              <button
-                type="button"
-                onClick={showPrev}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3.5 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
-              >
-                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-                <span>Anterior</span>
-              </button>
-
-              <span className="text-xs font-bold text-[var(--color-text-secondary)]">
-                {selectedIndex + 1} de {collageMembers.length} socias
-              </span>
-
-              <button
-                type="button"
-                onClick={showNext}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] bg-white px-3.5 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] hover:bg-gray-100 hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
-              >
-                <span>Siguiente</span>
-                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
