@@ -158,9 +158,9 @@ export default function CommunityCollage() {
           </p>
         </div>
 
-        {/* Seamless Photo Collage (Zero Separation) */}
-        <div className="mt-10 overflow-hidden rounded-2xl border border-[var(--color-border-light)] shadow-xl bg-black">
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 gap-0">
+        {/* Seamless Photo Collage (Zero Separation, Exact 7x7 = 49 Members) */}
+        <div className="mt-10 overflow-hidden rounded-2xl border border-[var(--color-border-light)] shadow-xl bg-white">
+          <div className="grid grid-cols-7 gap-0">
             {collageMembers.map((member, idx) => (
               <button
                 key={member.id}
