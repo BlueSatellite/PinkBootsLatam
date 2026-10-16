@@ -47,7 +47,7 @@ La pagina ya esta publicada temporalmente en:
 
 **Pagina de Patrocinadores**
 - Costa Rica Beer School destacado como sponsor principal
-- Lallemand Brewing, White Labs, Yakima Chief, Fermenta Cociencia, BJCP y Cicerone con sus logos
+- Lallemand Brewing, White Labs, Yakima Chief, Fermenta Cociencia, BJCP, Cicerone y Libros de Guarda con sus logos
 - Todos clickeables, llevan al sitio de cada aliado
 - Seccion para invitar a nuevas empresas a sumarse
 

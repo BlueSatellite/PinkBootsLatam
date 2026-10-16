@@ -22,7 +22,7 @@ export const members: Member[] = [
     country: "Panamá",
     city: "Ciudad de Panamá",
     email: "pbslatam@pinkbootssociety.org",
-    occupation: "Co-Fundadora de Salsipuedes Brewing Co. Encargada de Producción y Control de Calidad. Jueza World Beer Cup 2026.",
+    occupation: "Cervecera Profesional, Jueza BJCP Internacional, Jueza World Beer Cup y Consultora Cervecera. Co-Fundadora, Producción y Control de Calidad de Salsipuedes Brewing Co. Líder de Pink Boots Latin America.",
     company: "Salsipuedes Brewing Co.",
     social: "@salsipuedesbrewingco @eriquitalamasbonita",
     photoDriveId: "1V-gPg6QMAqUFXneIdw3EI-2-jj028RJQ",
@@ -30,6 +30,20 @@ export const members: Member[] = [
     chapter: "Pink Boots Latam",
     isLeadership: true,
     roleBadge: "Co-Fundadora & Regional Leader",
+    bio: `Ericka Otero
+Cervecera Profesional · Jueza BJCP Internacional · Consultora Cervecera
+
+• Co-Fundadora, Producción y Control de Calidad de Salsipuedes Brewing Co. — 10 años de experiencia.
+• Jueza BJCP Nacional e Internacional y Jueza World Beer Cup.
+• Cicerone® Certified Beer Server.
+• Especialista en Cerveza — Universidad de Alicante, España.
+• 85 medallas internacionales obtenidas por Salsipuedes Brewing Co.
+• 4 Best of Show (BOS) en competencias internacionales.
+• Mejor Cervecería — Copa Quetzal 2022.
+• Mejor Cerveza de la Competencia — Copa de las Alturas 2023.
+• Consultora y diseñadora de cervezas experimentales.
+• Especialista y educadora en técnicas de infusión y extracción de botánicos aplicadas a la elaboración de cerveza.
+• Líder de Pink Boots Latin America, promoviendo la formación y profesionalización de mujeres en la industria cervecera.`,
   },
   {
     id: "m-2",
@@ -70,7 +84,7 @@ Socia de Cebichela, brewpub especializado en el maridaje de la gastronomía peru
     country: "México",
     city: "Cuernavaca",
     email: "restaurandoando@gmail.com",
-    occupation: "Control de Calidad, Marketing e investigación histórica cervecera. Co-fundadora de Tebana Laboratorio Cervecero, Juez BJCP y Certified Beer Server Cicerone®. Coordinadora en Morelos de Catadoras y Cerveceras de México.",
+    occupation: "Juez BJCP, Cicerone, Beer Sommelier.",
     company: "Tebana Laboratorio Cervecero",
     social: "https://www.instagram.com/tebana_laboratorio_cervecero/",
     photoDriveId: "1TbL4uLGbIDKD7sszcjvNOUj5tubf__tQ",
@@ -80,14 +94,13 @@ Socia de Cebichela, brewpub especializado en el maridaje de la gastronomía peru
     roleBadge: "Líder de comunidad México",
     bio: `Viviana López Gutiérrez
 Nacionalidad Colombiana y residente en México.
-Restauradora y conservadora del Patrimonio Cultural
-Juez BJCP
-Certified Beer Server Cicerone
-Local Beer expert – Beer's Cool Escuela cervecera
-Actualmente cursa diplomado de Beer sommelier en AMEG
-Co fundadora de Tebana Laboratorio cervecero
-Miembro activo de los colectivos: Adelitas cerveceras, Wiccas Cerveceras y proyecto Las Hermanas.
-Coordinadora en el Estado de Morelos de Catadoras y cerveceras de México.
+Restauradora y conservadora del Patrimonio Cultural.
+Juez BJCP.
+Certified Beer Server Cicerone®.
+Beer Sommelier (AMEG, Unionbirrai, Doemens).
+Actualmente se ganó una beca Pink Boots y está cursando Experto Cervecero en CRBS (Costa Rica Beer School).
+Co-fundadora de Tebana Laboratorio Cervecero.
+
 Unir historia, cultura y elaboración de cerveza da lugar a una exploración fascinante. La cerveza no es solo una bebida, sino un reflejo vivo de las sociedades que la han producido y consumido a lo largo del tiempo. En sus inicios, fueron las mujeres quienes desempeñaron un papel fundamental como principales elaboradoras, dejando una huella en la tradición cervecera desde sus orígenes.`,
   },
   {

@@ -20,17 +20,25 @@ export default function EventsPage() {
 
   return (
     <>
-      <section className="relative bg-[var(--color-text-primary)] py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
-            Pink Boots Society Latin America
-          </p>
-          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            {t("title")}
-          </h1>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            {t("hero")}
-          </p>
+      <section className="relative overflow-hidden bg-white py-14 sm:py-16">
+        <img
+          src="/banners/eventos.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="relative z-10 mx-auto max-w-3xl px-4">
+          <div className="rounded-2xl bg-black/60 p-6 text-center shadow-sm backdrop-blur-sm sm:p-8">
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-pink-300)]">
+              Pink Boots Society Latin America
+            </p>
+            <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              {t("title")}
+            </h1>
+            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-white/85">
+              {t("hero")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -69,6 +77,82 @@ export default function EventsPage() {
                 alt="Pink Boots Collaboration Brew Day"
                 className="h-36 w-auto rounded-lg"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beer Awards Platform (BAP) Competitions Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-[var(--color-surface-alt)] border-t border-[var(--color-border-light)]">
+        <div className="mx-auto max-w-3xl px-4">
+          <div className="overflow-hidden rounded-3xl border-2 border-[var(--color-pink-200)] bg-white p-8 shadow-sm sm:p-10">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-pink-50)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-pink-brand)]">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Circuito de Competencias
+              </span>
+              <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-[var(--color-text-muted)]">
+                beerawardsplatform.com
+              </span>
+            </div>
+
+            <div className="mt-4 sm:flex sm:items-start sm:justify-between sm:gap-6">
+              <div className="max-w-xl">
+                <h2 className="font-display text-2xl font-extrabold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+                  Competencias en BAP
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  ¿Quieres inscribir tus cervezas en copas cerveceras o postularte como jueza BJCP o stewarding? En <strong>Beer Awards Platform (BAP)</strong> puedes consultar el calendario oficial de competencias activas en Latinoamérica y el mundo.
+                </p>
+              </div>
+
+              <div className="mt-5 shrink-0 sm:mt-0">
+                <a
+                  href="https://beerawardsplatform.com/competitions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-pink-brand)] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:bg-[var(--color-pink-600)] hover:scale-105"
+                >
+                  Ver Competencias BAP
+                  <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-4 text-left">
+                <p className="text-xl" aria-hidden="true">🍺</p>
+                <h3 className="mt-2 font-display text-sm font-bold text-[var(--color-text-primary)]">
+                  Inscripción de Cervezas
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-muted)]">
+                  Inscribe tus cervezas colaborativas o de fábrica, revisa fechas de recepción y recibe hojas de cata.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-4 text-left">
+                <p className="text-xl" aria-hidden="true">👩‍⚖️</p>
+                <h3 className="mt-2 font-display text-sm font-bold text-[var(--color-text-primary)]">
+                  Juezas de Cata BJCP
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-muted)]">
+                  Postúlate en convocatorias de cata en certámenes de la región y evalúa de forma digital.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[var(--color-border-light)] bg-[var(--color-surface-alt)] p-4 text-left">
+                <p className="text-xl" aria-hidden="true">📋</p>
+                <h3 className="mt-2 font-display text-sm font-bold text-[var(--color-text-primary)]">
+                  Stewarding
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-[var(--color-text-muted)]">
+                  Participa como voluntaria o comisaria de mesa para aprender de cerca sobre organización y cata técnica.
+                </p>
+              </div>
             </div>
           </div>
         </div>

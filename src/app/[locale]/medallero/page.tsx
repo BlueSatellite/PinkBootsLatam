@@ -317,6 +317,17 @@ export default function MedalsPage() {
                 Ver Próximos Eventos
               </Link>
             </div>
+            <p className="mt-4 text-xs text-[var(--color-text-muted)]">
+              ¿Buscas copas y certámenes cerveceros activos? Consulta el calendario de competencias en{" "}
+              <a
+                href="https://beerawardsplatform.com/competitions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[var(--color-pink-brand)] hover:underline inline-flex items-center gap-0.5"
+              >
+                Beer Awards Platform ↗
+              </a>
+            </p>
           </div>
 
         </div>

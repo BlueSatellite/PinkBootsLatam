@@ -27,7 +27,7 @@ export const officialChapters: Chapter[] = [
     representatives: [
       {
         name: "Ericka Otero",
-        role: "Co-Fundadora & Regional Chapter Leader. Head Brewer y Quality Control Manager en Salsipuedes Brewing Co. Jueza World Beer Cup 2026.",
+        role: "Co-Fundadora & Regional Chapter Leader. Cervecera Profesional, Producción y Control de Calidad en Salsipuedes Brewing Co. Jueza BJCP Internacional y World Beer Cup.",
       },
       {
         name: "Eloisa Sanjur",
@@ -114,7 +114,7 @@ export const regionNetwork: Chapter[] = [
     representatives: [
       {
         name: "Viviana López Gutiérrez",
-        role: "Líder de comunidad en México. Control de calidad e investigación en Tebana Laboratorio Cervecero (Cuernavaca).",
+        role: "Líder de comunidad en México. Beer Sommelier (AMEG, Unionbirrai, Doemens), Juez BJCP, co-fundadora de Tebana Laboratorio Cervecero y becaria Pink Boots en CRBS.",
       },
       {
         name: "Cynthia Hurtado",

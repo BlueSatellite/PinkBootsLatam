@@ -61,6 +61,15 @@ export const awardedScholarships: AwardedScholarship[] = [
     objective: "Beca otorgada en el marco del sub-capítulo Puerto Rico.",
     experience: "Por confirmar",
   },
+  {
+    memberName: "Viviana López Gutiérrez",
+    year: "2026",
+    institution: "Costa Rica Beer School (CRBS)",
+    type: "Beca Pink Boots Society — Experto Cervecero",
+    place: "Costa Rica / Online",
+    objective: "Formación profesional técnica especializada como Experto Cervecero.",
+    experience: "Actualmente cursando el programa como becaria de Pink Boots Society.",
+  },
 ];
 
 export const upcomingScholarships: UpcomingScholarship[] = [

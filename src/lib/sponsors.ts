@@ -114,8 +114,8 @@ export const sponsors: Sponsor[] = [
       "Aliado del programa de becas de Pink Boots Society, ofreciendo certificaciónes a integrantes de nuestra comunidad.",
   },
   {
-    name: "Fermenta Cociencia",
-    logo: "/sponsors/fermenta-cociencia.svg",
+    name: "Fermenta Con Ciencia",
+    logo: "/sponsors/fermenta-conciencia.png",
     website: "https://www.fermentaconciencia.com/",
     description:
       "Proyecto de divulgación y formación en ciencias de la fermentación, liderado por la científica Lucia Alvarez, especializada en microbiología de alimentos fermentados. Acompaña a personas y emprendimientos a fermentar con ciencia, conciencia y confianza.",
@@ -123,19 +123,40 @@ export const sponsors: Sponsor[] = [
       "Aliada educativa de Pink Boots Society Latin America, sumando conocimiento científico a la formación de nuestras integrantes.",
     videos: [
       {
-        title: "Video — Fermenta Cociencia",
+        title: "Video — Fermenta Con Ciencia",
         src: "/videos/fermenta-conciencia.mp4",
       },
     ],
   },
   {
-    name: "Academia Eco",
-    logo: "/sponsors/academia-eco.png",
+    name: "Libros de Guarda",
+    logo: "/sponsors/libros-de-guarda.png",
+    website: "http://www.librosdeguarda.com/",
     description:
-      "Marca de cosmetica natural aliada de Pink Boots Society Latin America, comprometida con el bienestar y el empoderamiento de las mujeres en la industria.",
+      "Primera editorial especializada en literatura cervecera y de fermentación en español. Publica y difunde títulos fundamentales sobre ciencia, técnica, procesos y cultura cervecera, acercando obras de referencia internacional a toda la comunidad.",
     relationship:
-      "Patrocinadora de Pink Boots Society Latin America. Video instituciónal pendiente de publicación.",
-    // videos: [{ title: "Video — Academia Eco", src: "/videos/academia-eco.mp4" }], // pendiente
+      "Aliado educativo y formativo de Pink Boots Society Latin America, apoyando activamente en el entrenamiento sensorial y en la preparación de las integrantes para el examen BJCP, tanto teórico como práctico de cata.",
+    socials: [
+      {
+        label: "Instagram",
+        url: "https://www.instagram.com/librosdeguarda/",
+      },
+    ],
+  },
+  {
+    name: "Academia Ecco",
+    logo: "/sponsors/academia-ecco.png",
+    website: "https://www.instagram.com/eccoinsumos.pty/",
+    description:
+      "Academia y tienda especializada en Panamá dedicada al suministro de materias primas, insumos y formación profesional para la elaboración de cosmética natural, jabonería artesanal y velas conscientes.",
+    relationship:
+      "Aliada y patrocinadora de Pink Boots Society Latin America, impulsando el bienestar, la cosmética consciente y el empoderamiento femenino en nuestra comunidad.",
+    socials: [
+      {
+        label: "Instagram",
+        url: "https://www.instagram.com/eccoinsumos.pty/",
+      },
+    ],
   },
 ];
 
