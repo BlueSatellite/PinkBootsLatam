@@ -141,7 +141,6 @@ export const sponsors: Sponsor[] = [
     photo: "/sponsors/jose-carlos-blanco.jpg",
     logo: "/sponsors/libros-de-guarda-badge.png",
     website: "http://www.librosdeguarda.com/",
-    label: "Patrocinador · Libros de Guarda",
     backing: {
       name: "Libros de Guarda",
       logo: "/sponsors/libros-de-guarda-badge.png",

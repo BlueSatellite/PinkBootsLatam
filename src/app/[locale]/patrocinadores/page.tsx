@@ -129,9 +129,6 @@ export default function SponsorsPage() {
                             <h4 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
                               {sponsor.name}
                             </h4>
-                            <span className="rounded-full bg-[var(--color-pink-brand)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
-                              Patrocinador
-                            </span>
                           </div>
                           {sponsor.backing && (
                             <div className="mt-2.5 inline-flex items-center gap-2.5 rounded-full bg-white px-3.5 py-1.5 shadow-xs border border-[var(--color-border-light)]">
