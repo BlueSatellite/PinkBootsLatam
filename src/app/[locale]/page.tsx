@@ -124,11 +124,11 @@ export default function HomePage() {
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}
-                    className="h-[100px] w-auto object-contain"
+                    className={sponsor.backing ? "h-[100px] w-auto object-contain rounded-full shadow-xs" : "h-[100px] w-auto object-contain"}
                   />
-                  {sponsor.label && (
-                    <span className="text-[9px] font-semibold uppercase tracking-wider text-[var(--color-pink-brand)] text-center">
-                      {sponsor.label}
+                  {(sponsor.backing ? sponsor.name : sponsor.label) && (
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--color-pink-brand)] text-center">
+                      {sponsor.backing ? sponsor.name : sponsor.label}
                     </span>
                   )}
                 </a>

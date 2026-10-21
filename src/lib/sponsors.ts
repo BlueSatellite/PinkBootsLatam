@@ -15,12 +15,20 @@ export interface SponsorFeaturedProduct {
   linkLabel: string;
 }
 
+export interface SponsorBacking {
+  name: string;
+  logo: string;
+  website?: string;
+}
+
 export interface Sponsor {
   name: string;
   logo: string;
+  photo?: string;
   featured?: boolean;
   website?: string;
   label?: string;
+  backing?: SponsorBacking;
   description: string;
   relationship: string;
   socials?: SponsorSocial[];
@@ -129,13 +137,20 @@ export const sponsors: Sponsor[] = [
     ],
   },
   {
-    name: "Libros de Guarda",
-    logo: "/sponsors/libros-de-guarda.png",
+    name: "José Carlos Blanco",
+    photo: "/sponsors/jose-carlos-blanco.jpg",
+    logo: "/sponsors/libros-de-guarda-badge.png",
     website: "http://www.librosdeguarda.com/",
+    label: "Patrocinador · Libros de Guarda",
+    backing: {
+      name: "Libros de Guarda",
+      logo: "/sponsors/libros-de-guarda-badge.png",
+      website: "http://www.librosdeguarda.com/",
+    },
     description:
-      "Primera editorial especializada en literatura cervecera y de fermentación en español. Publica y difunde títulos fundamentales sobre ciencia, técnica, procesos y cultura cervecera, acercando obras de referencia internacional a toda la comunidad.",
+      "En el mundo de la cerveza desde 2013, es socio fundador de Buenas Pintas, promotores de la cultura cervecera en Panamá. Certificado como juez BJCP y Certified Cicerone® en 2018, ha juzgado más de 40 competencias en América y Europa, ascendiendo a BJCP National en 2025. Ha sido juez director y encargado de logística en diversas ediciones de Barrilito de Oro, Indie Beer Cup, Copa Resiliencia, Copa Puente del Mundo, Copa Guaraní y Copa C4. Con experiencia profesional en gestión de empresas cerveceras, control de calidad y distribución de insumos, actualmente lidera varios proyectos, incluyendo Libros de Guarda, la primera editorial de libros cerveceros en español (desde 2020), así como labores de consultoría para cervecerías.",
     relationship:
-      "Aliado educativo y formativo de Pink Boots Society Latin America, apoyando activamente en el entrenamiento sensorial y en la preparación de las integrantes para el examen BJCP, tanto teórico como práctico de cata.",
+      "Patrocinador y aliado formativo de Pink Boots Society Latin America. Respalda a la comunidad cervecera regional a través de Libros de Guarda, apoyando activamente en el entrenamiento sensorial y en la preparación de las integrantes para el examen BJCP, tanto teórico como práctico de cata.",
     socials: [
       {
         label: "Instagram",

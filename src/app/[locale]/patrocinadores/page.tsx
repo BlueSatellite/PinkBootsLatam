@@ -67,12 +67,29 @@ export default function SponsorsPage() {
                   className="group rounded-xl border border-[var(--color-border-default)] bg-white open:border-[var(--color-pink-200)] open:shadow-sm"
                 >
                   <summary className="flex cursor-pointer list-none items-center gap-4 p-5 transition-colors hover:bg-gray-50/50">
-                    <div className="flex h-12 w-24 shrink-0 items-center justify-center">
-                      <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="max-h-full max-w-full object-contain"
-                      />
+                    <div className="flex h-14 w-24 shrink-0 items-center justify-center">
+                      {sponsor.photo ? (
+                        <div className="relative">
+                          <img
+                            src={sponsor.photo}
+                            alt={sponsor.name}
+                            className="h-12 w-12 rounded-full object-cover shadow-sm ring-2 ring-[var(--color-pink-300)]"
+                          />
+                          {sponsor.backing && (
+                            <img
+                              src={sponsor.backing.logo}
+                              alt={sponsor.backing.name}
+                              className="absolute -bottom-1 -right-1 h-5 w-5 rounded-full border border-white bg-black object-contain shadow-xs"
+                            />
+                          )}
+                        </div>
+                      ) : (
+                        <img
+                          src={sponsor.logo}
+                          alt={sponsor.name}
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      )}
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
@@ -100,8 +117,43 @@ export default function SponsorsPage() {
                   </summary>
 
                   <div className="border-t border-[var(--color-border-light)] p-5">
+                    {sponsor.photo && (
+                      <div className="mb-6 flex flex-col sm:flex-row items-center sm:items-start gap-5 rounded-2xl bg-gradient-to-br from-[var(--color-pink-50)]/60 via-white to-gray-50/40 p-5 border border-[var(--color-pink-200)] shadow-xs">
+                        <img
+                          src={sponsor.photo}
+                          alt={sponsor.name}
+                          className="h-28 w-28 sm:h-32 sm:w-32 shrink-0 rounded-2xl object-cover shadow-md ring-2 ring-white"
+                        />
+                        <div className="flex-1 text-center sm:text-left">
+                          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                            <h4 className="font-display text-lg font-bold text-[var(--color-text-primary)]">
+                              {sponsor.name}
+                            </h4>
+                            <span className="rounded-full bg-[var(--color-pink-brand)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                              Patrocinador
+                            </span>
+                          </div>
+                          {sponsor.backing && (
+                            <div className="mt-2.5 inline-flex items-center gap-2.5 rounded-full bg-white px-3.5 py-1.5 shadow-xs border border-[var(--color-border-light)]">
+                              <img
+                                src={sponsor.backing.logo}
+                                alt={sponsor.backing.name}
+                                className="h-6 w-6 rounded-full object-contain bg-black"
+                              />
+                              <span className="text-xs font-medium text-[var(--color-text-secondary)]">
+                                Respaldando con <strong className="font-semibold text-[var(--color-text-primary)]">{sponsor.backing.name}</strong>
+                              </span>
+                            </div>
+                          )}
+                          <p className="mt-2 text-xs text-[var(--color-text-muted)]">
+                            Juez BJCP National · Certified Cicerone® · Cofundador de Libros de Guarda & Buenas Pintas
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
                     <h4 className="font-display text-xs font-bold uppercase tracking-wide text-[var(--color-pink-brand)]">
-                      Sobre la empresa
+                      {sponsor.photo ? "Sobre el patrocinador" : "Sobre la empresa"}
                     </h4>
                     <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                       {sponsor.description}
@@ -142,7 +194,7 @@ export default function SponsorsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-pink-brand)] px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-[var(--color-pink-600)]"
                           >
-                            Sitio web
+                            {sponsor.backing ? `Sitio web ${sponsor.backing.name}` : "Sitio web"}
                           </a>
                         )}
                         {sponsor.socials?.map((social) => (
@@ -153,7 +205,7 @@ export default function SponsorsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-border-default)] px-4 py-1.5 text-xs font-semibold text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-pink-200)] hover:text-[var(--color-pink-brand)]"
                           >
-                            {social.label === "Instagram" && instagramIcon}
+                            {social.label.includes("Instagram") && instagramIcon}
                             {social.label}
                           </a>
                         ))}
